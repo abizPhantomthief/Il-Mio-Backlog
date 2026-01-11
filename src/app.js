@@ -13,15 +13,16 @@ const App = () => {
 
   // LOGICA DI ACCESSO (Premi 'L' per inserire password)
   useEffect(() => {
-    const handleKeyPress = (e) => {
-      if (e.key === 'l' || e.key === 'L') {
-        const passwordSegreta = "listone"; // <--- CAMBIA QUESTA
-        const inserimento = prompt("Accesso protetto. Inserisci codice:");
-        if (inserimento === passwordSegreta) {
-          setIsAdmin(true);
+      const handleKeyPress = (e) => {
+        // Si attiva solo se premi SHIFT + A (A sta per Admin)
+        if (e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+          const passwordSegreta = "listone";
+          const inserimento = prompt("Accesso protetto. Inserisci codice:");
+          if (inserimento === passwordSegreta) {
+            setIsAdmin(true);
+          }
         }
-      }
-    };
+      };
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
