@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Il-Mio-Backlog/static/js/main.6b3a62e6.js",
+    "main.js": "/Il-Mio-Backlog/static/js/main.9e17dcce.js",
     "index.html": "/Il-Mio-Backlog/index.html",
-    "main.6b3a62e6.js.map": "/Il-Mio-Backlog/static/js/main.6b3a62e6.js.map"
+    "main.9e17dcce.js.map": "/Il-Mio-Backlog/static/js/main.9e17dcce.js.map"
   },
   "entrypoints": [
-    "static/js/main.6b3a62e6.js"
+    "static/js/main.9e17dcce.js"
   ]
 }
