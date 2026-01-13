@@ -7654,11 +7654,12 @@
     "id": 751,
     "saga": "The Legend of Zelda Series",
     "titolo": "The Legend of Zelda: Ocarina of Time 3D",
-    "piattaforma": "N/A",
+    "piattaforma": "N3DS",
     "annoUscita": "2011",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co600u.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso",
+    "categoria": "Emulato"
   },
   {
     "id": 752,
