@@ -15,8 +15,8 @@ const App = () => {
   // Password e Accesso Admin
   useEffect(() => {
     const handleKeyPress = (e) => {
-      if (e.key === 'l' || e.key === 'L') {
-        const passwordSegreta = "listone"; // <--- CAMBIA QUESTA
+      if (e.altKey && (e.key === 'l' || e.key === 'L')) {
+        const passwordSegreta = "listone";
         const inserimento = prompt("Accesso protetto. Inserisci codice:");
         if (inserimento === passwordSegreta) {
           setIsAdmin(true);
