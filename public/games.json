@@ -20,7 +20,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2uls.webp",
     "stato": "Non Giocato",
-    "categoria": ""
+    "categoria": "",
+    "pinned": false
   },
   {
     "id": 3,
@@ -962,7 +963,10 @@
     "annoUscita": "2020",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kf2.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": true,
+    "note": "In rimozione a Febbraio 2026 da PSPlus",
+    "categoria": "Possibile Rimozione"
   },
   {
     "id": 95,
@@ -1437,7 +1441,10 @@
     "annoUscita": "2022",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55md.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "note": "In rimozione a Febbraio 2026 da PSPlus",
+    "categoria": "Possibile Rimozione",
+    "pinned": true
   },
   {
     "id": 142,
@@ -1788,7 +1795,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4nzt.webp",
     "stato": "Non Giocato",
-    "categoria": "OBIETTIVO 2026"
+    "categoria": "OBIETTIVO 2026",
+    "pinned": true
   },
   {
     "id": 176,
@@ -2341,7 +2349,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yq.webp",
     "stato": "Non Giocato",
-    "categoria": "OBIETTIVO 2026"
+    "categoria": "OBIETTIVO 2026",
+    "pinned": true
   },
   {
     "id": 230,
@@ -5046,7 +5055,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2qum.webp",
     "stato": "Non Giocato",
-    "categoria": "OBIETTIVO 2026"
+    "categoria": "OBIETTIVO 2026",
+    "pinned": true
   },
   {
     "id": 495,
@@ -5997,7 +6007,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co92d9.webp",
     "stato": "Non Giocato",
-    "categoria": "OBIETTIVO 2026"
+    "categoria": "OBIETTIVO 2026",
+    "pinned": true
   },
   {
     "id": 589,
@@ -6223,7 +6234,10 @@
     "annoUscita": "1997",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2x4z.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "note": "In rimozione a Febbraio 2026 da PSPlus",
+    "categoria": "Possibile Rimozione",
+    "pinned": true
   },
   {
     "id": 611,
@@ -7371,7 +7385,10 @@
     "annoUscita": "2021",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25o1.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "note": "In rimozione a Febbraio 2026 da PSPlus",
+    "categoria": "Possibile Rimozione",
+    "pinned": true
   },
   {
     "id": 724,
