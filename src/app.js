@@ -201,7 +201,7 @@ const App = () => {
         
         .game-card { position: relative; border-radius: 12px; background: #161616; border: 1px solid #333; overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s ease; }
         .game-card:hover { transform: translateY(-5px); border-color: #00d1b2; }
-        .game-card.pinned { border: 2px solid #00d1b2; box-shadow: 0 0 15px rgba(0, 209, 178, 0.2); }
+        .game-card.pinned { border: 2px solid #dbba00; box-shadow: 0 0 15px rgba(0, 209, 178, 0.2); }
         
         .pin-btn { position: absolute; top: 10px; left: 10px; z-index: 10; cursor: pointer; font-size: 20px; transition: 0.3s; filter: drop-shadow(0 0 5px rgba(0,0,0,0.5)); }
         .pin-btn:hover { transform: scale(1.2); }
