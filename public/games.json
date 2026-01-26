@@ -7381,14 +7381,14 @@
     "id": 723,
     "saga": "",
     "titolo": "The Ascent",
-    "piattaforma": "N/A",
+    "piattaforma": "PS5",
     "annoUscita": "2021",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25o1.webp",
-    "stato": "Non Giocato",
-    "note": "In rimozione a Febbraio 2026 da PSPlus",
-    "categoria": "Possibile Rimozione",
-    "pinned": true
+    "stato": "In corso",
+    "note": "",
+    "categoria": "",
+    "pinned": false
   },
   {
     "id": 724,
