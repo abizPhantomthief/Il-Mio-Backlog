@@ -4122,7 +4122,7 @@
   },
   {
     "id": 403,
-    "saga": "Little Nightmare Series",
+    "saga": "Little Nightmares Series",
     "titolo": "Little Nightmares",
     "piattaforma": "PS4",
     "annoUscita": 2017,
@@ -4132,7 +4132,7 @@
   },
   {
     "id": 404,
-    "saga": "Little Nightmare Series",
+    "saga": "Little Nightmares Series",
     "titolo": "Very Little Nightmares",
     "piattaforma": "Mobile",
     "annoUscita": 2019,
@@ -4143,7 +4143,7 @@
   },
   {
     "id": 405,
-    "saga": "Little Nightmare Series",
+    "saga": "Little Nightmares Series",
     "titolo": "Little Nightmares II",
     "piattaforma": "N/A",
     "annoUscita": "2021",
@@ -7073,7 +7073,8 @@
     "annoUscita": "1994",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5osy.webp",
-    "stato": ""
+    "stato": "Non Giocato",
+    "categoria": ""
   },
   {
     "id": 693,
