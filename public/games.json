@@ -959,14 +959,14 @@
     "id": 94,
     "saga": "",
     "titolo": "Carto",
-    "piattaforma": "N/A",
+    "piattaforma": "PS4",
     "annoUscita": "2020",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kf2.webp",
-    "stato": "Non Giocato",
-    "pinned": true,
+    "stato": "In corso",
+    "pinned": false,
     "note": "In rimozione a Febbraio 2026 da PSPlus",
-    "categoria": "Possibile Rimozione"
+    "categoria": "Streaming Playstation Plus"
   },
   {
     "id": 95,
