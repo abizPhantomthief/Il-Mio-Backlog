@@ -1442,9 +1442,9 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55md.webp",
     "stato": "Non Giocato",
-    "note": "In rimozione a Febbraio 2026 da PSPlus",
+    "note": "In rimozione a Febbraio 2026 da PSPlus; Giocarlo su PC è un'opzione preferibile.",
     "categoria": "Possibile Rimozione",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 142,
@@ -6237,7 +6237,7 @@
     "stato": "Non Giocato",
     "note": "In rimozione a Febbraio 2026 da PSPlus",
     "categoria": "Possibile Rimozione",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 611,
@@ -8716,7 +8716,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coay0x.webp",
     "stato": "Non Giocato",
-    "categoria": "In Uscita"
+    "categoria": "In Uscita",
+    "pinned": false
   },
   {
     "id": 854,

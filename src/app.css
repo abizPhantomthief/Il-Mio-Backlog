@@ -64,6 +64,67 @@ textarea {
   font-family: inherit;
 }
 
+/* Utility Classes */
+.section-title-pinned {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #f1c40f;
+}
+
+.section-title-games {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #95a5a6;
+}
+
+.flex-center {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.flex-center-top {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.info-mask-center {
+  text-align: center;
+  padding: 20px;
+}
+
+.platform-input-admin {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.spinner-choosing {
+  color: #f1c40f;
+  letter-spacing: 2px;
+}
+
+.modal-content-center {
+  text-align: center;
+}
+
+.confirm-btn-yes {
+  background: #f1c40f;
+  color: #000;
+}
+
+.confirm-btn-no {
+  background: #e74c3c;
+}
+
+.form-spacing {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 /* Main Container */
 .app-container {
   display: flex;
@@ -109,6 +170,13 @@ textarea {
 
 .sidebar.collapsed .sidebar-header h2 {
   display: none;
+}
+
+.section-title-pinned {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #f1c40f;
 }
 
 .sidebar-header button {

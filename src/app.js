@@ -8,6 +8,10 @@ const App = () => {
   const [selectedSaga, setSelectedSaga] = useState('Tutte');
   const [filterYear, setFilterYear] = useState('Tutti');
   const [filterStatus, setFilterStatus] = useState('Tutti');
+  const [filterCategory, setFilterCategory] = useState('Tutte');
+  const [sortTitle, setSortTitle] = useState('Default');
+  const [sortYear, setSortYear] = useState('Default');
+  const [sortPlatform, setSortPlatform] = useState('Default');
   const [showAddForm, setShowAddForm] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -30,6 +34,7 @@ const App = () => {
 
   const [isSpinning, setIsSpinning] = useState(false);
   const [chosenGame, setChosenGame] = useState(null);
+  const [showPinNotification, setShowPinNotification] = useState(false);
   const [spinTitle, setSpinTitle] = useState('');
   const [history, setHistory] = useState(() => {
     const saved = localStorage.getItem('spinHistory');
@@ -106,6 +111,17 @@ const App = () => {
     }
   };
 
+  const pinGameFromSpin = async () => {
+    if (!chosenGame) return;
+    const nuovaLista = games.map(g => g.id === chosenGame.id ? { ...g, pinned: true } : g);
+    setGames(nuovaLista);
+    if (window.location.hostname === 'localhost') {
+      await axios.post('http://localhost:5000/api/games/update', nuovaLista);
+    }
+    setShowPinNotification(false);
+    setChosenGame(null);
+  };
+
   const avviaSpinner = () => {
     const backlog = games.filter(g => g.stato === 'Non Giocato');
     if (backlog.length === 0) return alert("Nessun gioco 'Non Giocato'!");
@@ -143,7 +159,8 @@ const App = () => {
   };
   const sagaStats = getSagaStats();
 
-  const anniPerFiltro = [...new Set(games.flatMap(g => dividiStringa(g.annoGiocato)))].filter(anno => anno !== '-' && anno !== '').sort((a, b) => b - a);
+  const anniPerFiltro = [...new Set(games.flatMap(g => dividiStringa(g.annoGiocato)))].filter(anno => anno !== '-' && anno !== '').sort((a, b) => parseInt(b) - parseInt(a));
+  const anniUscita = [...new Set(games.filter(g => g.annoUscita && String(g.annoUscita).trim() !== '' && String(g.annoUscita).trim() !== '-').map(g => String(g.annoUscita).trim()))].sort((a, b) => parseInt(b) - parseInt(a));
   const suggerimentiSaghe = [...new Set(games.map(g => g.saga))].filter(s => s && s !== "" && s !== "-").sort();
   const suggerimentiCategorie = [...new Set(games.flatMap(g => dividiStringa(g.categoria)))].sort();
   const suggerimentiPiattaforme = [...new Set(games.flatMap(g => dividiStringa(g.piattaforma)))].sort();
@@ -154,12 +171,32 @@ const App = () => {
       const matchesYear = filterYear === 'Tutti' || dividiStringa(game.annoGiocato).includes(filterYear);
       const matchesSaga = selectedSaga === 'Tutte' || (selectedSaga === 'Senza Saga' ? !pulisciNomeSaga(game.saga) : pulisciNomeSaga(game.saga) === selectedSaga);
       const matchesStatus = filterStatus === 'Tutti' || game.stato === filterStatus;
-      return matchesSearch && matchesYear && matchesSaga && matchesStatus;
+      const matchesCategory = filterCategory === 'Tutte' || dividiStringa(game.categoria).includes(filterCategory);
+      const matchesPlatform = sortPlatform === 'Default' || dividiStringa(game.piattaforma).includes(sortPlatform);
+      const matchesReleaseYear = sortYear === 'Default' || sortYear === 'Crescente' || sortYear === 'Decrescente' || String(game.annoUscita).trim() === sortYear;
+      return matchesSearch && matchesYear && matchesSaga && matchesStatus && matchesCategory && matchesPlatform && matchesReleaseYear;
     })
     .sort((a, b) => {
       if (a.pinned && !b.pinned) return -1;
       if (!a.pinned && b.pinned) return 1;
 
+      // Ordina per Titolo
+      if (sortTitle === 'A-Z') return a.titolo.localeCompare(b.titolo);
+      if (sortTitle === 'Z-A') return b.titolo.localeCompare(a.titolo);
+
+      // Ordina per Anno Uscita
+      if (sortYear === 'Crescente') {
+        const annoA = parseInt(a.annoUscita) || 9999;
+        const annoB = parseInt(b.annoUscita) || 9999;
+        return annoA - annoB;
+      }
+      if (sortYear === 'Decrescente') {
+        const annoA = parseInt(a.annoUscita) || 0;
+        const annoB = parseInt(b.annoUscita) || 0;
+        return annoB - annoA;
+      }
+
+      // Default: ordina per saga (se selezionata) o per titolo
       if (selectedSaga !== 'Tutte' && selectedSaga !== 'Senza Saga') {
         const annoA = parseInt(a.annoUscita) || 9999;
         const annoB = parseInt(b.annoUscita) || 9999;
@@ -209,7 +246,7 @@ const App = () => {
             <button className="btn-spin" onClick={() => { avviaSpinner(); setIsMobileOpen(false); }}>🎲 COSA GIOCO?</button>
 
             {isAdmin && (
-              <div style={{ marginTop: '10px', marginBottom: '20px' }}>
+              <div className="form-spacing">
                 <button className="btn-add-game" onClick={() => setShowAddForm(!showAddForm)}>
                   {showAddForm ? 'CHIUDI' : '+ AGGIUNGI GIOCO'}
                 </button>
@@ -293,11 +330,35 @@ const App = () => {
             <option value="Tutti">Anno di Gioco</option>
             {anniPerFiltro.map(y => <option key={y} value={y}>{y}</option>)}
           </select>
+          <select id="filterCategory" name="filterCategory" value={filterCategory} onChange={e => setFilterCategory(e.target.value)} className="filter-select">
+            <option value="Tutte">Categoria</option>
+            {suggerimentiCategorie.map(c => <option key={c} value={c}>{c}</option>)}
+          </select>
+          <select id="sortTitle" name="sortTitle" value={sortTitle} onChange={e => setSortTitle(e.target.value)} className="filter-select">
+            <option value="Default">Ordine Titolo</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
+          <select id="sortYear" name="sortYear" value={sortYear} onChange={e => setSortYear(e.target.value)} className="filter-select">
+            <option value="Default">Anno Uscita</option>
+            <option value="Crescente">Crescente</option>
+            <option value="Decrescente">Decrescente</option>
+            <optgroup label="Anno Specifico">
+              {anniUscita.map(anno => <option key={anno} value={anno}>{anno}</option>)}
+            </optgroup>
+          </select>
+          <select id="sortPlatform" name="sortPlatform" value={sortPlatform} onChange={e => setSortPlatform(e.target.value)} className="filter-select">
+            <option value="Default">Piattaforme</option>
+            {suggerimentiPiattaforme.map(p => <option key={p} value={p}>{p}</option>)}
+          </select>
         </div>
 
-        <div className="games-grid">
-          {filteredGames.map(game => (
-            <div key={game.id} className={`game-card ${game.pinned ? 'pinned' : ''}`}>
+        {filteredGames.filter(g => g.pinned).length > 0 && (
+          <div>
+            <h3 className="section-title-pinned">📌 FISSATI</h3>
+            <div className="games-grid">
+              {filteredGames.filter(g => g.pinned).map(game => (
+                <div key={game.id} className={`game-card ${game.pinned ? 'pinned' : ''}`}>
 
               {/* TASTO PIN */}
               {(isAdmin || game.pinned) && (
@@ -326,12 +387,12 @@ const App = () => {
                         <input id={`cat-${game.id}`} name={`cat-${game.id}`} type="text" placeholder="Categoria" list="lista-categorie" className="edit-input" defaultValue={game.categoria || ''} onBlur={e => modificaCampo(game.id, 'categoria', e.target.value)} />
                         <input id={`annoUsc-${game.id}`} name={`annoUsc-${game.id}`} type="text" placeholder="Anno" className="edit-input" defaultValue={game.annoUscita || ''} onBlur={e => modificaCampo(game.id, 'annoUscita', e.target.value)} />
                       </div>
-                      <input id={`piatt-${game.id}`} name={`piatt-${game.id}`} type="text" placeholder="Piattaforme" list="lista-piattaforme" className="edit-input" style={{ color: '#10b981', fontWeight: 'bold' }} defaultValue={game.piattaforma || ''} onBlur={e => modificaCampo(game.id, 'piattaforma', e.target.value)} />
+                      <input id={`piatt-${game.id}`} name={`piatt-${game.id}`} type="text" placeholder="Piattaforme" list="lista-piattaforme" className="edit-input platform-input-admin" defaultValue={game.piattaforma || ''} onBlur={e => modificaCampo(game.id, 'piattaforma', e.target.value)} />
                       <input id={`annoGioc-${game.id}`} name={`annoGioc-${game.id}`} type="text" placeholder="Anno Giocato" className="edit-input" defaultValue={game.annoGiocato || ''} onBlur={e => modificaCampo(game.id, 'annoGiocato', e.target.value)} />
                       <input id={`note-${game.id}`} name={`note-${game.id}`} type="text" placeholder="Note" className="edit-input" defaultValue={game.note || ''} onBlur={e => modificaCampo(game.id, 'note', e.target.value)} />
                     </div>
                   ) : (
-                    <div style={{ textAlign: 'center', padding: '20px' }}>
+                    <div className="info-mask-center">
                       {game.saga && game.saga !== "-" && <h3 className="saga-info">{game.saga}</h3>}
                       <div className="category-tags">
                         {dividiStringa(game.categoria).map((c, i) => (
@@ -357,8 +418,80 @@ const App = () => {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {filteredGames.filter(g => !g.pinned).length > 0 && (
+          <div>
+            <h3 className="section-title-games">GIOCHI ({filteredGames.filter(g => !g.pinned).length})</h3>
+            <div className="games-grid">
+              {filteredGames.filter(g => !g.pinned).map(game => (
+                <div key={game.id} className={`game-card ${game.pinned ? 'pinned' : ''}`}>
+
+              {/* TASTO PIN */}
+              {(isAdmin || game.pinned) && (
+                <div
+                  className="pin-btn"
+                  onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
+                  title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
+                  style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
+                >
+                  {game.pinned ? '📌' : '📍'}
+                </div>
+              )}
+
+              <div className="image-container">
+                <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
+                <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
+                <div className="info-mask">
+                  {isAdmin ? (
+                    <div>
+                      <button className="delete-btn" onClick={() => eliminaGioco(game.id, game.titolo)}>ELIMINA 🗑</button>
+                      <select id={`stato-${game.id}`} name={`stato-${game.id}`} className="status-select" style={{ backgroundColor: getColorStato(game.stato) }} value={game.stato} onChange={e => modificaCampo(game.id, 'stato', e.target.value)}>
+                        {['Non Giocato', 'Completato', 'In corso', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
+                      </select>
+                      <input id={`saga-${game.id}`} name={`saga-${game.id}`} type="text" placeholder="Saga" list="lista-saghe" className="edit-input" defaultValue={game.saga || ''} onBlur={e => modificaCampo(game.id, 'saga', e.target.value)} />
+                      <div className="form-row">
+                        <input id={`cat-${game.id}`} name={`cat-${game.id}`} type="text" placeholder="Categoria" list="lista-categorie" className="edit-input" defaultValue={game.categoria || ''} onBlur={e => modificaCampo(game.id, 'categoria', e.target.value)} />
+                        <input id={`annoUsc-${game.id}`} name={`annoUsc-${game.id}`} type="text" placeholder="Anno" className="edit-input" defaultValue={game.annoUscita || ''} onBlur={e => modificaCampo(game.id, 'annoUscita', e.target.value)} />
+                      </div>
+                      <input id={`piatt-${game.id}`} name={`piatt-${game.id}`} type="text" placeholder="Piattaforme" list="lista-piattaforme" className="edit-input platform-input-admin" defaultValue={game.piattaforma || ''} onBlur={e => modificaCampo(game.id, 'piattaforma', e.target.value)} />
+                      <input id={`annoGioc-${game.id}`} name={`annoGioc-${game.id}`} type="text" placeholder="Anno Giocato" className="edit-input" defaultValue={game.annoGiocato || ''} onBlur={e => modificaCampo(game.id, 'annoGiocato', e.target.value)} />
+                      <input id={`note-${game.id}`} name={`note-${game.id}`} type="text" placeholder="Note" className="edit-input" defaultValue={game.note || ''} onBlur={e => modificaCampo(game.id, 'note', e.target.value)} />
+                    </div>
+                  ) : (
+                    <div className="info-mask-center">
+                      {game.saga && game.saga !== "-" && <h3 className="saga-info">{game.saga}</h3>}
+                      <div className="category-tags">
+                        {dividiStringa(game.categoria).map((c, i) => (
+                          <span key={i} className="category-tag">#{c}</span>
+                        ))}
+                      </div>
+                      <p className="played-info">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
+                      {game.note && <p className="note-text">{game.note}</p>}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className="card-content">
+                <div className="status-badge" style={{ backgroundColor: getColorStato(game.stato) }}>{game.stato}</div>
+                <h4 className="card-title">
+                  {game.titolo}
+                  {game.annoUscita && <span className="year">({game.annoUscita})</span>}
+                </h4>
+                <div className="platforms-tags">
+                  {dividiStringa(game.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
+                  {dividiStringa(game.categoria).map((c, i) => <span key={i} className="category-chip">{c}</span>)}
+                </div>
+              </div>
+            </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {(isSpinning || chosenGame) && (
@@ -367,7 +500,7 @@ const App = () => {
             {isSpinning ? (
               <div className="spinner-content">
                 <div className="spinner-icon">🎯</div>
-                <h2 style={{ color: '#f1c40f', letterSpacing: '2px' }}>SCEGLIENDO...</h2>
+                <h2 className="spinner-choosing">SCEGLIENDO...</h2>
                 <div className="spinner-title">{spinTitle}</div>
               </div>
             ) : (
@@ -375,9 +508,28 @@ const App = () => {
                 <h2>PROSSIMA AVVENTURA:</h2>
                 <img src={chosenGame.copertina} className="spinner-image" alt="" />
                 <h1>{chosenGame.titolo}</h1>
-                <button className="confirm-btn" onClick={() => setChosenGame(null)}>OTTIMO!</button>
+                <div className="flex-center">
+                  <button className="confirm-btn" onClick={() => {
+                    setShowPinNotification(true);
+                  }}>OTTIMO!</button>
+                </div>
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {showPinNotification && chosenGame && (
+        <div className="modal-overlay">
+          <div className="modal-content modal-content-center">
+            <h2>Vuoi pinnare "{chosenGame.titolo}"?</h2>
+            <div className="flex-center-top">
+              <button className="confirm-btn confirm-btn-yes" onClick={pinGameFromSpin}>SÌ, PINNA 📌</button>
+              <button className="confirm-btn confirm-btn-no" onClick={() => {
+                setShowPinNotification(false);
+                setChosenGame(null);
+              }}>NO, GRAZIE</button>
+            </div>
           </div>
         </div>
       )}
