@@ -622,6 +622,13 @@ textarea {
   margin-bottom: 10px;
 }
 
+.status-display {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 .card-title {
   margin: 0 0 10px 0;
   font-size: 18px;
