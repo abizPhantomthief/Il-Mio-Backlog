@@ -830,7 +830,8 @@
     "annoUscita": "2025",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9mzd.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": false
   },
   {
     "id": 82,
@@ -963,9 +964,9 @@
     "annoUscita": "2020",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kf2.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "pinned": false,
-    "note": "In rimozione a Febbraio 2026 da PSPlus",
+    "note": "",
     "categoria": "Streaming Playstation Plus"
   },
   {
@@ -1496,7 +1497,8 @@
     "annoUscita": "2000",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xtn.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": false
   },
   {
     "id": 147,
@@ -2872,7 +2874,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qqn.webp",
     "stato": "Non Giocato",
-    "categoria": ""
+    "categoria": "",
+    "pinned": true
   },
   {
     "id": 281,
@@ -3199,7 +3202,8 @@
     "annoUscita": "1998",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25r3.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": true
   },
   {
     "id": 313,
@@ -3229,7 +3233,8 @@
     "annoUscita": "2020",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39vc.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": false
   },
   {
     "id": 316,
@@ -3875,7 +3880,8 @@
     "annoUscita": "2010",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1w9w.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": true
   },
   {
     "id": 379,
@@ -3886,7 +3892,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1q9m.webp",
     "stato": "Non Giocato",
-    "categoria": ""
+    "categoria": "",
+    "pinned": false
   },
   {
     "id": 380,
@@ -7376,7 +7383,8 @@
     "annoUscita": "2017",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20pq.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": true
   },
   {
     "id": 723,
@@ -8183,7 +8191,8 @@
     "annoUscita": "2022",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4p88.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": true
   },
   {
     "id": 802,
