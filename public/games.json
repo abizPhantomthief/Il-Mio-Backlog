@@ -118,11 +118,12 @@
     "id": 12,
     "saga": "Remedy Connected Universe",
     "titolo": "Alan Wake",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2010",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dft.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso",
+    "note": ""
   },
   {
     "id": 13,
