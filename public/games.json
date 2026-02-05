@@ -3230,12 +3230,13 @@
     "id": 315,
     "saga": "",
     "titolo": "Hades",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2020",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39vc.webp",
-    "stato": "Non Giocato",
-    "pinned": false
+    "stato": "In corso",
+    "pinned": false,
+    "categoria": ""
   },
   {
     "id": 316,
@@ -6015,8 +6016,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co92d9.webp",
     "stato": "Non Giocato",
-    "categoria": "Obiettivo 2026",
-    "pinned": true
+    "categoria": "",
+    "pinned": false
   },
   {
     "id": 589,
@@ -8842,5 +8843,18 @@
     "categoria": "",
     "pinned": false,
     "id": 1770064987831
+  },
+  {
+    "titolo": "ZombiU",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co22ag.webp",
+    "saga": "",
+    "annoUscita": "2012",
+    "annoGiocato": "",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Obiettivo 2026",
+    "pinned": true,
+    "id": 1770323533929
   }
 ]
