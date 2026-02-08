@@ -3228,7 +3228,7 @@
   },
   {
     "id": 315,
-    "saga": "",
+    "saga": "Hades Saga",
     "titolo": "Hades",
     "piattaforma": "PS5",
     "annoUscita": "2020",
@@ -8801,7 +8801,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "In Uscita",
+    "categoria": "",
     "pinned": false,
     "id": 1770063906513
   },
@@ -8856,5 +8856,44 @@
     "categoria": "Obiettivo 2026",
     "pinned": true,
     "id": 1770323533929
+  },
+  {
+    "titolo": "Alan Wake's American Nightmare",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2eh1.webp",
+    "saga": "Remedy Connected Universe",
+    "annoUscita": "2012",
+    "annoGiocato": "",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1770585553154
+  },
+  {
+    "titolo": "Hades II",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaknx.webp",
+    "saga": "Hades Saga",
+    "annoUscita": "2025",
+    "annoGiocato": "",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1770585650305
+  },
+  {
+    "titolo": "Alan Wake II",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jar.webp",
+    "saga": "Remedy Connected Universe",
+    "annoUscita": "2023",
+    "annoGiocato": "",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1770585770587
   }
 ]
