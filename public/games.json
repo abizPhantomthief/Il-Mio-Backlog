@@ -122,7 +122,7 @@
     "annoUscita": "2010",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dft.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "note": ""
   },
   {
@@ -8727,7 +8727,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coay0x.webp",
     "stato": "Non Giocato",
-    "categoria": "In Uscita",
+    "categoria": "",
     "pinned": false
   },
   {
@@ -8739,7 +8739,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coajpi.webp",
     "stato": "Non Giocato",
-    "categoria": "In Uscita"
+    "categoria": ""
   },
   {
     "id": 855,
