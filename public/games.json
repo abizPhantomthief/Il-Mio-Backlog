@@ -7396,7 +7396,7 @@
     "annoUscita": "2021",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25o1.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false
@@ -8862,9 +8862,9 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2eh1.webp",
     "saga": "Remedy Connected Universe",
     "annoUscita": "2012",
-    "annoGiocato": "",
-    "piattaforma": "",
-    "stato": "Non Giocato",
+    "annoGiocato": "2026",
+    "piattaforma": "PC",
+    "stato": "In corso",
     "note": "",
     "categoria": "",
     "pinned": false,
@@ -8895,5 +8895,18 @@
     "categoria": "",
     "pinned": false,
     "id": 1770585770587
+  },
+  {
+    "titolo": "Echoes of the End",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xoc.webp",
+    "saga": "",
+    "annoUscita": "2025",
+    "annoGiocato": "",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1771015191812
   }
 ]
