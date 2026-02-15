@@ -36,6 +36,10 @@ const App = () => {
   const [chosenGame, setChosenGame] = useState(null);
   const [showPinNotification, setShowPinNotification] = useState(false);
   const [spinTitle, setSpinTitle] = useState('');
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = localStorage.getItem('darkMode');
+    return saved ? JSON.parse(saved) : true;
+  });
   const [history, setHistory] = useState(() => {
     const saved = localStorage.getItem('spinHistory');
     return saved ? JSON.parse(saved) : [];
@@ -46,6 +50,8 @@ const App = () => {
   });
 
   useEffect(() => { localStorage.setItem('spinHistory', JSON.stringify(history)); }, [history]);
+
+  useEffect(() => { localStorage.setItem('darkMode', JSON.stringify(isDarkMode)); }, [isDarkMode]);
 
   const fetchGames = async () => {
     try {
@@ -210,7 +216,7 @@ const App = () => {
     });
 
   return (
-    <div className="app-container">
+    <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
 
       <datalist id="lista-saghe">
         {suggerimentiSaghe.map((s, i) => <option key={i} value={s} />)}
@@ -230,9 +236,14 @@ const App = () => {
       <div className={`sidebar ${isCollapsed ? 'collapsed' : ''} ${isMobileOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header">
           {!isCollapsed && <h2>LA MIA LISTA</h2>}
-          <button onClick={() => setIsCollapsed(!isCollapsed)}>
-            {isCollapsed ? '➡' : '⬅'}
-          </button>
+          <div style={{ display: 'flex', flexDirection: isCollapsed ? 'column' : 'row', gap: '8px' }}>
+            <button onClick={() => setIsDarkMode(!isDarkMode)} title={isDarkMode ? 'Light Mode' : 'Dark Mode'}>
+              {isDarkMode ? '☀️' : '🌙'}
+            </button>
+            <button onClick={() => setIsCollapsed(!isCollapsed)}>
+              {isCollapsed ? '➡' : '⬅'}
+            </button>
+          </div>
         </div>
 
         {!isCollapsed && (
