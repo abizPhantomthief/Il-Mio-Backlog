@@ -3199,12 +3199,13 @@
     "id": 312,
     "saga": "",
     "titolo": "Grim Fandango",
-    "piattaforma": "",
+    "piattaforma": "PS4",
     "annoUscita": "1998",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25r3.webp",
-    "stato": "Non Giocato",
-    "pinned": true
+    "stato": "In corso",
+    "pinned": false,
+    "categoria": ""
   },
   {
     "id": 313,
