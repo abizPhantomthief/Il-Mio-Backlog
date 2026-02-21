@@ -178,10 +178,10 @@ const App = () => {
   const filteredGames = games
     .filter(game => {
       const matchesSearch = game.titolo?.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesYear = filterYear === 'Tutti' || filterYear === '-' ? true : dividiStringa(game.annoGiocato).includes(filterYear);
+      const matchesYear = filterYear === 'Tutti' || dividiStringa(game.annoGiocato).includes(filterYear);
       const matchesSaga = selectedSaga === 'Tutte' || (selectedSaga === 'Senza Saga' ? !pulisciNomeSaga(game.saga) : pulisciNomeSaga(game.saga) === selectedSaga);
-      const matchesStatus = filterStatus === 'Tutti' || filterStatus === '-' ? true : game.stato === filterStatus;
-      const matchesCategory = filterCategory === 'Tutte' || filterCategory === '-' ? true : dividiStringa(game.categoria).includes(filterCategory);
+      const matchesStatus = filterStatus === 'Tutti' || game.stato === filterStatus;
+      const matchesCategory = filterCategory === 'Tutte' || dividiStringa(game.categoria).includes(filterCategory);
       const matchesPlatform = sortPlatform === 'Default' || dividiStringa(game.piattaforma).includes(sortPlatform);
       const matchesReleaseYear = sortYear === 'Default' || sortYear === 'Crescente' || sortYear === 'Decrescente' || String(game.annoUscita).trim() === sortYear;
       return matchesSearch && matchesYear && matchesSaga && matchesStatus && matchesCategory && matchesPlatform && matchesReleaseYear;
@@ -338,18 +338,15 @@ const App = () => {
         <div className="filter-bar">
           <input id="search" name="search" type="text" placeholder="🔍 Cerca tra i tuoi giochi..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="search-input" />
           <select id="filterStatus" name="filterStatus" value={filterStatus} onChange={e => setFilterStatus(e.target.value)} className="filter-select" style={{ color: filterStatus === 'Tutti' ? 'white' : getColorStato(filterStatus) }}>
-            {filterStatus === 'Tutti' ? <option value="Tutti">Stato di Gioco</option> : <option value="-">-</option>}
-            {filterStatus !== 'Tutti' && <option value="Tutti">Stato di Gioco</option>}
+            <option value="Tutti">Stato di Gioco</option>
             {['Non Giocato', 'In corso', 'Completato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
           </select>
           <select id="filterYear" name="filterYear" value={filterYear} onChange={e => setFilterYear(e.target.value)} className="filter-select">
-            {filterYear === 'Tutti' ? <option value="Tutti">Anno di Gioco</option> : <option value="-">-</option>}
-            {filterYear !== 'Tutti' && <option value="Tutti">Anno di Gioco</option>}
+            <option value="Tutti">Anno di Gioco</option>
             {anniPerFiltro.map(y => <option key={y} value={y}>{y}</option>)}
           </select>
           <select id="filterCategory" name="filterCategory" value={filterCategory} onChange={e => setFilterCategory(e.target.value)} className="filter-select">
-            {filterCategory === 'Tutte' ? <option value="Tutte">Categoria</option> : <option value="-">-</option>}
-            {filterCategory !== 'Tutte' && <option value="Tutte">Categoria</option>}
+            <option value="Tutte">Categoria</option>
             {suggerimentiCategorie.map(c => <option key={c} value={c}>{c}</option>)}
           </select>
           <select id="sortTitle" name="sortTitle" value={sortTitle} onChange={e => setSortTitle(e.target.value)} className="filter-select">
