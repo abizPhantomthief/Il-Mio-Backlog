@@ -2876,7 +2876,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qqn.webp",
     "stato": "Non Giocato",
     "categoria": "",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 281,
@@ -3203,7 +3203,7 @@
     "annoUscita": "1998",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25r3.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "pinned": false,
     "categoria": ""
   },
@@ -3235,7 +3235,7 @@
     "annoUscita": "2020",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39vc.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "pinned": false,
     "categoria": ""
   },
@@ -7387,7 +7387,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20pq.webp",
     "stato": "Non Giocato",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 723,
@@ -8195,7 +8195,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4p88.webp",
     "stato": "Non Giocato",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 802,
