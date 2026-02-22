@@ -7087,16 +7087,6 @@
     "categoria": "Emulato"
   },
   {
-    "id": 693,
-    "saga": "Metroid Series",
-    "titolo": "Metroid Fusion",
-    "piattaforma": "",
-    "annoUscita": "2002",
-    "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3w49.webp",
-    "stato": "Non Giocato"
-  },
-  {
     "id": 694,
     "saga": "Metroid Series",
     "titolo": "Metroid Prime",
@@ -7118,37 +7108,6 @@
     "categoria": "Emulato"
   },
   {
-    "id": 696,
-    "saga": "Metroid Series",
-    "titolo": "Metroid Prime 2: Echoes",
-    "piattaforma": "",
-    "annoUscita": "2004",
-    "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1w7n.webp",
-    "stato": "Non Giocato"
-  },
-  {
-    "id": 697,
-    "saga": "Metroid Series",
-    "titolo": "Metroid Prime 3: Corruption",
-    "piattaforma": "",
-    "annoUscita": "2007",
-    "annoGiocato": "",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wwp.webp",
-    "stato": "Non Giocato"
-  },
-  {
-    "id": 698,
-    "saga": "Metroid Series",
-    "titolo": "Metroid: Other M",
-    "piattaforma": "",
-    "annoUscita": "2010",
-    "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3m7m.webp",
-    "stato": "Non Giocato",
-    "categoria": ""
-  },
-  {
     "id": 699,
     "saga": "Metroid Series",
     "titolo": "Metroid: Samus Returns",
@@ -7157,16 +7116,6 @@
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3j82.webp",
     "stato": "Completato"
-  },
-  {
-    "id": 700,
-    "saga": "Metroid Series",
-    "titolo": "Metroid Dread",
-    "piattaforma": "",
-    "annoUscita": "2021",
-    "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39zx.webp",
-    "stato": "Non Giocato"
   },
   {
     "id": 701,
