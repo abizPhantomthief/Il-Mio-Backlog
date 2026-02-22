@@ -6659,11 +6659,11 @@
     "id": 651,
     "saga": "",
     "titolo": "Split Fiction",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2025",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95gf.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 652,
@@ -7079,12 +7079,12 @@
     "id": 692,
     "saga": "Metroid Series",
     "titolo": "Super Metroid",
-    "piattaforma": "",
+    "piattaforma": "SNES",
     "annoUscita": "1994",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5osy.webp",
-    "stato": "Non Giocato",
-    "categoria": ""
+    "stato": "In corso",
+    "categoria": "Emulato"
   },
   {
     "id": 693,
