@@ -1717,7 +1717,7 @@
     "annoUscita": 2011,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1t1w.webp",
-    "stato": "Sospeso"
+    "stato": "Droppato"
   },
   {
     "id": 168,
@@ -2738,7 +2738,7 @@
   },
   {
     "id": 267,
-    "saga": "",
+    "saga": "Final Fantasy Series",
     "titolo": "Final Fantasy XII",
     "piattaforma": "",
     "annoUscita": "2006",
@@ -8318,7 +8318,7 @@
     "annoUscita": "1994",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xup.webp",
-    "stato": ""
+    "stato": "Non Giocato"
   },
   {
     "id": 819,
