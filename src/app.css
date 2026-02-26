@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -697,6 +699,8 @@ textarea {
   font-size: 18px;
   line-height: 1.2;
   color: var(--text-primary);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 .card-title .year {
@@ -796,6 +800,12 @@ textarea {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   text-align: center;
   color: var(--text-primary);
+}
+
+.spinner-title,
+.modal-content h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }
 
 .modal-content h2 {
