@@ -3879,12 +3879,13 @@
     "id": 378,
     "saga": "Kirby Series",
     "titolo": "Kirby e la Stoffa dell'Eroe",
-    "piattaforma": "",
+    "piattaforma": "N3DS",
     "annoUscita": "2010",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1w9w.webp",
-    "stato": "Non Giocato",
-    "pinned": true
+    "stato": "In corso",
+    "pinned": false,
+    "categoria": "Emulato"
   },
   {
     "id": 379,

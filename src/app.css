@@ -4,7 +4,17 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Kanit:wght@400;500;700&display=swap');
+
+/* Titles use Montserrat font */
+
+/* Generic heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kanit', sans-serif;
+}
+
+/* Titles use Kanit font */
+
 
 html, body {
   margin: 0;
@@ -121,6 +131,7 @@ textarea {
   margin-top: 20px;
   margin-bottom: 10px;
   color: var(--text-secondary);
+  /* font-family set by generic heading rule above */
 }
 
 .flex-center {

@@ -320,7 +320,7 @@ const App = () => {
                 onClick={() => { setSelectedSaga('Tutte'); setIsMobileOpen(false); }}>Tutte le Saghe</div>
               <div className={`saga-item ${selectedSaga === 'Senza Saga' ? 'active' : ''}`}
                 onClick={() => { setSelectedSaga('Senza Saga'); setIsMobileOpen(false); }}>
-                Senza Saga <span className="saga-count">({sagaStats['Senza Saga']})</span>
+                Senza Saga <span className="saga-count">({sagaStats['Senza Saga']} {sagaStats['Senza Saga'] === 1 ? 'titolo' : 'titoli'})</span>
               </div>
               {Object.keys(sagaStats).filter(s => s !== 'Senza Saga').sort().map(s => (
                 <div key={s} className={`saga-item ${selectedSaga === s ? 'active' : ''}`}
