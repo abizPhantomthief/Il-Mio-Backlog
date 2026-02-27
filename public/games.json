@@ -6076,12 +6076,12 @@
     "id": 594,
     "saga": "Resident Evil Series",
     "titolo": "Resident Evil Requiem",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2026",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0nx.webp",
-    "stato": "Non Giocato",
-    "categoria": "In Uscita"
+    "stato": "In corso",
+    "categoria": ""
   },
   {
     "id": 595,
