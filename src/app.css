@@ -479,6 +479,329 @@ textarea {
   gap: 30px;
 }
 
+/* List View */
+.games-grid.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.games-grid.list-view .game-card {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  width: 100%;
+  min-height: 180px;
+}
+
+.games-grid.list-view .image-container {
+  width: 180px;
+  min-width: 180px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.games-grid.list-view .main-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.games-grid.list-view .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 20px;
+  gap: 20px;
+}
+
+.games-grid.list-view .status-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 8px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  min-width: 70px;
+  text-align: center;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.games-grid.list-view .list-view-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.games-grid.list-view .card-title {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.games-grid.list-view .platforms-tags {
+  margin-top: 8px;
+}
+
+.games-grid.list-view .saga-info-list {
+  color: var(--accent-primary);
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.games-grid.list-view .played-info-list {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin: 0;
+}
+
+.games-grid.list-view .note-text-list {
+  color: var(--accent-tertiary);
+  font-size: 12px;
+  font-style: italic;
+  margin: 0;
+}
+
+.games-grid.list-view .category-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.games-grid.list-view .category-tag-list {
+  color: var(--text-secondary);
+  font-size: 10px;
+  background: rgba(16, 185, 129, 0.08);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Status badge in list view */
+.games-grid.list-view .status-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 8px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  min-width: 70px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.status-badge-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-left: 15px;
+}
+
+/* Metacritic Score Box */
+.metacritic-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 16px;
+  color: white;
+  flex-shrink: 0;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* Metacritic Score on Card (Grid View) */
+.metacritic-score-card {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 16px;
+  color: white;
+  z-index: 5;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* View Toggle Buttons */
+.view-toggle {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.view-btn {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.view-btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-primary);
+}
+
+.view-btn.active {
+  background: var(--accent-primary);
+  color: #000;
+  border-color: var(--accent-primary);
+}
+
+/* Edit Button Card */
+.edit-btn-card {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  transition: all 0.2s ease;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-btn-card:hover {
+  transform: scale(1.2);
+}
+
+/* Pin Button */
+.pin-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  transition: all 0.2s ease;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Info Mask Admin */
+.info-mask-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.info-mask-hint {
+  font-size: 11px;
+  color: var(--accent-primary);
+  font-style: italic;
+}
+
+/* Edit Game Modal */
+.edit-game-modal {
+  max-width: 700px;
+  text-align: left;
+}
+
+.edit-game-modal h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.edit-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.edit-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.edit-form-group label {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.edit-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.edit-modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Modal Saving */
+.modal-saving {
+  max-width: 300px;
+}
+
+.modal-saving h3 {
+  margin-top: 20px;
+  color: var(--accent-primary);
+}
+
+.saving-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--border-subtle);
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 /* Game Card */
 .game-card {
   background: var(--bg-tertiary);
@@ -499,26 +822,6 @@ textarea {
 .game-card.pinned {
   border: 2px solid var(--accent-tertiary);
   box-shadow: 0 0 20px rgba(234, 179, 8, 0.2);
-}
-
-/* Pin Button */
-.pin-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid var(--accent-primary);
-  border-radius: 8px;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 18px;
-  z-index: 10;
-  transition: all 0.2s ease;
-}
-
-.pin-btn:hover {
-  background: rgba(16, 185, 129, 0.2);
-  transform: scale(1.1);
 }
 
 /* Image Container */
@@ -1057,6 +1360,18 @@ datalist {
     gap: 15px;
   }
 
+  .games-grid.list-view .game-card {
+    flex-direction: column;
+    max-width: none;
+    min-height: auto;
+  }
+
+  .games-grid.list-view .image-container {
+    width: 100%;
+    min-width: 100%;
+    height: 250px;
+  }
+
   .image-container {
     height: auto;
     aspect-ratio: auto;
@@ -1068,6 +1383,10 @@ datalist {
   }
 
   .preview-section {
+    display: none;
+  }
+
+  .view-toggle {
     display: none;
   }
 }

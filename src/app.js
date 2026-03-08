@@ -16,6 +16,33 @@ const App = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [viewMode, setViewMode] = useState('grid');
+  const [editingGame, setEditingGame] = useState(null);
+  const [isSaving, setIsSaving] = useState(false);
+  const [editedGameData, setEditedGameData] = useState(null);
+
+  const openEditModal = (game) => {
+    setEditingGame(game);
+    setEditedGameData({ ...game });
+  };
+
+  const closeEditModal = () => {
+    setEditingGame(null);
+    setEditedGameData(null);
+  };
+
+  const saveGameChanges = async () => {
+    setIsSaving(true);
+    await new Promise(resolve => setTimeout(resolve, 800));
+    const nuovaLista = games.map(g => g.id === editedGameData.id ? editedGameData : g);
+    setGames(nuovaLista);
+    if (window.location.hostname === 'localhost') {
+      await axios.post('http://localhost:5000/api/games/update', nuovaLista);
+    }
+    setIsSaving(false);
+    setEditingGame(null);
+    setEditedGameData(null);
+  };
 
   // Password e Accesso Admin
   useEffect(() => {
@@ -46,7 +73,7 @@ const App = () => {
   });
 
   const [newGame, setNewGame] = useState({
-    titolo: '', copertina: '', saga: '', annoUscita: '', annoGiocato: '', piattaforma: '', stato: 'Non Giocato', note: '', categoria: '', pinned: false
+    titolo: '', copertina: '', saga: '', annoUscita: '', annoGiocato: '', piattaforma: '', stato: 'Non Giocato', note: '', categoria: '', pinned: false, voto: ''
   });
 
   useEffect(() => { localStorage.setItem('spinHistory', JSON.stringify(history)); }, [history]);
@@ -78,6 +105,24 @@ const App = () => {
     }
   };
 
+  const getColorStatoTransparent = (stato) => {
+    switch (stato) {
+      case 'Completato': return 'rgba(39, 174, 96, 0.15)';
+      case 'In corso': return 'rgba(241, 196, 15, 0.15)';
+      case 'Droppato': return 'rgba(231, 76, 60, 0.15)';
+      case 'Sospeso': return 'rgba(230, 126, 34, 0.15)';
+      default: return 'rgba(127, 140, 141, 0.15)';
+    }
+  };
+
+  const getMetacriticColor = (voto) => {
+    if (!voto || voto === '-' || voto === '') return '#555';
+    const num = parseInt(voto);
+    if (num >= 75) return '#66cc33'; // Verde
+    if (num >= 50) return '#ffcc33'; // Giallo
+    return '#ff3333'; // Rosso
+  };
+
   const formatStatoDisplay = (stato) => {
     return stato?.toUpperCase();
   };
@@ -86,6 +131,133 @@ const App = () => {
     if (!saga) return "";
     return String(saga).replace(/Series/gi, "").replace(/Saga/gi, "").trim();
   };
+
+  const renderGameCardGrid = (game) => (
+    <div key={game.id} className={`game-card ${game.pinned ? 'pinned' : ''}`}>
+      {(isAdmin || game.pinned) && (
+        <>
+          <div
+            className="pin-btn"
+            onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
+            title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
+            style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
+          >
+            {game.pinned ? '📌' : '📍'}
+          </div>
+          {isAdmin && (
+            <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
+              ⚙️
+            </button>
+          )}
+        </>
+      )}
+
+      <div className="image-container">
+        <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
+        <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
+        <div className="metacritic-score-card" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
+          {game.voto && game.voto !== '-' && game.voto !== '' ? game.voto : '-'}
+        </div>
+        <div className="info-mask">
+          {isAdmin ? (
+            <div className="info-mask-admin">
+              <button className="delete-btn" onClick={() => eliminaGioco(game.id, game.titolo)}>ELIMINA 🗑</button>
+              <p className="info-mask-hint">Usa l'ingranaggio per modificare</p>
+            </div>
+          ) : (
+            <div className="info-mask-center">
+              {game.saga && game.saga !== "-" && <h3 className="saga-info">{game.saga}</h3>}
+              <div className="category-tags">
+                {dividiStringa(game.categoria).map((c, i) => (
+                  <span key={i} className="category-tag">#{c}</span>
+                ))}
+              </div>
+              <p className="played-info">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
+              {game.note && <p className="note-text">{game.note}</p>}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="card-content">
+        <div className="status-badge" style={{ backgroundColor: getColorStato(game.stato) }}><span className="status-display">{formatStatoDisplay(game.stato)}</span></div>
+        <h4 className="card-title">
+          {game.titolo}
+          {game.annoUscita && <span className="year">({game.annoUscita})</span>}
+        </h4>
+        <div className="platforms-tags">
+          {dividiStringa(game.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
+          {dividiStringa(game.categoria).map((c, i) => <span key={i} className="category-chip">{c}</span>)}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderGameCardList = (game) => (
+    <div 
+      key={game.id} 
+      className={`game-card ${game.pinned ? 'pinned' : ''}`}
+      style={{ backgroundColor: getColorStatoTransparent(game.stato) }}
+    >
+      {(isAdmin || game.pinned) && (
+        <>
+          <div
+            className="pin-btn"
+            onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
+            title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
+            style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
+          >
+            {game.pinned ? '📌' : '📍'}
+          </div>
+          {isAdmin && (
+            <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
+              ⚙️
+            </button>
+          )}
+        </>
+      )}
+
+      <div className="image-container">
+        <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
+        <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
+        {isAdmin && (
+          <div className="info-mask">
+            <button className="delete-btn" onClick={() => eliminaGioco(game.id, game.titolo)}>ELIMINA 🗑</button>
+            <p className="info-mask-hint">Usa l'ingranaggio per modificare</p>
+          </div>
+        )}
+      </div>
+
+      <div className="card-content">
+        <div className="list-view-info">
+          <h4 className="card-title">
+            {game.titolo}
+            {game.annoUscita && <span className="year">({game.annoUscita})</span>}
+          </h4>
+          {game.saga && game.saga !== "-" && <p className="saga-info-list">{game.saga}</p>}
+          <p className="played-info-list">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
+          {game.note && <p className="note-text-list">{game.note}</p>}
+          <div className="category-tags-list">
+            {dividiStringa(game.categoria).map((c, i) => (
+              <span key={i} className="category-tag-list">#{c}</span>
+            ))}
+          </div>
+          <div className="platforms-tags">
+            {dividiStringa(game.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
+            {dividiStringa(game.categoria).map((c, i) => <span key={i} className="category-chip">{c}</span>)}
+          </div>
+        </div>
+        <div className="status-badge-wrapper">
+          <div className="status-badge" style={{ backgroundColor: getColorStato(game.stato) }}>
+            <span className="status-display">{formatStatoDisplay(game.stato)}</span>
+          </div>
+          <div className="metacritic-score" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
+            {game.voto && game.voto !== '-' && game.voto !== '' ? game.voto : '-'}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
   const modificaCampo = async (id, campo, valore) => {
     if (!isAdmin && campo !== 'pinned') return;
@@ -285,6 +457,9 @@ const App = () => {
                           <select id="stato" name="stato" className="form-select" value={newGame.stato} onChange={e => setNewGame({ ...newGame, stato: e.target.value })}>
                             {['Non Giocato', 'In corso', 'Completato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
                           </select>
+                          <div className="form-row">
+                            <input id="voto" name="voto" type="number" min="1" max="100" placeholder="Voto (1-100)" className="form-input" value={newGame.voto} onChange={e => setNewGame({ ...newGame, voto: e.target.value })} />
+                          </div>
                           <textarea id="note" name="note" placeholder="Note personali..." className="form-textarea" value={newGame.note} onChange={e => setNewGame({ ...newGame, note: e.target.value })} />
                           <div className="form-buttons">
                             <button type="button" className="form-btn cancel" onClick={() => setShowAddForm(false)}>ANNULLA</button>
@@ -302,6 +477,9 @@ const App = () => {
                           <div className="card-content">
                             <div className="status-badge" style={{ backgroundColor: getColorStato(newGame.stato) }}><span className="status-display">{formatStatoDisplay(newGame.stato)}</span></div>
                             <h4 className="card-title">{newGame.titolo || 'Titolo del Gioco'}</h4>
+                            <div className="metacritic-score" style={{ backgroundColor: getMetacriticColor(newGame.voto) }}>
+                              {newGame.voto && newGame.voto !== '' ? newGame.voto : '-'}
+                            </div>
                             <div className="platforms-tags">
                               {dividiStringa(newGame.piattaforma).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
                             </div>
@@ -366,74 +544,29 @@ const App = () => {
             <option value="Default">Piattaforme</option>
             {suggerimentiPiattaforme.map(p => <option key={p} value={p}>{p}</option>)}
           </select>
+          <div className="view-toggle">
+            <button 
+              className={`view-btn ${viewMode === 'grid' ? 'active' : ''}`} 
+              onClick={() => setViewMode('grid')}
+              title="Vista Griglia"
+            >
+              ⊞
+            </button>
+            <button 
+              className={`view-btn ${viewMode === 'list' ? 'active' : ''}`} 
+              onClick={() => setViewMode('list')}
+              title="Vista Lista"
+            >
+              ☰
+            </button>
+          </div>
         </div>
 
         {filteredGames.filter(g => g.pinned).length > 0 && (
           <div>
             <h3 className="section-title-pinned">📌 FISSATI</h3>
-            <div className="games-grid">
-              {filteredGames.filter(g => g.pinned).map(game => (
-                <div key={game.id} className={`game-card ${game.pinned ? 'pinned' : ''}`}>
-
-              {/* TASTO PIN */}
-              {(isAdmin || game.pinned) && (
-                <div
-                  className="pin-btn"
-                  onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
-                  title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
-                  style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
-                >
-                  {game.pinned ? '📌' : '📍'}
-                </div>
-              )}
-
-              <div className="image-container">
-                <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
-                <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
-                <div className="info-mask">
-                  {isAdmin ? (
-                    <div>
-                      <button className="delete-btn" onClick={() => eliminaGioco(game.id, game.titolo)}>ELIMINA 🗑</button>
-                      <select id={`stato-${game.id}`} name={`stato-${game.id}`} className="status-select" style={{ backgroundColor: getColorStato(game.stato) }} value={game.stato} onChange={e => modificaCampo(game.id, 'stato', e.target.value)}>
-                        {['Non Giocato', 'Completato', 'In corso', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
-                      </select>
-                      <input id={`saga-${game.id}`} name={`saga-${game.id}`} type="text" placeholder="Saga" list="lista-saghe" className="edit-input" defaultValue={game.saga || ''} onBlur={e => modificaCampo(game.id, 'saga', e.target.value)} />
-                      <div className="form-row">
-                        <input id={`cat-${game.id}`} name={`cat-${game.id}`} type="text" placeholder="Categoria" list="lista-categorie" className="edit-input" defaultValue={game.categoria || ''} onBlur={e => modificaCampo(game.id, 'categoria', e.target.value)} />
-                        <input id={`annoUsc-${game.id}`} name={`annoUsc-${game.id}`} type="text" placeholder="Anno" className="edit-input" defaultValue={game.annoUscita || ''} onBlur={e => modificaCampo(game.id, 'annoUscita', e.target.value)} />
-                      </div>
-                      <input id={`piatt-${game.id}`} name={`piatt-${game.id}`} type="text" placeholder="Piattaforme" list="lista-piattaforme" className="edit-input platform-input-admin" defaultValue={game.piattaforma || ''} onBlur={e => modificaCampo(game.id, 'piattaforma', e.target.value)} />
-                      <input id={`annoGioc-${game.id}`} name={`annoGioc-${game.id}`} type="text" placeholder="Anno Giocato" className="edit-input" defaultValue={game.annoGiocato || ''} onBlur={e => modificaCampo(game.id, 'annoGiocato', e.target.value)} />
-                      <input id={`note-${game.id}`} name={`note-${game.id}`} type="text" placeholder="Note" className="edit-input" defaultValue={game.note || ''} onBlur={e => modificaCampo(game.id, 'note', e.target.value)} />
-                    </div>
-                  ) : (
-                    <div className="info-mask-center">
-                      {game.saga && game.saga !== "-" && <h3 className="saga-info">{game.saga}</h3>}
-                      <div className="category-tags">
-                        {dividiStringa(game.categoria).map((c, i) => (
-                          <span key={i} className="category-tag">#{c}</span>
-                        ))}
-                      </div>
-                      <p className="played-info">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
-                      {game.note && <p className="note-text">{game.note}</p>}
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <div className="card-content">
-                <div className="status-badge" style={{ backgroundColor: getColorStato(game.stato) }}><span className="status-display">{formatStatoDisplay(game.stato)}</span></div>
-                <h4 className="card-title">
-                  {game.titolo}
-                  {game.annoUscita && <span className="year">({game.annoUscita})</span>}
-                </h4>
-                <div className="platforms-tags">
-                  {dividiStringa(game.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
-                  {dividiStringa(game.categoria).map((c, i) => <span key={i} className="category-chip">{c}</span>)}
-                </div>
-              </div>
-            </div>
-              ))}
+            <div className={`games-grid ${viewMode === 'list' ? 'list-view' : ''}`}>
+              {filteredGames.filter(g => g.pinned).map(game => viewMode === 'list' ? renderGameCardList(game) : renderGameCardGrid(game))}
             </div>
           </div>
         )}
@@ -441,73 +574,87 @@ const App = () => {
         {filteredGames.filter(g => !g.pinned).length > 0 && (
           <div>
             <h3 className="section-title-games">GIOCHI ({filteredGames.filter(g => !g.pinned).length})</h3>
-            <div className="games-grid">
-              {filteredGames.filter(g => !g.pinned).map(game => (
-                <div key={game.id} className={`game-card ${game.pinned ? 'pinned' : ''}`}>
-
-              {/* TASTO PIN */}
-              {(isAdmin || game.pinned) && (
-                <div
-                  className="pin-btn"
-                  onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
-                  title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
-                  style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
-                >
-                  {game.pinned ? '📌' : '📍'}
-                </div>
-              )}
-
-              <div className="image-container">
-                <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
-                <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
-                <div className="info-mask">
-                  {isAdmin ? (
-                    <div>
-                      <button className="delete-btn" onClick={() => eliminaGioco(game.id, game.titolo)}>ELIMINA 🗑</button>
-                      <select id={`stato-${game.id}`} name={`stato-${game.id}`} className="status-select" style={{ backgroundColor: getColorStato(game.stato) }} value={game.stato} onChange={e => modificaCampo(game.id, 'stato', e.target.value)}>
-                        {['Non Giocato', 'Completato', 'In corso', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
-                      </select>
-                      <input id={`saga-${game.id}`} name={`saga-${game.id}`} type="text" placeholder="Saga" list="lista-saghe" className="edit-input" defaultValue={game.saga || ''} onBlur={e => modificaCampo(game.id, 'saga', e.target.value)} />
-                      <div className="form-row">
-                        <input id={`cat-${game.id}`} name={`cat-${game.id}`} type="text" placeholder="Categoria" list="lista-categorie" className="edit-input" defaultValue={game.categoria || ''} onBlur={e => modificaCampo(game.id, 'categoria', e.target.value)} />
-                        <input id={`annoUsc-${game.id}`} name={`annoUsc-${game.id}`} type="text" placeholder="Anno" className="edit-input" defaultValue={game.annoUscita || ''} onBlur={e => modificaCampo(game.id, 'annoUscita', e.target.value)} />
-                      </div>
-                      <input id={`piatt-${game.id}`} name={`piatt-${game.id}`} type="text" placeholder="Piattaforme" list="lista-piattaforme" className="edit-input platform-input-admin" defaultValue={game.piattaforma || ''} onBlur={e => modificaCampo(game.id, 'piattaforma', e.target.value)} />
-                      <input id={`annoGioc-${game.id}`} name={`annoGioc-${game.id}`} type="text" placeholder="Anno Giocato" className="edit-input" defaultValue={game.annoGiocato || ''} onBlur={e => modificaCampo(game.id, 'annoGiocato', e.target.value)} />
-                      <input id={`note-${game.id}`} name={`note-${game.id}`} type="text" placeholder="Note" className="edit-input" defaultValue={game.note || ''} onBlur={e => modificaCampo(game.id, 'note', e.target.value)} />
-                    </div>
-                  ) : (
-                    <div className="info-mask-center">
-                      {game.saga && game.saga !== "-" && <h3 className="saga-info">{game.saga}</h3>}
-                      <div className="category-tags">
-                        {dividiStringa(game.categoria).map((c, i) => (
-                          <span key={i} className="category-tag">#{c}</span>
-                        ))}
-                      </div>
-                      <p className="played-info">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
-                      {game.note && <p className="note-text">{game.note}</p>}
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <div className="card-content">
-                <div className="status-badge" style={{ backgroundColor: getColorStato(game.stato) }}><span className="status-display">{formatStatoDisplay(game.stato)}</span></div>
-                <h4 className="card-title">
-                  {game.titolo}
-                  {game.annoUscita && <span className="year">({game.annoUscita})</span>}
-                </h4>
-                <div className="platforms-tags">
-                  {dividiStringa(game.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
-                  {dividiStringa(game.categoria).map((c, i) => <span key={i} className="category-chip">{c}</span>)}
-                </div>
-              </div>
-            </div>
-              ))}
+            <div className={`games-grid ${viewMode === 'list' ? 'list-view' : ''}`}>
+              {filteredGames.filter(g => !g.pinned).map(game => viewMode === 'list' ? renderGameCardList(game) : renderGameCardGrid(game))}
             </div>
           </div>
         )}
       </div>
+
+      {/* Modale di Modifica Gioco */}
+      {editingGame && editedGameData && (
+        <div className="modal-overlay">
+          <div className="modal-content edit-game-modal">
+            <h2>Modifica Gioco</h2>
+            <div className="edit-modal-body">
+              <div className="edit-form-group">
+                <label>Titolo</label>
+                <input type="text" className="form-input" value={editedGameData.titolo} onChange={e => setEditedGameData({ ...editedGameData, titolo: e.target.value })} />
+              </div>
+              <div className="edit-form-group">
+                <label>Copertina URL</label>
+                <input type="text" className="form-input" value={editedGameData.copertina} onChange={e => setEditedGameData({ ...editedGameData, copertina: e.target.value })} />
+              </div>
+              <div className="edit-form-row">
+                <div className="edit-form-group">
+                  <label>Saga</label>
+                  <input type="text" className="form-input" list="lista-saghe" value={editedGameData.saga} onChange={e => setEditedGameData({ ...editedGameData, saga: e.target.value })} />
+                </div>
+                <div className="edit-form-group">
+                  <label>Categoria</label>
+                  <input type="text" className="form-input" list="lista-categorie" value={editedGameData.categoria} onChange={e => setEditedGameData({ ...editedGameData, categoria: e.target.value })} />
+                </div>
+              </div>
+              <div className="edit-form-row">
+                <div className="edit-form-group">
+                  <label>Anno Uscita</label>
+                  <input type="text" className="form-input" value={editedGameData.annoUscita} onChange={e => setEditedGameData({ ...editedGameData, annoUscita: e.target.value })} />
+                </div>
+                <div className="edit-form-group">
+                  <label>Anno Giocato</label>
+                  <input type="text" className="form-input" value={editedGameData.annoGiocato} onChange={e => setEditedGameData({ ...editedGameData, annoGiocato: e.target.value })} />
+                </div>
+              </div>
+              <div className="edit-form-row">
+                <div className="edit-form-group">
+                  <label>Piattaforme</label>
+                  <input type="text" className="form-input" list="lista-piattaforme" value={editedGameData.piattaforma} onChange={e => setEditedGameData({ ...editedGameData, piattaforma: e.target.value })} />
+                </div>
+                <div className="edit-form-group">
+                  <label>Stato</label>
+                  <select className="form-select" value={editedGameData.stato} onChange={e => setEditedGameData({ ...editedGameData, stato: e.target.value })}>
+                    {['Non Giocato', 'In corso', 'Completato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
+                  </select>
+                </div>
+              </div>
+              <div className="edit-form-row">
+                <div className="edit-form-group">
+                  <label>Voto (1-100)</label>
+                  <input type="number" min="1" max="100" placeholder="-" className="form-input" value={editedGameData.voto || ''} onChange={e => setEditedGameData({ ...editedGameData, voto: e.target.value })} />
+                </div>
+              </div>
+              <div className="edit-form-group">
+                <label>Note</label>
+                <textarea className="form-textarea" value={editedGameData.note} onChange={e => setEditedGameData({ ...editedGameData, note: e.target.value })} />
+              </div>
+            </div>
+            <div className="edit-modal-actions">
+              <button className="form-btn cancel" onClick={closeEditModal}>ANNULLA</button>
+              <button className="form-btn submit" onClick={saveGameChanges}>SALVA MODIFICHE</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Conferma Salvataggio */}
+      {isSaving && (
+        <div className="modal-overlay">
+          <div className="modal-content modal-saving">
+            <div className="saving-spinner"></div>
+            <h3>Salvataggio in corso...</h3>
+          </div>
+        </div>
+      )}
 
       {(isSpinning || chosenGame) && (
         <div className="modal-overlay">

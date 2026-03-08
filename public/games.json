@@ -9,7 +9,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vtb.webp",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": ""
+    "categoria": "",
+    "voto": ""
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
     "annoUscita": "2015",
     "annoGiocato": "2023",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wwn.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": ""
   },
   {
     "id": 4,
@@ -1799,7 +1801,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4nzt.webp",
     "stato": "Non Giocato",
     "categoria": "Obiettivo 2026",
-    "pinned": true
+    "pinned": true,
+    "voto": ""
   },
   {
     "id": 176,
