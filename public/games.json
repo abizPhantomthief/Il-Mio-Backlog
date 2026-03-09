@@ -33,7 +33,7 @@
     "annoGiocato": "2023",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wwn.webp",
     "stato": "Completato",
-    "voto": ""
+    "voto": "70"
   },
   {
     "id": 4,
@@ -54,7 +54,8 @@
     "annoUscita": "2019",
     "annoGiocato": 2021,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1lat.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "74"
   },
   {
     "id": 6,
@@ -64,7 +65,8 @@
     "annoUscita": 2022,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pwb.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "77"
   },
   {
     "id": 7,
@@ -74,7 +76,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vca.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "76"
   },
   {
     "id": 8,
@@ -84,7 +87,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4qqz.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "68"
   },
   {
     "id": 9,
@@ -94,7 +98,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28sy.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "60"
   },
   {
     "id": 10,
@@ -104,7 +109,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ilk.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "82"
   },
   {
     "id": 11,
@@ -114,7 +120,8 @@
     "annoUscita": 2023,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5val.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "63"
   },
   {
     "id": 12,
@@ -125,7 +132,8 @@
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dft.webp",
     "stato": "Completato",
-    "note": ""
+    "note": "",
+    "voto": "79"
   },
   {
     "id": 13,
@@ -155,7 +163,8 @@
     "annoUscita": 1986,
     "annoGiocato": 2026,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ewj.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "70"
   },
   {
     "id": 16,
@@ -185,7 +194,8 @@
     "annoUscita": 2000,
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2bwl.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "70"
   },
   {
     "id": 19,
@@ -195,7 +205,8 @@
     "annoUscita": 2011,
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n91.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "75"
   },
   {
     "id": 20,
@@ -205,7 +216,8 @@
     "annoUscita": 2010,
     "annoGiocato": "2017",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qq5.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "74"
   },
   {
     "id": 21,
@@ -215,7 +227,8 @@
     "annoUscita": 2013,
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rdf.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "72"
   },
   {
     "id": 22,
@@ -235,7 +248,8 @@
     "annoUscita": 2024,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4hdh.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "89"
   },
   {
     "id": 24,
@@ -257,7 +271,8 @@
     "annoUscita": 1991,
     "annoGiocato": 2018,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9svc.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "50"
   },
   {
     "id": 26,
@@ -287,7 +302,8 @@
     "annoUscita": 2015,
     "annoGiocato": 2019,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co493k.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "20"
   },
   {
     "id": 29,
@@ -307,7 +323,8 @@
     "annoUscita": 2007,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rrw.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "80"
   },
   {
     "id": 31,
@@ -329,7 +346,8 @@
     "annoGiocato": "2013, 2023",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rcf.webp",
     "stato": "Completato",
-    "note": "Rigiocato"
+    "note": "Rigiocato",
+    "voto": "79"
   },
   {
     "id": 33,
@@ -515,7 +533,8 @@
     "annoUscita": 2012,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4961.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "66"
   },
   {
     "id": 51,
@@ -545,7 +564,8 @@
     "annoUscita": "2023",
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "82"
   },
   {
     "id": 54,
@@ -677,7 +697,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h99.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "65"
   },
   {
     "id": 67,
@@ -697,7 +718,8 @@
     "annoUscita": 2013,
     "annoGiocato": 2014,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8r4w.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "80"
   },
   {
     "id": 69,
@@ -793,7 +815,8 @@
     "annoGiocato": 2016,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rba.webp",
     "stato": "Completato",
-    "categoria": ""
+    "categoria": "",
+    "voto": "90"
   },
   {
     "id": 78,
@@ -803,7 +826,8 @@
     "annoUscita": "2022",
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4euc.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "78"
   },
   {
     "id": 79,
@@ -907,7 +931,8 @@
     "annoUscita": 2013,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rro.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "72"
   },
   {
     "id": 89,
@@ -917,7 +942,8 @@
     "annoUscita": 2020,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co45t5.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "71"
   },
   {
     "id": 90,
@@ -927,7 +953,8 @@
     "annoUscita": 2011,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7abq.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "69"
   },
   {
     "id": 91,
@@ -937,7 +964,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2018,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2306.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "60"
   },
   {
     "id": 92,
@@ -947,7 +975,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2d3a.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "48"
   },
   {
     "id": 93,
@@ -957,7 +986,8 @@
     "annoUscita": 2006,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lc9.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "85"
   },
   {
     "id": 94,
@@ -970,7 +1000,8 @@
     "stato": "Completato",
     "pinned": false,
     "note": "",
-    "categoria": "Streaming Playstation Plus"
+    "categoria": "Streaming Playstation Plus",
+    "voto": "69"
   },
   {
     "id": 95,
@@ -1193,7 +1224,8 @@
     "annoUscita": 2017,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qlq.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "75"
   },
   {
     "id": 117,
@@ -1203,7 +1235,8 @@
     "annoUscita": 2012,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e3g.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "92"
   },
   {
     "id": 118,
@@ -1213,7 +1246,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3byy.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "94"
   },
   {
     "id": 119,
@@ -1261,11 +1295,11 @@
     "id": 123,
     "saga": "",
     "titolo": "Clair Obscur: Expedition 33",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2025",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gam.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 124,
@@ -1275,7 +1309,8 @@
     "annoUscita": 2014,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wf9.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "60"
   },
   {
     "id": 125,
@@ -1295,7 +1330,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2019,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r69.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "73"
   },
   {
     "id": 127,
@@ -1325,7 +1361,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2019,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6nv0.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "20"
   },
   {
     "id": 130,
@@ -1335,7 +1372,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3u25.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "77"
   },
   {
     "id": 131,
@@ -1435,7 +1473,8 @@
     "annoUscita": 2007,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2on1.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "83"
   },
   {
     "id": 141,
@@ -1458,7 +1497,8 @@
     "annoUscita": 2017,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co62ao.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "90"
   },
   {
     "id": 143,
@@ -1468,7 +1508,8 @@
     "annoUscita": 2020,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "75"
   },
   {
     "id": 144,
@@ -1490,7 +1531,8 @@
     "annoUscita": 2010,
     "annoGiocato": 2015,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28oa.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "76"
   },
   {
     "id": 146,
@@ -1856,7 +1898,8 @@
     "annoUscita": 2009,
     "annoGiocato": 2015,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27sk.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "82"
   },
   {
     "id": 181,
@@ -1866,7 +1909,8 @@
     "annoUscita": 2020,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kj9.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "85"
   },
   {
     "id": 182,
@@ -1906,7 +1950,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mzf.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "86"
   },
   {
     "id": 186,
@@ -2054,7 +2099,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sfj.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "89"
   },
   {
     "id": 200,
@@ -2330,7 +2376,8 @@
     "annoUscita": 2014,
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2pzw.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "75"
   },
   {
     "id": 227,
@@ -2352,7 +2399,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2021,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7fva.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "70"
   },
   {
     "id": 229,
@@ -2455,7 +2503,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p7n.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "40"
   },
   {
     "id": 239,
@@ -2495,7 +2544,8 @@
     "annoUscita": 2005,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3rhh.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "79"
   },
   {
     "id": 243,
@@ -2847,7 +2897,8 @@
     "annoUscita": 2003,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p0m.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "88"
   },
   {
     "id": 277,
@@ -3900,10 +3951,10 @@
     "saga": "Kirby Series",
     "titolo": "Kirby e la Nuova Stoffa dell'Eroe",
     "piattaforma": "N3DS",
-    "annoUscita": "2010",
+    "annoUscita": "2019",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co69p5.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "pinned": false,
     "categoria": "Emulato"
   },
