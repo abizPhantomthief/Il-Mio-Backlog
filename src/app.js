@@ -75,7 +75,7 @@ const App = () => {
   });
 
   const [newGame, setNewGame] = useState({
-    titolo: '', copertina: '', saga: '', annoUscita: '', annoGiocato: '', piattaforma: '', stato: 'Non Giocato', note: '', categoria: '', pinned: false, voto: '', dlcType: '', parentId: null
+    titolo: '', copertina: '', saga: '', annoUscita: '', annoGiocato: '', piattaforma: '', stato: 'Non Giocato', note: '', categoria: '', pinned: false, voto: '', dlcType: '', parentId: null, includeInCount: false
   });
 
   const [expandedDlcs, setExpandedDlcs] = useState({});
@@ -230,6 +230,11 @@ const App = () => {
             {game.titolo}
             {game.annoUscita && <span className="year">({game.annoUscita})</span>}
           </h4>
+          {game.dlcType && (
+            <div className="dlc-type-badge" style={{ background: getDlcTypeColor(game.dlcType) }}>
+              {getDlcTypeLabel(game.dlcType)}
+            </div>
+          )}
           <div className="platforms-tags">
             {dividiStringa(game.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
             {dividiStringa(game.categoria).map((c, i) => <span key={i} className="category-chip">{c}</span>)}
@@ -240,12 +245,13 @@ const App = () => {
           <div className="dlc-container">
             {dlcs.map(dlc => (
               <div key={dlc.id} className="dlc-card">
-                <div className="dlc-badge" style={{ background: getDlcTypeColor(dlc.dlcType || 'dlc') }}>{getDlcTypeLabel(dlc.dlcType || 'dlc')}</div>
                 <img src={dlc.copertina} className="dlc-img" alt={dlc.titolo} />
                 <div className="dlc-content">
-                  <h5 className="dlc-title">{dlc.titolo}</h5>
+                  <h5 className="dlc-title">
+                    {dlc.titolo}
+                    {dlc.annoUscita && <span className="dlc-year"> ({dlc.annoUscita})</span>}
+                  </h5>
                   <div className="dlc-meta">
-                    {dlc.annoUscita && <span className="dlc-year">{dlc.annoUscita}</span>}
                     <span className="dlc-status" style={{ color: getColorStato(dlc.stato) }}>{formatStatoDisplay(dlc.stato)}</span>
                     {dlc.voto && dlc.voto !== '-' && dlc.voto !== '' && (
                       <span className="dlc-vote" style={{ backgroundColor: getMetacriticColor(dlc.voto) }}>{dlc.voto}</span>
@@ -258,6 +264,7 @@ const App = () => {
                     </div>
                   </div>
                 </div>
+                <div className="dlc-type-badge" style={{ background: getDlcTypeColor(dlc.dlcType || 'dlc') }}>{getDlcTypeLabel(dlc.dlcType || 'dlc')}</div>
                 {isAdmin && (
                   <button className="dlc-edit-btn" onClick={() => openEditModal(dlc)}>⚙️</button>
                 )}
@@ -329,6 +336,11 @@ const App = () => {
             {game.parentId && (
               <p className="dlc-parent-info">Gioco Base: <b>{getDlcParentTitle(game.parentId)}</b></p>
             )}
+            {game.dlcType && (
+              <span className="dlc-type-badge" style={{ background: getDlcTypeColor(game.dlcType), marginBottom: '6px' }}>
+                {getDlcTypeLabel(game.dlcType)}
+              </span>
+            )}
             <p className="played-info-list">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
             {game.note && <p className="note-text-list">{game.note}</p>}
             <div className="platforms-tags">
@@ -360,12 +372,13 @@ const App = () => {
       <div className="dlc-container list-view">
         {dlcs.map(dlc => (
           <div key={dlc.id} className="dlc-card">
-            <div className="dlc-badge" style={{ background: getDlcTypeColor(dlc.dlcType || 'dlc') }}>{getDlcTypeLabel(dlc.dlcType || 'dlc')}</div>
             <img src={dlc.copertina} className="dlc-img" alt={dlc.titolo} />
             <div className="dlc-content">
-              <h5 className="dlc-title">{dlc.titolo}</h5>
+              <h5 className="dlc-title">
+                {dlc.titolo}
+                {dlc.annoUscita && <span className="dlc-year"> ({dlc.annoUscita})</span>}
+              </h5>
               <div className="dlc-meta">
-                {dlc.annoUscita && <span className="dlc-year">{dlc.annoUscita}</span>}
                 <span className="dlc-status" style={{ color: getColorStato(dlc.stato) }}>{formatStatoDisplay(dlc.stato)}</span>
                 {dlc.voto && dlc.voto !== '-' && dlc.voto !== '' && (
                   <span className="dlc-vote" style={{ backgroundColor: getMetacriticColor(dlc.voto) }}>{dlc.voto}</span>
@@ -378,6 +391,7 @@ const App = () => {
                 </div>
               </div>
             </div>
+            <div className="dlc-type-badge" style={{ background: getDlcTypeColor(dlc.dlcType || 'dlc') }}>{getDlcTypeLabel(dlc.dlcType || 'dlc')}</div>
             {isAdmin && (
               <button className="dlc-edit-btn" onClick={() => openEditModal(dlc)}>⚙️</button>
             )}
@@ -455,7 +469,10 @@ const App = () => {
     spin();
   };
 
-  const isDlc = (game) => game.isDlc || game.parentId || game.dlcType;
+  const isDlc = (game) => {
+    if (game.includeInCount) return false;
+    return game.isDlc || game.parentId || game.dlcType;
+  };
 
   const getSagaStats = () => {
     const stats = { 'Senza Saga': 0 };
@@ -473,7 +490,9 @@ const App = () => {
 
   const getStatisticheTotali = () => {
     const gamesWithoutDlcs = games.filter(g => !isDlc(g));
+    const dlcGames = games.filter(g => isDlc(g));
     const totale = gamesWithoutDlcs.length;
+    const totaleDlcs = dlcGames.length;
     const completati = gamesWithoutDlcs.filter(g => g.stato === 'Completato').length;
     const inCorso = gamesWithoutDlcs.filter(g => g.stato === 'In corso').length;
     const droppati = gamesWithoutDlcs.filter(g => g.stato === 'Droppato').length;
@@ -511,8 +530,38 @@ const App = () => {
       });
     });
 
+    // DLC Stats
+    const dlcPerTipo = { dlc: 0, espansione: 0, riedizione: 0 };
+    dlcGames.forEach(g => {
+      const type = g.dlcType || 'dlc';
+      dlcPerTipo[type] = (dlcPerTipo[type] || 0) + 1;
+    });
+
+    const dlcCompletati = dlcGames.filter(g => g.stato === 'Completato').length;
+    const dlcInCorso = dlcGames.filter(g => g.stato === 'In corso').length;
+    const dlcDroppati = dlcGames.filter(g => g.stato === 'Droppato').length;
+    const dlcSospesi = dlcGames.filter(g => g.stato === 'Sospeso').length;
+    const dlcNonGiocati = dlcGames.filter(g => g.stato === 'Non Giocato').length;
+
+    const dlcPerAnno = {};
+    dlcGames.forEach(g => {
+      dividiStringa(g.annoGiocato).forEach(a => {
+        if (a && a !== '-' && a !== '') {
+          dlcPerAnno[a] = (dlcPerAnno[a] || 0) + 1;
+        }
+      });
+    });
+
+    const dlcPerPiattaforma = {};
+    dlcGames.forEach(g => {
+      dividiStringa(g.piattaforma).forEach(p => {
+        dlcPerPiattaforma[p] = (dlcPerPiattaforma[p] || 0) + 1;
+      });
+    });
+
     return {
       totale,
+      totaleDlcs,
       completati,
       inCorso,
       droppati,
@@ -524,11 +573,24 @@ const App = () => {
       piattaforme: Object.entries(piattaforme).sort((a, b) => b[1] - a[1]),
       categorie: Object.entries(categorie).sort((a, b) => b[1] - a[1]),
       giochiPerAnno: Object.entries(giochiPerAnno).sort((a, b) => parseInt(b[0]) - parseInt(a[0])),
-      saga: Object.entries(sagaStats).filter(s => s[0] !== 'Senza Saga').sort((a, b) => b[1] - a[1])
+      saga: Object.entries(sagaStats).filter(s => s[0] !== 'Senza Saga').sort((a, b) => b[1] - a[1]),
+      dlcPerTipo,
+      dlcCompletati,
+      dlcInCorso,
+      dlcDroppati,
+      dlcSospesi,
+      dlcNonGiocati,
+      dlcPerAnno: Object.entries(dlcPerAnno).sort((a, b) => parseInt(b[0]) - parseInt(a[0])),
+      dlcPerPiattaforma: Object.entries(dlcPerPiattaforma).sort((a, b) => b[1] - a[1])
     };
   };
 
   const statistiche = getStatisticheTotali();
+
+  const getMaxValue = (data) => {
+    if (!data || data.length === 0) return 1;
+    return Math.max(...data.map(([, value]) => value));
+  };
 
   const anniPerFiltro = [...new Set(games.flatMap(g => dividiStringa(g.annoGiocato)))].filter(anno => anno !== '-' && anno !== '').sort((a, b) => parseInt(b) - parseInt(a));
   const anniUscita = [...new Set(games.filter(g => g.annoUscita && String(g.annoUscita).trim() !== '' && String(g.annoUscita).trim() !== '-').map(g => String(g.annoUscita).trim()))].sort((a, b) => parseInt(b) - parseInt(a));
@@ -627,7 +689,7 @@ const App = () => {
         {!isCollapsed && (
           <>
             <div className="sidebar-stats" onClick={() => setShowStats(true)} style={{ cursor: 'pointer' }}>
-              Totale: <b>{games.length}</b> | Da giocare: <b>{games.filter(g => g.stato === 'Non Giocato').length}</b>
+              Totale: <b>{games.filter(g => !isDlc(g)).length}</b> | Da giocare: <b>{games.filter(g => !isDlc(g) && g.stato === 'Non Giocato').length}</b>
               {isAdmin && (
                 <div className="admin-status">
                   <span className="admin-badge">● ADMIN ATTIVO</span>
@@ -673,8 +735,8 @@ const App = () => {
                             <select
                               className="form-select"
                               value={newGame.dlcType || ''}
-                              onChange={e => setNewGame({ 
-                                ...newGame, 
+                              onChange={e => setNewGame({
+                                ...newGame,
                                 dlcType: e.target.value,
                                 parentId: e.target.value ? (newGame.parentId || (games.length > 0 ? games[0].id : null)) : null
                               })}
@@ -695,6 +757,16 @@ const App = () => {
                                   <option key={g.id} value={g.id}>{g.titolo} ({g.piattaforma || 'N/A'})</option>
                                 ))}
                               </select>
+                            )}
+                            {newGame.dlcType && (
+                              <label className="include-count-checkbox">
+                                <input
+                                  type="checkbox"
+                                  checked={newGame.includeInCount}
+                                  onChange={e => setNewGame({ ...newGame, includeInCount: e.target.checked })}
+                                />
+                                Includi nel conteggio totale
+                              </label>
                             )}
                           </div>
                           <textarea id="note" name="note" placeholder="Note personali..." className="form-textarea" value={newGame.note} onChange={e => setNewGame({ ...newGame, note: e.target.value })} />
@@ -756,11 +828,15 @@ const App = () => {
               <h2>📊 STATISTICHE TOTALI</h2>
               <button className="back-btn" onClick={() => setShowStats(false)}>← TORNA AI GIOCHI</button>
             </div>
-            
+
             <div className="stats-grid">
               <div className="stat-card">
                 <h3>📚 TOTALE GIOCHI</h3>
                 <p className="stat-number">{statistiche.totale}</p>
+              </div>
+              <div className="stat-card">
+                <h3>📦 TOTALE DLC/ESPANSIONI</h3>
+                <p className="stat-number">{statistiche.totaleDlcs}</p>
               </div>
               <div className="stat-card">
                 <h3>📌 FISSATI</h3>
@@ -775,82 +851,217 @@ const App = () => {
 
             <div className="stats-section">
               <h3>📈 STATO DEI GIOCHI</h3>
-              <div className="stats-bars">
-                <div className="stat-bar-item">
-                  <span>Completati</span>
-                  <div className="stat-bar"><div className="stat-bar-fill" style={{ width: `${(statistiche.completati / statistiche.totale) * 100}%`, backgroundColor: '#27ae60' }}></div></div>
-                  <span className="stat-bar-value">{statistiche.completati}</span>
+              <div className="tower-chart-container">
+                <div className="tower-chart">
+                  <div className="tower-bar" style={{ height: `${(statistiche.completati / Math.max(statistiche.completati, statistiche.inCorso, statistiche.sospesi, statistiche.droppati, statistiche.nonGiocati, 1)) * 100}%`, backgroundColor: '#27ae60' }}>
+                    <span className="tower-value">{statistiche.completati}</span>
+                  </div>
+                  <div className="tower-bar" style={{ height: `${(statistiche.inCorso / Math.max(statistiche.completati, statistiche.inCorso, statistiche.sospesi, statistiche.droppati, statistiche.nonGiocati, 1)) * 100}%`, backgroundColor: '#f1c40f' }}>
+                    <span className="tower-value">{statistiche.inCorso}</span>
+                  </div>
+                  <div className="tower-bar" style={{ height: `${(statistiche.sospesi / Math.max(statistiche.completati, statistiche.inCorso, statistiche.sospesi, statistiche.droppati, statistiche.nonGiocati, 1)) * 100}%`, backgroundColor: '#e67e22' }}>
+                    <span className="tower-value">{statistiche.sospesi}</span>
+                  </div>
+                  <div className="tower-bar" style={{ height: `${(statistiche.droppati / Math.max(statistiche.completati, statistiche.inCorso, statistiche.sospesi, statistiche.droppati, statistiche.nonGiocati, 1)) * 100}%`, backgroundColor: '#e74c3c' }}>
+                    <span className="tower-value">{statistiche.droppati}</span>
+                  </div>
+                  <div className="tower-bar" style={{ height: `${(statistiche.nonGiocati / Math.max(statistiche.completati, statistiche.inCorso, statistiche.sospesi, statistiche.droppati, statistiche.nonGiocati, 1)) * 100}%`, backgroundColor: '#7f8c8d' }}>
+                    <span className="tower-value">{statistiche.nonGiocati}</span>
+                  </div>
                 </div>
-                <div className="stat-bar-item">
-                  <span>In Corso</span>
-                  <div className="stat-bar"><div className="stat-bar-fill" style={{ width: `${(statistiche.inCorso / statistiche.totale) * 100}%`, backgroundColor: '#f1c40f' }}></div></div>
-                  <span className="stat-bar-value">{statistiche.inCorso}</span>
+                <div className="tower-chart-legend">
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#27ae60' }}></span>Completati</div>
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#f1c40f' }}></span>In Corso</div>
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#e67e22' }}></span>Sospesi</div>
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#e74c3c' }}></span>Droppati</div>
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#7f8c8d' }}></span>Non Giocati</div>
                 </div>
-                <div className="stat-bar-item">
-                  <span>Sospesi</span>
-                  <div className="stat-bar"><div className="stat-bar-fill" style={{ width: `${(statistiche.sospesi / statistiche.totale) * 100}%`, backgroundColor: '#e67e22' }}></div></div>
-                  <span className="stat-bar-value">{statistiche.sospesi}</span>
+              </div>
+            </div>
+
+            <div className="stats-section">
+              <h3>📦 STATO DLC/ESPANSIONI</h3>
+              <div className="tower-chart-container">
+                <div className="tower-chart">
+                  <div className="tower-bar" style={{ height: `${(statistiche.dlcCompletati / Math.max(statistiche.dlcCompletati, statistiche.dlcInCorso, statistiche.dlcSospesi, statistiche.dlcDroppati, statistiche.dlcNonGiocati, 1)) * 100}%`, backgroundColor: '#27ae60' }}>
+                    <span className="tower-value">{statistiche.dlcCompletati}</span>
+                  </div>
+                  <div className="tower-bar" style={{ height: `${(statistiche.dlcInCorso / Math.max(statistiche.dlcCompletati, statistiche.dlcInCorso, statistiche.dlcSospesi, statistiche.dlcDroppati, statistiche.dlcNonGiocati, 1)) * 100}%`, backgroundColor: '#f1c40f' }}>
+                    <span className="tower-value">{statistiche.dlcInCorso}</span>
+                  </div>
+                  <div className="tower-bar" style={{ height: `${(statistiche.dlcSospesi / Math.max(statistiche.dlcCompletati, statistiche.dlcInCorso, statistiche.dlcSospesi, statistiche.dlcDroppati, statistiche.dlcNonGiocati, 1)) * 100}%`, backgroundColor: '#e67e22' }}>
+                    <span className="tower-value">{statistiche.dlcSospesi}</span>
+                  </div>
+                  <div className="tower-bar" style={{ height: `${(statistiche.dlcDroppati / Math.max(statistiche.dlcCompletati, statistiche.dlcInCorso, statistiche.dlcSospesi, statistiche.dlcDroppati, statistiche.dlcNonGiocati, 1)) * 100}%`, backgroundColor: '#e74c3c' }}>
+                    <span className="tower-value">{statistiche.dlcDroppati}</span>
+                  </div>
+                  <div className="tower-bar" style={{ height: `${(statistiche.dlcNonGiocati / Math.max(statistiche.dlcCompletati, statistiche.dlcInCorso, statistiche.dlcSospesi, statistiche.dlcDroppati, statistiche.dlcNonGiocati, 1)) * 100}%`, backgroundColor: '#7f8c8d' }}>
+                    <span className="tower-value">{statistiche.dlcNonGiocati}</span>
+                  </div>
                 </div>
-                <div className="stat-bar-item">
-                  <span>Droppati</span>
-                  <div className="stat-bar"><div className="stat-bar-fill" style={{ width: `${(statistiche.droppati / statistiche.totale) * 100}%`, backgroundColor: '#e74c3c' }}></div></div>
-                  <span className="stat-bar-value">{statistiche.droppati}</span>
-                </div>
-                <div className="stat-bar-item">
-                  <span>Non Giocati</span>
-                  <div className="stat-bar"><div className="stat-bar-fill" style={{ width: `${(statistiche.nonGiocati / statistiche.totale) * 100}%`, backgroundColor: '#7f8c8d' }}></div></div>
-                  <span className="stat-bar-value">{statistiche.nonGiocati}</span>
+                <div className="tower-chart-legend">
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#27ae60' }}></span>Completati</div>
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#f1c40f' }}></span>In Corso</div>
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#e67e22' }}></span>Sospesi</div>
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#e74c3c' }}></span>Droppati</div>
+                  <div className="legend-item"><span className="legend-color" style={{ backgroundColor: '#7f8c8d' }}></span>Non Giocati</div>
                 </div>
               </div>
             </div>
 
             <div className="stats-section">
               <h3>🎮 PIATTAFORME PRINCIPALI</h3>
-              <div className="stats-list">
-                {statistiche.piattaforme.slice(0, 10).map(([nome, count]) => (
-                  <div key={nome} className="stats-list-item">
-                    <span>{nome}</span>
-                    <span className="stats-count">{count}</span>
-                  </div>
-                ))}
+              <div className="tower-chart-container">
+                <div className="tower-chart">
+                  {statistiche.piattaforme.slice(0, 10).map(([nome, count], index) => {
+                    const maxValue = getMaxValue(statistiche.piattaforme.slice(0, 10));
+                    return (
+                      <div key={nome} className="tower-bar" style={{ height: `${(count / maxValue) * 100}%`, backgroundColor: ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c', '#7f8c8d', '#3498db', '#9b59b6', '#1abc9c', '#e91e63', '#00bcd4'][index % 10] }}>
+                        <span className="tower-value">{count}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="tower-chart-legend">
+                  {statistiche.piattaforme.slice(0, 10).map(([nome], index) => (
+                    <div key={nome} className="legend-item">
+                      <span className="legend-color" style={{ backgroundColor: ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c', '#7f8c8d', '#3498db', '#9b59b6', '#1abc9c', '#e91e63', '#00bcd4'][index % 10] }}></span>
+                      {nome}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
             <div className="stats-section">
               <h3>🏷️ CATEGORIE</h3>
-              <div className="stats-list">
-                {statistiche.categorie.slice(0, 10).map(([nome, count]) => (
-                  <div key={nome} className="stats-list-item">
-                    <span>{nome}</span>
-                    <span className="stats-count">{count}</span>
-                  </div>
-                ))}
+              <div className="tower-chart-container">
+                <div className="tower-chart">
+                  {statistiche.categorie.slice(0, 10).map(([nome, count], index) => {
+                    const maxValue = getMaxValue(statistiche.categorie.slice(0, 10));
+                    return (
+                      <div key={nome} className="tower-bar" style={{ height: `${(count / maxValue) * 100}%`, backgroundColor: ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c', '#7f8c8d', '#3498db', '#9b59b6', '#1abc9c', '#e91e63', '#00bcd4'][index % 10] }}>
+                        <span className="tower-value">{count}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="tower-chart-legend">
+                  {statistiche.categorie.slice(0, 10).map(([nome], index) => (
+                    <div key={nome} className="legend-item">
+                      <span className="legend-color" style={{ backgroundColor: ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c', '#7f8c8d', '#3498db', '#9b59b6', '#1abc9c', '#e91e63', '#00bcd4'][index % 10] }}></span>
+                      {nome}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
             <div className="stats-section">
               <h3>📅 GIOCHI PER ANNO</h3>
-              <div className="stats-list">
-                {statistiche.giochiPerAnno.slice(0, 10).map(([anno, count]) => (
-                  <div key={anno} className="stats-list-item">
-                    <span>{anno}</span>
-                    <span className="stats-count">{count}</span>
-                  </div>
-                ))}
+              <div className="tower-chart-container">
+                <div className="tower-chart">
+                  {statistiche.giochiPerAnno.slice(0, 10).map(([anno, count], index) => {
+                    const maxValue = getMaxValue(statistiche.giochiPerAnno.slice(0, 10));
+                    return (
+                      <div key={anno} className="tower-bar" style={{ height: `${(count / maxValue) * 100}%`, backgroundColor: ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c', '#7f8c8d', '#3498db', '#9b59b6', '#1abc9c', '#e91e63', '#00bcd4'][index % 10] }}>
+                        <span className="tower-value">{count}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="tower-chart-legend">
+                  {statistiche.giochiPerAnno.slice(0, 10).map(([anno], index) => (
+                    <div key={anno} className="legend-item">
+                      <span className="legend-color" style={{ backgroundColor: ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c', '#7f8c8d', '#3498db', '#9b59b6', '#1abc9c', '#e91e63', '#00bcd4'][index % 10] }}></span>
+                      {anno}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
             <div className="stats-section">
               <h3>📖 SAGHE PRINCIPALI</h3>
-              <div className="stats-list">
-                {statistiche.saga.slice(0, 10).map(([nome, count]) => (
-                  <div key={nome} className="stats-list-item">
-                    <span>{nome}</span>
-                    <span className="stats-count">{count}</span>
-                  </div>
-                ))}
+              <div className="tower-chart-container">
+                <div className="tower-chart">
+                  {statistiche.saga.slice(0, 10).map(([nome, count], index) => {
+                    const maxValue = getMaxValue(statistiche.saga.slice(0, 10));
+                    return (
+                      <div key={nome} className="tower-bar" style={{ height: `${(count / maxValue) * 100}%`, backgroundColor: ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c', '#7f8c8d', '#3498db', '#9b59b6', '#1abc9c', '#e91e63', '#00bcd4'][index % 10] }}>
+                        <span className="tower-value">{count}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="tower-chart-legend">
+                  {statistiche.saga.slice(0, 10).map(([nome], index) => (
+                    <div key={nome} className="legend-item">
+                      <span className="legend-color" style={{ backgroundColor: ['#27ae60', '#f1c40f', '#e67e22', '#e74c3c', '#7f8c8d', '#3498db', '#9b59b6', '#1abc9c', '#e91e63', '#00bcd4'][index % 10] }}></span>
+                      {nome}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+
+            {statistiche.totaleDlcs > 0 && (
+              <div className="stats-section">
+                <h3>📦 DLC PER TIPO</h3>
+                <div className="tower-chart-container">
+                  <div className="tower-chart">
+                    {Object.entries(statistiche.dlcPerTipo).filter(([, v]) => v > 0).map(([tipo, count], index) => {
+                      const maxValue = getMaxValue(Object.entries(statistiche.dlcPerTipo).filter(([, v]) => v > 0));
+                      const color = tipo === 'dlc' ? '#f39c12' : tipo === 'espansione' ? '#9b59b6' : '#3498db';
+                      const label = tipo === 'dlc' ? 'DLC' : tipo === 'espansione' ? 'Espansione' : 'Riedizione';
+                      return (
+                        <div key={tipo} className="tower-bar" style={{ height: `${(count / maxValue) * 100}%`, backgroundColor: color }}>
+                          <span className="tower-value">{count}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="tower-chart-legend">
+                    {Object.entries(statistiche.dlcPerTipo).filter(([, v]) => v > 0).map(([tipo], index) => {
+                      const color = tipo === 'dlc' ? '#f39c12' : tipo === 'espansione' ? '#9b59b6' : '#3498db';
+                      const label = tipo === 'dlc' ? '📦 DLC' : tipo === 'espansione' ? '🎮 Espansione' : '🔄 Riedizione';
+                      return (
+                        <div key={tipo} className="legend-item">
+                          <span className="legend-color" style={{ backgroundColor: color }}></span>
+                          {label}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {statistiche.totaleDlcs > 0 && (
+              <div className="stats-section">
+                <h3>📅 DLC PER ANNO</h3>
+                <div className="tower-chart-container">
+                  <div className="tower-chart">
+                    {statistiche.dlcPerAnno.slice(0, 10).map(([anno, count], index) => {
+                      const maxValue = getMaxValue(statistiche.dlcPerAnno.slice(0, 10));
+                      return (
+                        <div key={anno} className="tower-bar" style={{ height: `${(count / maxValue) * 100}%`, backgroundColor: ['#f39c12', '#9b59b6', '#3498db', '#1abc9c', '#e91e63', '#00bcd4', '#e67e22', '#e74c3c', '#7f8c8d', '#f1c40f'][index % 10] }}>
+                          <span className="tower-value">{count}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="tower-chart-legend">
+                    {statistiche.dlcPerAnno.slice(0, 10).map(([anno], index) => (
+                      <div key={anno} className="legend-item">
+                        <span className="legend-color" style={{ backgroundColor: ['#f39c12', '#9b59b6', '#3498db', '#1abc9c', '#e91e63', '#00bcd4', '#e67e22', '#e74c3c', '#7f8c8d', '#f1c40f'][index % 10] }}></span>
+                        {anno}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <div className="filter-bar">
@@ -868,8 +1079,7 @@ const App = () => {
             {suggerimentiCategorie.map(c => <option key={c} value={c}>{c}</option>)}
           </select>
           <select id="filterDlc" name="filterDlc" value={filterDlc} onChange={e => setFilterDlc(e.target.value)} className="filter-select">
-            <option value="Tutti">Tipo</option>
-            <option value="Solo Base">Solo Giochi Base</option>
+            <option value="Solo Base">Giochi Base</option>
             <option value="Solo DLC">Solo DLC/Espansioni</option>
           </select>
           <select id="sortTitle" name="sortTitle" value={sortTitle} onChange={e => setSortTitle(e.target.value)} className="filter-select">
@@ -907,7 +1117,7 @@ const App = () => {
           </div>
         </div>
         )}
-        {filteredGames.filter(g => g.pinned).length > 0 && (
+        {!showStats && filteredGames.filter(g => g.pinned).length > 0 && (
           <div>
             <h3 className="section-title-pinned">📌 FISSATI</h3>
             <div className={`games-grid ${viewMode === 'list' ? 'list-view' : ''}`}>
@@ -921,7 +1131,7 @@ const App = () => {
           </div>
         )}
 
-        {filteredGames.filter(g => !g.pinned).length > 0 && (
+        {!showStats && filteredGames.filter(g => !g.pinned).length > 0 && (
           <div>
             <h3 className="section-title-games">GIOCHI ({filteredGames.filter(g => !g.pinned).length})</h3>
             <div className={`games-grid ${viewMode === 'list' ? 'list-view' : ''}`}>
@@ -1017,6 +1227,16 @@ const App = () => {
                       <option key={g.id} value={g.id}>{g.titolo} ({g.piattaforma || 'N/A'})</option>
                     ))}
                   </select>
+                )}
+                {editedGameData.dlcType && (
+                  <label className="include-count-checkbox">
+                    <input
+                      type="checkbox"
+                      checked={editedGameData.includeInCount || false}
+                      onChange={e => setEditedGameData({ ...editedGameData, includeInCount: e.target.checked })}
+                    />
+                    Includi nel conteggio totale
+                  </label>
                 )}
               </div>
               <div className="edit-form-group">
