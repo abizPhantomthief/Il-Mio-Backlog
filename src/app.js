@@ -75,7 +75,7 @@ const App = () => {
   });
 
   const [newGame, setNewGame] = useState({
-    titolo: '', copertina: '', saga: '', annoUscita: '', annoGiocato: '', piattaforma: '', stato: 'Non Giocato', note: '', categoria: '', pinned: false, voto: '', dlcType: '', parentId: null, includeInCount: false
+    titolo: '', copertina: '', saga: '', annoUscita: '', annoGiocato: '', piattaforma: '', stato: 'Non Giocato', note: '', categoria: '', pinned: false, /* voto: '', */ dlcType: '', parentId: null, includeInCount: false
   });
 
   const [expandedDlcs, setExpandedDlcs] = useState({});
@@ -200,9 +200,9 @@ const App = () => {
         <div className="image-container">
           <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
           <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
-          <div className="metacritic-score-card" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
+          {/* <div className="metacritic-score-card" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
             {game.voto && game.voto !== '-' && game.voto !== '' ? game.voto : '-'}
-          </div>
+          </div> */}
           <div className="info-mask">
             {isAdmin ? (
               <div className="info-mask-admin">
@@ -352,9 +352,9 @@ const App = () => {
             <div className="status-badge" style={{ backgroundColor: getColorStato(game.stato) }}>
               <span className="status-display">{formatStatoDisplay(game.stato)}</span>
             </div>
-            <div className="metacritic-score" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
+            {/* <div className="metacritic-score" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
               {game.voto && game.voto !== '-' && game.voto !== '' ? game.voto : '-'}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -380,9 +380,9 @@ const App = () => {
               </h5>
               <div className="dlc-meta">
                 <span className="dlc-status" style={{ color: getColorStato(dlc.stato) }}>{formatStatoDisplay(dlc.stato)}</span>
-                {dlc.voto && dlc.voto !== '-' && dlc.voto !== '' && (
+                {/* {dlc.voto && dlc.voto !== '-' && dlc.voto !== '' && (
                   <span className="dlc-vote" style={{ backgroundColor: getMetacriticColor(dlc.voto) }}>{dlc.voto}</span>
-                )}
+                )} */}
               </div>
               <div className="dlc-played-platform">
                 <span className="dlc-played-info">Giocato nel: <b>{dlc.annoGiocato || '---'}</b></span>
@@ -725,9 +725,9 @@ const App = () => {
                           <select id="stato" name="stato" className="form-select" value={newGame.stato} onChange={e => setNewGame({ ...newGame, stato: e.target.value })}>
                             {['Non Giocato', 'In corso', 'Completato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
                           </select>
-                          <div className="form-row">
+                          {/* <div className="form-row">
                             <input id="voto" name="voto" type="number" min="1" max="100" placeholder="Voto (1-100)" className="form-input" value={newGame.voto} onChange={e => setNewGame({ ...newGame, voto: e.target.value })} />
-                          </div>
+                          </div> */}
                           <div className="form-row dlc-option-row">
                             <label className="dlc-select-label">
                               Tipo di Contenuto
@@ -786,9 +786,9 @@ const App = () => {
                           <div className="card-content">
                             <div className="status-badge" style={{ backgroundColor: getColorStato(newGame.stato) }}><span className="status-display">{formatStatoDisplay(newGame.stato)}</span></div>
                             <h4 className="card-title">{newGame.titolo || 'Titolo del Gioco'}</h4>
-                            <div className="metacritic-score" style={{ backgroundColor: getMetacriticColor(newGame.voto) }}>
+                            {/* <div className="metacritic-score" style={{ backgroundColor: getMetacriticColor(newGame.voto) }}>
                               {newGame.voto && newGame.voto !== '' ? newGame.voto : '-'}
-                            </div>
+                            </div> */}
                             <div className="platforms-tags">
                               {dividiStringa(newGame.piattaforma).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
                             </div>
@@ -842,11 +842,11 @@ const App = () => {
                 <h3>📌 FISSATI</h3>
                 <p className="stat-number">{statistiche.pinned}</p>
               </div>
-              <div className="stat-card">
+              {/* <div className="stat-card">
                 <h3>⭐ VOTO MEDIO</h3>
                 <p className="stat-number">{statistiche.giochiConVoto > 0 ? statistiche.votoMedio : 'N/A'}</p>
                 {statistiche.giochiConVoto > 0 && <span className="stat-subtitle">su {statistiche.giochiConVoto} giochi</span>}
-              </div>
+              </div> */}
             </div>
 
             <div className="stats-section">
@@ -1193,10 +1193,10 @@ const App = () => {
                 </div>
               </div>
               <div className="edit-form-row">
-                <div className="edit-form-group">
+                {/* <div className="edit-form-group">
                   <label>Voto (1-100)</label>
                   <input type="number" min="1" max="100" placeholder="-" className="form-input" value={editedGameData.voto || ''} onChange={e => setEditedGameData({ ...editedGameData, voto: e.target.value })} />
-                </div>
+                </div> */}
               </div>
               <div className="edit-form-row dlc-option-row">
                 <label className="dlc-select-label">
