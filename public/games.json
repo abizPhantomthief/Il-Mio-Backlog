@@ -308,11 +308,11 @@
   {
     "id": 29,
     "saga": "",
-    "titolo": "Armored Core",
+    "titolo": "Armored Core VI: Fires of Rubicon",
     "piattaforma": "",
-    "annoUscita": "1997",
+    "annoUscita": "2023",
     "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9qr0.webp",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coan1v.webp",
     "stato": "Non Giocato"
   },
   {
@@ -2691,7 +2691,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xv8.webp",
     "stato": "Completato",
     "note": "Rigiocato",
-    "categoria": "Emulato (PSP)"
+    "categoria": "Emulato"
   },
   {
     "id": 257,
@@ -2702,7 +2702,7 @@
     "annoGiocato": "2022, 2023",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xx4.webp",
     "stato": "Completato",
-    "categoria": "Emulato (PSP)",
+    "categoria": "Emulato",
     "note": "Rigiocato"
   },
   {
@@ -5435,7 +5435,7 @@
     "annoGiocato": "2021, 2023",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n1z.webp",
     "stato": "Completato",
-    "categoria": "Emulato (PSP)"
+    "categoria": "Emulato"
   },
   {
     "id": 524,
@@ -10750,5 +10750,34 @@
     "dlcType": "dlc",
     "parentId": 772,
     "id": 1773055685907
+  },
+  {
+    "titolo": "Castle Crashers",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaskv.webp",
+    "saga": "",
+    "annoUscita": "2008",
+    "annoGiocato": "",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1773349449953
+  },
+  {
+    "titolo": "Sunset Overdrive",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20td.webp",
+    "saga": "",
+    "annoUscita": "2014",
+    "annoGiocato": "",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1773349704677
   }
 ]
