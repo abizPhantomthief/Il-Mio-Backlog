@@ -7073,11 +7073,12 @@
     "id": 683,
     "saga": "Super Mario Series",
     "titolo": "Super Mario World 2: Yoshi's Island",
-    "piattaforma": "",
+    "piattaforma": "SNES",
     "annoUscita": "1995",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kn9.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso",
+    "categoria": "Emulato"
   },
   {
     "id": 684,
