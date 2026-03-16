@@ -3520,7 +3520,7 @@
   },
   {
     "id": 337,
-    "saga": "",
+    "saga": "Professor Layton Saga",
     "titolo": "Il Professor Layton e il Paese dei Misteri",
     "piattaforma": "NDS",
     "annoUscita": "2007",
@@ -5804,7 +5804,8 @@
     "annoUscita": "2020",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xhp.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": true
   },
   {
     "id": 560,
@@ -10780,5 +10781,21 @@
     "categoria": "",
     "pinned": false,
     "id": 1773349704677
+  },
+  {
+    "titolo": "Il Professor Layton e lo Scrigno di Pandora",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobauy.webp",
+    "saga": "Professor Layton Saga",
+    "annoUscita": "2007",
+    "annoGiocato": "",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1773698025874
   }
 ]
