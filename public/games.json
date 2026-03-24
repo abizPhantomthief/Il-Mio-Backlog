@@ -1299,7 +1299,7 @@
     "annoUscita": "2025",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gam.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 124,
@@ -5800,12 +5800,12 @@
     "id": 559,
     "saga": "",
     "titolo": "Raji: An Ancient Epic",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2020",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xhp.webp",
-    "stato": "Non Giocato",
-    "pinned": true
+    "stato": "In corso",
+    "pinned": false
   },
   {
     "id": 560,
@@ -10852,5 +10852,21 @@
     "categoria": "",
     "pinned": false,
     "id": 1773867140256
+  },
+  {
+    "titolo": "Clair Obscur: Expedition 33 - Thank You Update",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0vd.webp",
+    "saga": "",
+    "annoUscita": "2025",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 123,
+    "includeInCount": false,
+    "id": 1774377374554
   }
 ]
