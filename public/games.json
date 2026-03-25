@@ -4288,11 +4288,11 @@
     "id": 411,
     "saga": "",
     "titolo": "Lost Records: Bloom & Rage",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2025",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9p3a.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 412,
@@ -5804,7 +5804,7 @@
     "annoUscita": "2020",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xhp.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "pinned": false
   },
   {
