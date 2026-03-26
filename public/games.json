@@ -5136,13 +5136,13 @@
     "id": 494,
     "saga": "",
     "titolo": "No More Heroes",
-    "piattaforma": "",
+    "piattaforma": "PC",
     "annoUscita": "2007",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2qum.webp",
-    "stato": "Non Giocato",
+    "stato": "In corso",
     "categoria": "Obiettivo 2026",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 495,
