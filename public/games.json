@@ -5134,13 +5134,13 @@
   },
   {
     "id": 494,
-    "saga": "",
+    "saga": "No More Heroes Saga",
     "titolo": "No More Heroes",
     "piattaforma": "PC",
     "annoUscita": "2007",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2qum.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "categoria": "Obiettivo 2026",
     "pinned": false
   },
@@ -10868,5 +10868,21 @@
     "parentId": 123,
     "includeInCount": false,
     "id": 1774377374554
+  },
+  {
+    "titolo": "No More Heroes 2: Desperate Struggle",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobp4c.webp",
+    "saga": "No More Heroes Saga",
+    "annoUscita": "2010",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1774860105222
   }
 ]

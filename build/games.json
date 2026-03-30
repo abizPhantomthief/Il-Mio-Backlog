@@ -33,7 +33,7 @@
     "annoGiocato": "2023",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wwn.webp",
     "stato": "Completato",
-    "voto": ""
+    "voto": "70"
   },
   {
     "id": 4,
@@ -54,7 +54,8 @@
     "annoUscita": "2019",
     "annoGiocato": 2021,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1lat.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "74"
   },
   {
     "id": 6,
@@ -64,7 +65,8 @@
     "annoUscita": 2022,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pwb.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "77"
   },
   {
     "id": 7,
@@ -74,7 +76,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vca.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "76"
   },
   {
     "id": 8,
@@ -84,7 +87,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4qqz.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "68"
   },
   {
     "id": 9,
@@ -94,7 +98,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28sy.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "60"
   },
   {
     "id": 10,
@@ -104,7 +109,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ilk.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "82"
   },
   {
     "id": 11,
@@ -114,7 +120,8 @@
     "annoUscita": 2023,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5val.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "63"
   },
   {
     "id": 12,
@@ -125,7 +132,8 @@
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dft.webp",
     "stato": "Completato",
-    "note": ""
+    "note": "",
+    "voto": "79"
   },
   {
     "id": 13,
@@ -155,7 +163,8 @@
     "annoUscita": 1986,
     "annoGiocato": 2026,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ewj.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "70"
   },
   {
     "id": 16,
@@ -185,7 +194,8 @@
     "annoUscita": 2000,
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2bwl.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "70"
   },
   {
     "id": 19,
@@ -195,7 +205,8 @@
     "annoUscita": 2011,
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n91.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "75"
   },
   {
     "id": 20,
@@ -205,7 +216,8 @@
     "annoUscita": 2010,
     "annoGiocato": "2017",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qq5.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "74"
   },
   {
     "id": 21,
@@ -215,7 +227,8 @@
     "annoUscita": 2013,
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rdf.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "72"
   },
   {
     "id": 22,
@@ -235,7 +248,8 @@
     "annoUscita": 2024,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4hdh.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "89"
   },
   {
     "id": 24,
@@ -257,7 +271,8 @@
     "annoUscita": 1991,
     "annoGiocato": 2018,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9svc.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "50"
   },
   {
     "id": 26,
@@ -287,16 +302,17 @@
     "annoUscita": 2015,
     "annoGiocato": 2019,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co493k.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "20"
   },
   {
     "id": 29,
     "saga": "",
-    "titolo": "Armored Core",
+    "titolo": "Armored Core VI: Fires of Rubicon",
     "piattaforma": "",
-    "annoUscita": "1997",
+    "annoUscita": "2023",
     "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9qr0.webp",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coan1v.webp",
     "stato": "Non Giocato"
   },
   {
@@ -307,7 +323,8 @@
     "annoUscita": 2007,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rrw.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "80"
   },
   {
     "id": 31,
@@ -329,7 +346,8 @@
     "annoGiocato": "2013, 2023",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rcf.webp",
     "stato": "Completato",
-    "note": "Rigiocato"
+    "note": "Rigiocato",
+    "voto": "79"
   },
   {
     "id": 33,
@@ -515,7 +533,8 @@
     "annoUscita": 2012,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4961.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "66"
   },
   {
     "id": 51,
@@ -545,7 +564,8 @@
     "annoUscita": "2023",
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "82"
   },
   {
     "id": 54,
@@ -677,7 +697,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h99.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "65"
   },
   {
     "id": 67,
@@ -692,12 +713,13 @@
   {
     "id": 68,
     "saga": "",
-    "titolo": "Beyond: Two Souls",
+    "titolo": "Beyond: Due Anime",
     "piattaforma": "PS3",
     "annoUscita": 2013,
     "annoGiocato": 2014,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8r4w.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "80"
   },
   {
     "id": 69,
@@ -793,7 +815,8 @@
     "annoGiocato": 2016,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rba.webp",
     "stato": "Completato",
-    "categoria": ""
+    "categoria": "",
+    "voto": "90"
   },
   {
     "id": 78,
@@ -803,7 +826,8 @@
     "annoUscita": "2022",
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4euc.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "78"
   },
   {
     "id": 79,
@@ -907,7 +931,8 @@
     "annoUscita": 2013,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rro.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "72"
   },
   {
     "id": 89,
@@ -917,7 +942,8 @@
     "annoUscita": 2020,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co45t5.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "71"
   },
   {
     "id": 90,
@@ -927,7 +953,8 @@
     "annoUscita": 2011,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7abq.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "69"
   },
   {
     "id": 91,
@@ -937,7 +964,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2018,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2306.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "60"
   },
   {
     "id": 92,
@@ -947,7 +975,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2d3a.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "48"
   },
   {
     "id": 93,
@@ -957,7 +986,8 @@
     "annoUscita": 2006,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lc9.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "85"
   },
   {
     "id": 94,
@@ -970,7 +1000,8 @@
     "stato": "Completato",
     "pinned": false,
     "note": "",
-    "categoria": "Streaming Playstation Plus"
+    "categoria": "Streaming Playstation Plus",
+    "voto": "69"
   },
   {
     "id": 95,
@@ -1193,7 +1224,8 @@
     "annoUscita": 2017,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qlq.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "75"
   },
   {
     "id": 117,
@@ -1203,7 +1235,8 @@
     "annoUscita": 2012,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e3g.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "92"
   },
   {
     "id": 118,
@@ -1213,7 +1246,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3byy.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "94"
   },
   {
     "id": 119,
@@ -1261,11 +1295,11 @@
     "id": 123,
     "saga": "",
     "titolo": "Clair Obscur: Expedition 33",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2025",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gam.webp",
-    "stato": "Non Giocato"
+    "stato": "Completato"
   },
   {
     "id": 124,
@@ -1275,7 +1309,8 @@
     "annoUscita": 2014,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wf9.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "60"
   },
   {
     "id": 125,
@@ -1295,7 +1330,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2019,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r69.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "73"
   },
   {
     "id": 127,
@@ -1325,7 +1361,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2019,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6nv0.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "20"
   },
   {
     "id": 130,
@@ -1335,7 +1372,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3u25.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "77"
   },
   {
     "id": 131,
@@ -1435,7 +1473,8 @@
     "annoUscita": 2007,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2on1.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "83"
   },
   {
     "id": 141,
@@ -1446,7 +1485,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55md.webp",
     "stato": "Non Giocato",
-    "note": "In rimozione a Febbraio 2026 da PSPlus; Giocarlo su PC è un'opzione preferibile.",
+    "note": "Giocarlo su PC è un'opzione preferibile.",
     "categoria": "Possibile Rimozione",
     "pinned": false
   },
@@ -1458,7 +1497,8 @@
     "annoUscita": 2017,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co62ao.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "90"
   },
   {
     "id": 143,
@@ -1468,7 +1508,8 @@
     "annoUscita": 2020,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "75"
   },
   {
     "id": 144,
@@ -1490,7 +1531,8 @@
     "annoUscita": 2010,
     "annoGiocato": 2015,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28oa.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "76"
   },
   {
     "id": 146,
@@ -1517,12 +1559,12 @@
     "id": 148,
     "saga": "Dark Souls Series",
     "titolo": "Dark Souls",
-    "piattaforma": "PS3, PS4",
+    "piattaforma": "PS3",
     "annoUscita": 2011,
-    "annoGiocato": "2014, 2018",
+    "annoGiocato": "2014",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x78.webp",
     "stato": "Completato",
-    "note": "Rigiocato"
+    "note": ""
   },
   {
     "id": 149,
@@ -1709,7 +1751,9 @@
     "annoUscita": "2010",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mqf.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "dlcType": "espansione",
+    "parentId": 165
   },
   {
     "id": 167,
@@ -1719,7 +1763,9 @@
     "annoUscita": 2011,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1t1w.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "riedizione",
+    "parentId": 165
   },
   {
     "id": 168,
@@ -1852,7 +1898,8 @@
     "annoUscita": 2009,
     "annoGiocato": 2015,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27sk.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "82"
   },
   {
     "id": 181,
@@ -1862,7 +1909,8 @@
     "annoUscita": 2020,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kj9.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "85"
   },
   {
     "id": 182,
@@ -1902,7 +1950,8 @@
     "annoUscita": 2018,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mzf.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "86"
   },
   {
     "id": 186,
@@ -2050,7 +2099,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sfj.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "89"
   },
   {
     "id": 200,
@@ -2080,7 +2130,9 @@
     "annoUscita": 2017,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pd2.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 201
   },
   {
     "id": 203,
@@ -2288,11 +2340,11 @@
   {
     "id": 223,
     "saga": "Dragon's Dogma Series",
-    "titolo": "Dragon's Dogma",
+    "titolo": "Dragon's Dogma: Dark Arisen",
     "piattaforma": "PS3, PS4",
     "annoUscita": 2012,
     "annoGiocato": "2017, 2023",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8zm7.webp",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2a1v.webp",
     "stato": "Completato",
     "note": "Rigiocato"
   },
@@ -2318,23 +2370,26 @@
   },
   {
     "id": 226,
-    "saga": "Driveclub Series",
+    "saga": "",
     "titolo": "Driveclub",
     "piattaforma": "PS4",
     "annoUscita": 2014,
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2pzw.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "75"
   },
   {
     "id": 227,
-    "saga": "Driveclub Series",
+    "saga": "",
     "titolo": "Driveclub Bikes",
     "piattaforma": "PS4",
     "annoUscita": 2015,
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4xep.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 226
   },
   {
     "id": 228,
@@ -2344,7 +2399,8 @@
     "annoUscita": 2016,
     "annoGiocato": 2021,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7fva.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "70"
   },
   {
     "id": 229,
@@ -2447,7 +2503,8 @@
     "annoUscita": 2019,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p7n.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "40"
   },
   {
     "id": 239,
@@ -2487,7 +2544,8 @@
     "annoUscita": 2005,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3rhh.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "79"
   },
   {
     "id": 243,
@@ -2568,7 +2626,9 @@
     "annoUscita": 2013,
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpp.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 249
   },
   {
     "id": 251,
@@ -2631,7 +2691,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xv8.webp",
     "stato": "Completato",
     "note": "Rigiocato",
-    "categoria": "Emulato (PSP)"
+    "categoria": "Emulato"
   },
   {
     "id": 257,
@@ -2642,7 +2702,7 @@
     "annoGiocato": "2022, 2023",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xx4.webp",
     "stato": "Completato",
-    "categoria": "Emulato (PSP)",
+    "categoria": "Emulato",
     "note": "Rigiocato"
   },
   {
@@ -2837,7 +2897,8 @@
     "annoUscita": 2003,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p0m.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "88"
   },
   {
     "id": 277,
@@ -3144,7 +3205,9 @@
     "annoUscita": 2009,
     "annoGiocato": 2013,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1th2.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 305
   },
   {
     "id": 307,
@@ -3154,7 +3217,9 @@
     "annoUscita": 2009,
     "annoGiocato": 2013,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28od.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 305
   },
   {
     "id": 308,
@@ -3455,13 +3520,14 @@
   },
   {
     "id": 337,
-    "saga": "",
+    "saga": "Professor Layton Saga",
     "titolo": "Il Professor Layton e il Paese dei Misteri",
-    "piattaforma": "",
+    "piattaforma": "NDS",
     "annoUscita": "2007",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wtd.webp",
-    "stato": "Non Giocato"
+    "stato": "Completato",
+    "categoria": "Emulato"
   },
   {
     "id": 338,
@@ -3564,7 +3630,9 @@
     "annoUscita": 2014,
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ygu.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 346
   },
   {
     "id": 348,
@@ -3881,12 +3949,12 @@
   {
     "id": 378,
     "saga": "Kirby Series",
-    "titolo": "Kirby e la Stoffa dell'Eroe",
+    "titolo": "Kirby e la Nuova Stoffa dell'Eroe",
     "piattaforma": "N3DS",
-    "annoUscita": "2010",
+    "annoUscita": "2019",
     "annoGiocato": "2026",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1w9w.webp",
-    "stato": "In corso",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co69p5.webp",
+    "stato": "Completato",
     "pinned": false,
     "categoria": "Emulato"
   },
@@ -4220,11 +4288,11 @@
     "id": 411,
     "saga": "",
     "titolo": "Lost Records: Bloom & Rage",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2025",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9p3a.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 412,
@@ -4347,7 +4415,9 @@
     "annoUscita": 2020,
     "annoGiocato": 2021,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dwe.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 422
   },
   {
     "id": 424,
@@ -4593,7 +4663,9 @@
     "annoUscita": 2014,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v88.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 448
   },
   {
     "id": 448,
@@ -5064,13 +5136,13 @@
     "id": 494,
     "saga": "",
     "titolo": "No More Heroes",
-    "piattaforma": "",
+    "piattaforma": "PC",
     "annoUscita": "2007",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2qum.webp",
-    "stato": "Non Giocato",
+    "stato": "In corso",
     "categoria": "Obiettivo 2026",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 495,
@@ -5363,7 +5435,7 @@
     "annoGiocato": "2021, 2023",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n1z.webp",
     "stato": "Completato",
-    "categoria": "Emulato (PSP)"
+    "categoria": "Emulato"
   },
   {
     "id": 524,
@@ -5433,7 +5505,10 @@
     "annoUscita": 2017,
     "annoGiocato": 2018,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r76.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "voto": "",
+    "dlcType": "",
+    "parentId": null
   },
   {
     "id": 531,
@@ -5463,7 +5538,11 @@
     "annoUscita": 2019,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nic.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "isDlc": true,
+    "parentId": 530,
+    "voto": "",
+    "dlcType": "riedizione"
   },
   {
     "id": 534,
@@ -5721,11 +5800,12 @@
     "id": 559,
     "saga": "",
     "titolo": "Raji: An Ancient Epic",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2020",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xhp.webp",
-    "stato": "Non Giocato"
+    "stato": "Completato",
+    "pinned": false
   },
   {
     "id": 560,
@@ -6249,7 +6329,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2x4z.webp",
     "stato": "Non Giocato",
-    "note": "In rimozione a Febbraio 2026 da PSPlus",
+    "note": "",
     "categoria": "Possibile Rimozione",
     "pinned": false
   },
@@ -6772,17 +6852,18 @@
   {
     "id": 662,
     "saga": "Star Wars: The Force Unleashed Saga",
-    "titolo": "Star Wars Il Potere della Forza",
+    "titolo": "Star Wars: Il Potere della Forza",
     "piattaforma": "PS3",
     "annoUscita": 2008,
-    "annoGiocato": 2016,
+    "annoGiocato": "2015, 2021",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25xx.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "note": "Rigiocato"
   },
   {
     "id": 663,
     "saga": "Star Wars: The Force Unleashed Saga",
-    "titolo": "Star Wars Il Potere della Forza 2",
+    "titolo": "Star Wars: Il Potere della Forza 2",
     "piattaforma": "PS3",
     "annoUscita": 2010,
     "annoGiocato": 2021,
@@ -6993,11 +7074,12 @@
     "id": 683,
     "saga": "Super Mario Series",
     "titolo": "Super Mario World 2: Yoshi's Island",
-    "piattaforma": "",
+    "piattaforma": "SNES",
     "annoUscita": "1995",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kn9.webp",
-    "stato": "Non Giocato"
+    "stato": "Completato",
+    "categoria": "Emulato"
   },
   {
     "id": 684,
@@ -7443,7 +7525,7 @@
     "titolo": "The Elder Scrolls IV: Oblivion Remastered",
     "piattaforma": "",
     "annoUscita": "2025",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9pul.webp",
     "stato": "Non Giocato",
     "categoria": ""
@@ -8231,7 +8313,10 @@
     "annoUscita": 2017,
     "annoGiocato": 2021,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tp9.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 808,
+    "includeInCount": false
   },
   {
     "id": 810,
@@ -8423,7 +8508,9 @@
     "annoUscita": 2015,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21et.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "dlcType": "espansione",
+    "parentId": 827
   },
   {
     "id": 829,
@@ -8751,7 +8838,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobe4a.webp",
     "saga": "Nioh Series",
     "annoUscita": "2026",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
@@ -8764,7 +8851,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wwv.webp",
     "saga": "",
     "annoUscita": "2026",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
@@ -8777,7 +8864,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9qs.webp",
     "saga": "",
     "annoUscita": "2022",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
@@ -8790,7 +8877,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2q4c.webp",
     "saga": "",
     "annoUscita": "2004",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
@@ -8803,7 +8890,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co22ag.webp",
     "saga": "",
     "annoUscita": "2012",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
@@ -8822,14 +8909,16 @@
     "note": "",
     "categoria": "",
     "pinned": false,
-    "id": 1770585553154
+    "id": 1770585553154,
+    "dlcType": "espansione",
+    "parentId": 12
   },
   {
     "titolo": "Hades II",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaknx.webp",
     "saga": "Hades Saga",
     "annoUscita": "2025",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
@@ -8842,7 +8931,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jar.webp",
     "saga": "Remedy Connected Universe",
     "annoUscita": "2023",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
@@ -8855,7 +8944,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xoc.webp",
     "saga": "",
     "annoUscita": "2025",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
@@ -8868,12 +8957,1916 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobigb.webp",
     "saga": "God of War Saga",
     "annoUscita": "2026",
-    "annoGiocato": "",
+    "annoGiocato": "-",
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
     "categoria": "",
     "pinned": false,
     "id": 1771190120139
+  },
+  {
+    "titolo": "Amnesia: Justine",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1jiy.webp",
+    "saga": "Amnesia Series",
+    "annoUscita": "2011",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "voto": "",
+    "dlcType": "espansione",
+    "parentId": 20,
+    "id": 1773003403664
+  },
+  {
+    "titolo": "Assassin's Creed II: La Battaglia di Forlì",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabt4.webp",
+    "saga": "Assassin's Creed Series",
+    "annoUscita": "2010",
+    "annoGiocato": "2013, 2023",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 32,
+    "id": 1773003768463
+  },
+  {
+    "titolo": "Assassin's Creed II: Il Falò delle Vanità",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabt3.webp",
+    "saga": "Assassin's Creed Series",
+    "annoUscita": "2010",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 32,
+    "id": 1773003838216
+  },
+  {
+    "titolo": "Assassin's Creed Brotherhood: La Cospirazione di Copernico",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabt5.webp",
+    "saga": "Assassin's Creed Series",
+    "annoUscita": "2010",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 33,
+    "id": 1773003975240
+  },
+  {
+    "titolo": "Assassin's Creed Brotherhood: La Scomparsa di Da Vinci",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zlk.webp",
+    "saga": "Assassin's Creed Series",
+    "annoUscita": "2011",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 33,
+    "id": 1773004089592
+  },
+  {
+    "titolo": "Assassin's Creed III: La Tirannia di Re Washington",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r5f.webp",
+    "saga": "Assassin's Creed Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2024",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 35,
+    "id": 1773004290620
+  },
+  {
+    "titolo": "Assassin's Creed IV Black Flag: Aveline",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7oi2.webp",
+    "saga": "Assassin's Creed Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2025",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 37,
+    "id": 1773004427282
+  },
+  {
+    "titolo": "Assassin's Creed: Grido di Libertà",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gjy.webp",
+    "saga": "Assassin's Creed Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2025",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 37,
+    "id": 1773004495122
+  },
+  {
+    "titolo": "Assassin's Creed Revelations: Gli Archivi Perduti",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zni.webp",
+    "saga": "Assassin's Creed Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2024",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 34,
+    "id": 1773004607978
+  },
+  {
+    "titolo": "Astro Bot: Circuito Stellare",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa49v.webp",
+    "saga": "Astro Series",
+    "annoUscita": "2024",
+    "annoGiocato": "2024",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 49,
+    "id": 1773005221310
+  },
+  {
+    "titolo": "Astro Bot: Villaggio Polare",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa49w.webp",
+    "saga": "Astro Series",
+    "annoUscita": "2024",
+    "annoGiocato": "2024",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 49,
+    "id": 1773005295018
+  },
+  {
+    "titolo": "Astro Bot: Vuoto Violento",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa5s1.webp",
+    "saga": "Astro Series",
+    "annoUscita": "2025",
+    "annoGiocato": "2025",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 49,
+    "id": 1773005351181
+  },
+  {
+    "titolo": "Batman: Arkham Knight - Missioni Incubo dello Spaventapasseri",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fvx.webp",
+    "saga": "Batman Arkham Saga",
+    "annoUscita": "2015",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 59,
+    "id": 1773005970330
+  },
+  {
+    "titolo": "Batman: Arkham Knight - Affari di Famiglia",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fw1.webp",
+    "saga": "Batman Arkham Saga",
+    "annoUscita": "2015",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 59,
+    "id": 1773006090654
+  },
+  {
+    "titolo": "Batman: Arkham Knight - Pacchetto storia di Harley Quinn",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fvy.webp",
+    "saga": "Batman Arkham Saga",
+    "annoUscita": "2015",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 59,
+    "id": 1773006176571
+  },
+  {
+    "titolo": "Batman: Arkham Knight - Pacchetto storia di Cappuccio Rosso",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fw0.webp",
+    "saga": "Batman Arkham Saga",
+    "annoUscita": "2015",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 59,
+    "id": 1773006268669
+  },
+  {
+    "titolo": "Batman: Arkham Knight - Commissariato Sotto Chiave",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fw3.webp",
+    "saga": "Batman Arkham Saga",
+    "annoUscita": "2015",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 59,
+    "id": 1773006338017
+  },
+  {
+    "titolo": "Batman: Arkham Knight - La Vendetta di Catwoman",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fw4.webp",
+    "saga": "Batman Arkham Saga",
+    "annoUscita": "2015",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 59,
+    "id": 1773006409840
+  },
+  {
+    "titolo": "Batman: Arkham Knight - Testa o Croce",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4q4z.webp",
+    "saga": "Batman Arkham Saga",
+    "annoUscita": "2015",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 59,
+    "id": 1773006489635
+  },
+  {
+    "titolo": "Batman: Arkham Knight - L'Era dell'Infamia",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fw6.webp",
+    "saga": "Batman Arkham Saga",
+    "annoUscita": "2015",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 59,
+    "id": 1773006559273
+  },
+  {
+    "titolo": "BioShock: Stanze della Sfida",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1znr.webp",
+    "saga": "Bioshock Saga",
+    "annoUscita": "2008",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 70,
+    "id": 1773006827425
+  },
+  {
+    "titolo": "BioShock 2: Prove protettore",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co54yg.webp",
+    "saga": "Bioshock Saga",
+    "annoUscita": "2010",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 71,
+    "id": 1773006886443
+  },
+  {
+    "titolo": "BioShock 2: Minerva's Den",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co54yk.webp",
+    "saga": "Bioshock Saga",
+    "annoUscita": "2010",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 71,
+    "id": 1773006934073
+  },
+  {
+    "titolo": "Blasphemous: Strife & Ruin",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7o22.webp",
+    "saga": "Blasphemous Saga",
+    "annoUscita": "2021",
+    "annoGiocato": "2025",
+    "piattaforma": "PS4",
+    "stato": "Droppato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 74,
+    "id": 1773007146109
+  },
+  {
+    "titolo": "Blasphemous: Wounds of Eventide",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8x3.webp",
+    "saga": "Blasphemous Saga",
+    "annoUscita": "2021",
+    "annoGiocato": "2025",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 74,
+    "id": 1773007194633
+  },
+  {
+    "titolo": "Bloodborne: The Old Hunters",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob99k.webp",
+    "saga": "",
+    "annoUscita": "2015",
+    "annoGiocato": "2016",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 77,
+    "id": 1773007343181
+  },
+  {
+    "titolo": "Borderlands: Zombie Island of Dr. Ned",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co56fd.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2009",
+    "annoGiocato": "2017, 2020",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 82,
+    "id": 1773007638547
+  },
+  {
+    "titolo": "Borderlands: Mad Moxxi's Underdome Riot",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co56ep.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2009",
+    "annoGiocato": "2017",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 82,
+    "id": 1773007786419
+  },
+  {
+    "titolo": "Borderlands: The Secret Armory of General Knoxx",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4gnd.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2010",
+    "annoGiocato": "2017, 2020",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 82,
+    "id": 1773007885623
+  },
+  {
+    "titolo": "Borderlands: Claptrap's New Robot Revolution",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co56eo.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2010",
+    "annoGiocato": "2017, 2020",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 82,
+    "id": 1773007997798
+  },
+  {
+    "titolo": "Borderlands 2: Capitan Scarlett e il suo Bottino dei Pirati",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bu1.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008162527
+  },
+  {
+    "titolo": "Borderlands 2: Campagna del Massacro di Mr. Torgue",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bu3.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008311122
+  },
+  {
+    "titolo": "Borderlands 2: Creature Slaughterdome",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bu2.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008409835
+  },
+  {
+    "titolo": "Borderlands 2: Caccia Grossa con Sir Hammerlock",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bty.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008508587
+  },
+  {
+    "titolo": "Borderlands 2: Assalto alla Rocca del Drago di Tiny Tina",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27fo.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008585762
+  },
+  {
+    "titolo": "Borderlands 2: Il Raccolto Sanguinoso di T.K. Baha",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co603y.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008711333
+  },
+  {
+    "titolo": "Borderlands 2: The Horrible Hunger of the Ravenous Wattle Gobbler",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co603x.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008786905
+  },
+  {
+    "titolo": "Borderlands 2: How Marcus Saved Mercenary Day",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co603s.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008836391
+  },
+  {
+    "titolo": "Borderlands 2: Mad Moxxi and the Wedding Day Massacre",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6041.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2014",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008930092
+  },
+  {
+    "titolo": "Borderlands 2: Sir Hammerlock vs. the Son of Crawmerax",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4btx.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2014",
+    "annoGiocato": "2018, 2025",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773008973712
+  },
+  {
+    "titolo": "Borderlands 2: Lilith e la Battaglia per Sanctuary",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4btw.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": "2019",
+    "annoGiocato": "2025",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 83,
+    "id": 1773009036968
+  },
+  {
+    "titolo": "Crash Bandicoot N. Sane Trilogy: Stormy Ascent",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6iym.webp",
+    "saga": "Crash Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2018",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 134,
+    "id": 1773009186053
+  },
+  {
+    "titolo": "Crash Bandicoot N. Sane Trilogy: Future Tense",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6y03.webp",
+    "saga": "Crash Series",
+    "annoUscita": "2018",
+    "annoGiocato": "2018",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 136,
+    "id": 1773009271295
+  },
+  {
+    "titolo": "Cuphead: The Delicious Last Course",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co62al.webp",
+    "saga": "",
+    "annoUscita": "2022",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 142,
+    "id": 1773009378536
+  },
+  {
+    "titolo": "Dark Souls: Artorias of the Abyss",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95nf.webp",
+    "saga": "Dark Souls Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2014",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 148,
+    "id": 1773009465605
+  },
+  {
+    "titolo": "Dark Souls II: Crown of the Sunken King",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vuz.webp",
+    "saga": "Dark Souls Series",
+    "annoUscita": "2014",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 149,
+    "id": 1773009723989
+  },
+  {
+    "titolo": "Dark Souls II: Crown of the Old Iron King",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vv1.webp",
+    "saga": "Dark Souls Series",
+    "annoUscita": "2014",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 149,
+    "id": 1773009836579
+  },
+  {
+    "titolo": "Dark Souls II: Crown of the Ivory King",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vv0.webp",
+    "saga": "Dark Souls Series",
+    "annoUscita": "2014",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 149,
+    "id": 1773009892714
+  },
+  {
+    "titolo": "Dark Souls III: Ashes of Ariandel",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vwd.webp",
+    "saga": "Dark Souls Series",
+    "annoUscita": "2016",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 150,
+    "id": 1773009987060
+  },
+  {
+    "titolo": "Dark Souls III: The Ringed City",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28fq.webp",
+    "saga": "Dark Souls Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2017",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 150,
+    "id": 1773010033900
+  },
+  {
+    "titolo": "Deus Ex: Human Revolution - The Missing Link",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25nu.webp",
+    "saga": "Deus Ex Saga",
+    "annoUscita": "2011",
+    "annoGiocato": "2016",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 188,
+    "id": 1773010390519
+  },
+  {
+    "titolo": "Elden Ring: Shadow of the Erdtree",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7sly.webp",
+    "saga": "Elden Ring Saga",
+    "annoUscita": "2024",
+    "annoGiocato": "2024",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 233,
+    "id": 1773010980536
+  },
+  {
+    "titolo": "Fallout 4: Automatron",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9py.webp",
+    "saga": "Fallout Series",
+    "annoUscita": "2016",
+    "annoGiocato": "2019",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 247,
+    "id": 1773011243705
+  },
+  {
+    "titolo": "Fallout 4: Far Harbor",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob5zr.webp",
+    "saga": "Fallout Series",
+    "annoUscita": "2016",
+    "annoGiocato": "2019",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 247,
+    "id": 1773011309311
+  },
+  {
+    "titolo": "Fallout 4: Nuka World",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob74d.webp",
+    "saga": "Fallout Series",
+    "annoUscita": "2016",
+    "annoGiocato": "2019",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1773011328493,
+    "dlcType": "dlc",
+    "parentId": 247
+  },
+  {
+    "titolo": "Ghost of Tsushima: Iki Island",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3gl4.webp",
+    "saga": "",
+    "annoUscita": "2021",
+    "annoGiocato": "2023",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 285,
+    "id": 1773011717586
+  },
+  {
+    "titolo": "God of War Ragnarök: Valhalla",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7jl8.webp",
+    "saga": "God of War Saga",
+    "annoUscita": "2023",
+    "annoGiocato": "2023",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 299,
+    "id": 1773011805441
+  },
+  {
+    "titolo": "Hollow Knight: Hidden Dreams",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co310u.webp",
+    "saga": "Hollow Knight Saga",
+    "annoUscita": "2017",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 331,
+    "id": 1773012108866
+  },
+  {
+    "titolo": "Hollow Knight: The Grimm Troupe",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co310v.webp",
+    "saga": "Hollow Knight Saga",
+    "annoUscita": "2017",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 331,
+    "id": 1773012171896
+  },
+  {
+    "titolo": "Hollow Knight: Godmaster",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4hc2.webp",
+    "saga": "Hollow Knight Saga",
+    "annoUscita": "2018",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 331,
+    "id": 1773012239440
+  },
+  {
+    "titolo": "Horizon Zero Dawn: The Frozen Wilds",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4hjg.webp",
+    "saga": "Horizon Saga",
+    "annoUscita": "2017",
+    "annoGiocato": "2019",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 333,
+    "id": 1773012339586
+  },
+  {
+    "titolo": "Infamous: Festival of Blood",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yh0.webp",
+    "saga": "Infamous Saga",
+    "annoUscita": "2011",
+    "annoGiocato": "2021",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "Streaming Playstation Plus",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 345,
+    "id": 1773012521272
+  },
+  {
+    "titolo": "Kingdom Hearts III: ReMind",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xdl.webp",
+    "saga": "Kingdom Hearts Saga",
+    "annoUscita": "2020",
+    "annoGiocato": "2020",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 375,
+    "id": 1773012708462
+  },
+  {
+    "titolo": "Lies of P: Overture",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e24.webp",
+    "saga": "",
+    "annoUscita": "2025",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 398,
+    "id": 1773012929352
+  },
+  {
+    "titolo": "Little Nightmares: The Depths",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ubv.webp",
+    "saga": "Little Nightmares Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 403,
+    "id": 1773013025744
+  },
+  {
+    "titolo": "Little Nightmares: The Hideaway",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2uby.webp",
+    "saga": "Little Nightmares Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 403,
+    "id": 1773013075048
+  },
+  {
+    "titolo": "Little Nightmares: The Residence",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ubx.webp",
+    "saga": "Little Nightmares Series",
+    "annoUscita": "2018",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 403,
+    "id": 1773013116986
+  },
+  {
+    "titolo": "Lost Judgment: The Kaito Files",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8xz.webp",
+    "saga": "Yakuza/Like a Dragon Saga",
+    "annoUscita": "2022",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 848,
+    "id": 1773013201814
+  },
+  {
+    "titolo": "Mafia II: Joe's Adventures",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co49rf.webp",
+    "saga": "Mafia Series",
+    "annoUscita": "2010",
+    "annoGiocato": "2024",
+    "piattaforma": "PS4",
+    "stato": "Droppato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 415,
+    "id": 1773013279836
+  },
+  {
+    "titolo": "Marvel's Spider-Man: La Rapina",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w2o.webp",
+    "saga": "Marvel's Spider-Man Saga",
+    "annoUscita": "2018",
+    "annoGiocato": "2021",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "voto": "",
+    "dlcType": "dlc",
+    "parentId": 422,
+    "id": 1773049397504
+  },
+  {
+    "titolo": "Marvel's Spider-Man: Territori Contesi",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w2p.webp",
+    "saga": "Marvel's Spider-Man Saga",
+    "annoUscita": "2018",
+    "annoGiocato": "2021",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 422,
+    "id": 1773049630880
+  },
+  {
+    "titolo": "Marvel's Spider-Man: Silver Lining",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4w2q.webp",
+    "saga": "Marvel's Spider-Man Saga",
+    "annoUscita": "2018",
+    "annoGiocato": "2021",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 422,
+    "id": 1773049708980
+  },
+  {
+    "titolo": "Mass Effect: Bring Down the Sky",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kxy.webp",
+    "saga": "Mass Effect Saga",
+    "annoUscita": "2008",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 425,
+    "id": 1773049972145
+  },
+  {
+    "titolo": "Mass Effect: Pinnacle Station",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobow0.webp",
+    "saga": "Mass Effect Saga",
+    "annoUscita": "2009",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 425,
+    "id": 1773050036303
+  },
+  {
+    "titolo": "Mass Effect 2: Overlord",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kxe.webp",
+    "saga": "Mass Effect Saga",
+    "annoUscita": "2010",
+    "annoGiocato": "2024",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 426,
+    "id": 1773050216321
+  },
+  {
+    "titolo": "Mass Effect 2: Lair of the Shadow Broker",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k9f.webp",
+    "saga": "Mass Effect Saga",
+    "annoUscita": "2010",
+    "annoGiocato": "2024",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 426,
+    "id": 1773050286556
+  },
+  {
+    "titolo": "Mass Effect 2: Arrival",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55lz.webp",
+    "saga": "Mass Effect Saga",
+    "annoUscita": "2011",
+    "annoGiocato": "2024",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 426,
+    "id": 1773050343457
+  },
+  {
+    "titolo": "Naruto Shippuden: Ultimate Ninja Storm 4 - Road to Boruto",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v70.webp",
+    "saga": "Naruto: Ultimate Ninja Storm Saga",
+    "annoUscita": "2017",
+    "annoGiocato": "2023",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 479,
+    "id": 1773050688448
+  },
+  {
+    "titolo": "Nioh: Drago del Nord",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co31e2.webp",
+    "saga": "Nioh Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2021",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 492,
+    "id": 1773050849858
+  },
+  {
+    "titolo": "Nioh: Onore Sprezzante",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co31e3.webp",
+    "saga": "Nioh Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2021",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 492,
+    "id": 1773050890912
+  },
+  {
+    "titolo": "Nioh: Fine del Massacro",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co31e0.webp",
+    "saga": "Nioh Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2021",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 492,
+    "id": 1773050951194
+  },
+  {
+    "titolo": "Nioh 2: Il Discepolo del Tengu",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39o5.webp",
+    "saga": "Nioh Series",
+    "annoUscita": "2020",
+    "annoGiocato": "2022",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 493,
+    "id": 1773051055962
+  },
+  {
+    "titolo": "Nioh 2: Tenebre nella Capitale",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ip3.webp",
+    "saga": "Nioh Series",
+    "annoUscita": "2020",
+    "annoGiocato": "2022",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 493,
+    "id": 1773051123747
+  },
+  {
+    "titolo": "Nioh 2: Il Primo Samurai",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7muv.webp",
+    "saga": "Nioh Series",
+    "annoUscita": "2020",
+    "annoGiocato": "2022",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 493,
+    "id": 1773051172239
+  },
+  {
+    "titolo": "Operation: Tango - Modalità Sfida",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4947.webp",
+    "saga": "",
+    "annoUscita": "2021",
+    "annoGiocato": "2025",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 507,
+    "id": 1773051247785
+  },
+  {
+    "titolo": "Outlast: Whistleblower",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaeza.webp",
+    "saga": "Outlast Series",
+    "annoUscita": "2014",
+    "annoGiocato": "2018",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 510,
+    "id": 1773051316373
+  },
+  {
+    "titolo": "Pillars of Eternity: The White March Part I",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25v9.webp",
+    "saga": "Pillars of Eternity Series",
+    "annoUscita": "2015",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 540,
+    "id": 1773051658237
+  },
+  {
+    "titolo": "Pillars of Eternity: The White March Part II",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25va.webp",
+    "saga": "Pillars of Eternity Series",
+    "annoUscita": "2016",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 540,
+    "id": 1773051709720
+  },
+  {
+    "titolo": "Red Dead Redemption: Undead Nightmare",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lcw.webp",
+    "saga": "Red Dead Saga",
+    "annoUscita": "2010",
+    "annoGiocato": "2017",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 573,
+    "id": 1773051931573
+  },
+  {
+    "titolo": "Resident Evil 2: The Ghost Survivors",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5vp9.webp",
+    "saga": "Resident Evil Series",
+    "annoUscita": "2019",
+    "annoGiocato": "2025",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "voto": "",
+    "dlcType": "dlc",
+    "parentId": 590,
+    "id": 1773052668217
+  },
+  {
+    "titolo": "Resident Evil 4: Separate Ways",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7lar.webp",
+    "saga": "Resident Evil Series",
+    "annoUscita": "2023",
+    "annoGiocato": "2023",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 593,
+    "id": 1773052739279
+  },
+  {
+    "titolo": "Resident Evil 7: Biohazard - Banned Footage Vol. 1",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co94ks.webp",
+    "saga": "Resident Evil Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2021",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 589,
+    "id": 1773052915199
+  },
+  {
+    "titolo": "Resident Evil 7: Biohazard - Banned Footage Vol. 2",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co94l0.webp",
+    "saga": "Resident Evil Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2021",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 589,
+    "id": 1773052985045
+  },
+  {
+    "titolo": "Resident Evil 7: Biohazard - Not A Hero",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5yf8.webp",
+    "saga": "Resident Evil Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2020, 2021",
+    "piattaforma": "",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 589,
+    "id": 1773053052707
+  },
+  {
+    "titolo": "Resident Evil 7: Biohazard - End of Zoe",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5yf7.webp",
+    "saga": "Resident Evil Series",
+    "annoUscita": "2017",
+    "annoGiocato": "2021",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 589,
+    "id": 1773053134168
+  },
+  {
+    "titolo": "Returnal: Ascension",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4l4l.webp",
+    "saga": "",
+    "annoUscita": "2022",
+    "annoGiocato": "2024",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 596,
+    "id": 1773053287702
+  },
+  {
+    "titolo": "Saints Row: The Third - Genkibowl VII",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobgae.webp",
+    "saga": "Saints Row Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2014",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 604,
+    "id": 1773053446406
+  },
+  {
+    "titolo": "Saints Row: The Third - Gangstas in Space",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4h3g.webp",
+    "saga": "Saints Row Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2014",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 604,
+    "id": 1773053480302
+  },
+  {
+    "titolo": "Saints Row: The Third - The Trouble with Clones",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1mhd.webp",
+    "saga": "Saints Row Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2014",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 604,
+    "id": 1773053537296
+  },
+  {
+    "titolo": "Saints Row IV: Enter the Dominatrix",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20k9.webp",
+    "saga": "Saints Row Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2021",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 605,
+    "id": 1773053612571
+  },
+  {
+    "titolo": "Saints Row IV: How the Saints Save Christmas",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8jdz.webp",
+    "saga": "Saints Row Series",
+    "annoUscita": "2013",
+    "annoGiocato": "2021",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 605,
+    "id": 1773053656134
+  },
+  {
+    "titolo": "Sleeping Dogs: Nightmare in North Point",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28jq.webp",
+    "saga": "",
+    "annoUscita": "2012",
+    "annoGiocato": "2018",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 636,
+    "id": 1773053845891
+  },
+  {
+    "titolo": "Sleeping Dogs: Zodiac Tournament",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28jr.webp",
+    "saga": "",
+    "annoUscita": "2012",
+    "annoGiocato": "2018",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 636,
+    "id": 1773053903765
+  },
+  {
+    "titolo": "Sleeping Dogs: Wheels of Fury",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6kqf.webp",
+    "saga": "",
+    "annoUscita": "2013",
+    "annoGiocato": "2018",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 636,
+    "id": 1773053946785
+  },
+  {
+    "titolo": "Sleeping Dogs: Year of the Snake",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8hqd.webp",
+    "saga": "",
+    "annoUscita": "2013",
+    "annoGiocato": "2018",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 636,
+    "id": 1773054013081
+  },
+  {
+    "titolo": "Star Wars: Il Potere della Forza - Jedi Temple Mission Pack",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8jem.webp",
+    "saga": "",
+    "annoUscita": "2008",
+    "annoGiocato": "2015, 2021",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 662,
+    "id": 1773054269329
+  },
+  {
+    "titolo": "Star Wars: Il Potere della Forza - Tatooine Mission Pack",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8jek.webp",
+    "saga": "",
+    "annoUscita": "2009",
+    "annoGiocato": "2015, 2021",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 662,
+    "id": 1773054381877
+  },
+  {
+    "titolo": "Star Wars: Il Potere della Forza - Hoth Mission Pack",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8jel.webp",
+    "saga": "",
+    "annoUscita": "2010",
+    "annoGiocato": "2015, 2021",
+    "piattaforma": "PS3",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 662,
+    "id": 1773054427626
+  },
+  {
+    "titolo": "Tails of Iron: Bright Fir Forest",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co98nh.webp",
+    "saga": "",
+    "annoUscita": "2023",
+    "annoGiocato": "2024",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 706,
+    "id": 1773054549362
+  },
+  {
+    "titolo": "Tales of Zestiria: Additional Chapter - Alisha's Story",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4r9z.webp",
+    "saga": "Tales Series",
+    "annoUscita": "2015",
+    "annoGiocato": "2019",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 712,
+    "id": 1773054651044
+  },
+  {
+    "titolo": "Terra di Mezzo: L'Ombra di Mordor - Il Signore della Caccia",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9kwp.webp",
+    "saga": "Middle-Earth Saga",
+    "annoUscita": "2014",
+    "annoGiocato": "2024",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 721,
+    "id": 1773054823674
+  },
+  {
+    "titolo": "Terra di Mezzo: L'Ombra di Mordor - Il Signore Pallido",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9kwq.webp",
+    "saga": "Middle-Earth Saga",
+    "annoUscita": "2015",
+    "annoGiocato": "2024",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 721,
+    "id": 1773054914566
+  },
+  {
+    "titolo": "The Elder Scrolls V: Skyrim - Dawnguard",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21lv.webp",
+    "saga": "The Elder Scrolls Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2015, 2017",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 731,
+    "id": 1773055107620
+  },
+  {
+    "titolo": "The Elder Scrolls V: Skyrim - Dragonborn",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21lw.webp",
+    "saga": "The Elder Scrolls Series",
+    "annoUscita": "2012",
+    "annoGiocato": "2015, 2017",
+    "piattaforma": "PS3, PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 731,
+    "id": 1773055194845
+  },
+  {
+    "titolo": "The Evil Within: The Assignment",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co52v9.webp",
+    "saga": "The Evil Within Series",
+    "annoUscita": "2015",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 734,
+    "id": 1773055350747
+  },
+  {
+    "titolo": "The Evil Within: The Consequence",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co52va.webp",
+    "saga": "The Evil Within Series",
+    "annoUscita": "2015",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 734,
+    "id": 1773055392937
+  },
+  {
+    "titolo": "The Evil Within: The Executioner",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co52vb.webp",
+    "saga": "The Evil Within Series",
+    "annoUscita": "2015",
+    "annoGiocato": "2022",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 734,
+    "id": 1773055434181
+  },
+  {
+    "titolo": "The Last of Us: Left Behind",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5xg8.webp",
+    "saga": "The Last of Us Saga",
+    "annoUscita": "2014",
+    "annoGiocato": "2019",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 738,
+    "id": 1773055543489
+  },
+  {
+    "titolo": "The Walking Dead: 400 Days",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gyk.webp",
+    "saga": "The Walking Dead (Telltale)",
+    "annoUscita": "2013",
+    "annoGiocato": "2019",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 772,
+    "id": 1773055685907
+  },
+  {
+    "titolo": "Castle Crashers",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaskv.webp",
+    "saga": "",
+    "annoUscita": "2008",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1773349449953
+  },
+  {
+    "titolo": "Sunset Overdrive",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20td.webp",
+    "saga": "",
+    "annoUscita": "2014",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1773349704677
+  },
+  {
+    "titolo": "Il Professor Layton e lo Scrigno di Pandora",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobauy.webp",
+    "saga": "Professor Layton Saga",
+    "annoUscita": "2007",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1773698025874
+  },
+  {
+    "titolo": "Professor Layton e il Futuro Perduto",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobav0.webp",
+    "saga": "Professor Layton Saga",
+    "annoUscita": "2008",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1773867005702
+  },
+  {
+    "titolo": "Professor Layton e il Richiamo dello Spettro",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8lu.webp",
+    "saga": "Professor Layton Saga",
+    "annoUscita": "2009",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1773867047688
+  },
+  {
+    "titolo": "Professor Layton e la Maschera dei Miracoli",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wtm.webp",
+    "saga": "Professor Layton Saga",
+    "annoUscita": "2011",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1773867098332
+  },
+  {
+    "titolo": "Il Professor Layton e l'Eredità degli Aslant",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8vv.webp",
+    "saga": "Professor Layton Saga",
+    "annoUscita": "2013",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1773867140256
+  },
+  {
+    "titolo": "Clair Obscur: Expedition 33 - Thank You Update",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob0vd.webp",
+    "saga": "",
+    "annoUscita": "2025",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 123,
+    "includeInCount": false,
+    "id": 1774377374554
   }
 ]
