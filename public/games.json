@@ -10885,5 +10885,36 @@
     "parentId": null,
     "includeInCount": false,
     "id": 1774860105222
+  },
+  {
+    "titolo": "Grand Theft Auto: Vice City Stories",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lc8.webp",
+    "saga": "Grand Theft Auto Series",
+    "annoUscita": "2006",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1775293236382
+  },
+  {
+    "titolo": "Dave the Diver: Balatro",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9p4o.webp",
+    "saga": "",
+    "annoUscita": "2024",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "In corso",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 156,
+    "id": 1775293618252
   }
 ]

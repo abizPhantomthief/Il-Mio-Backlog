@@ -1099,6 +1099,7 @@ const App = () => {
             <option value="Default">Piattaforme</option>
             {suggerimentiPiattaforme.map(p => <option key={p} value={p}>{p}</option>)}
           </select>
+          {/* GRID VIEW TOGGLE - Hidden but kept for future use
           <div className="view-toggle">
             <button
               className={`view-btn ${viewMode === 'grid' ? 'active' : ''}`}
@@ -1115,16 +1116,28 @@ const App = () => {
               ☰
             </button>
           </div>
+          */}
         </div>
         )}
         {!showStats && filteredGames.filter(g => g.pinned).length > 0 && (
           <div>
             <h3 className="section-title-pinned">📌 FISSATI</h3>
+            {/* GRID VIEW - Hidden but kept for future use
             <div className={`games-grid ${viewMode === 'list' ? 'list-view' : ''}`}>
               {filteredGames.filter(g => g.pinned).map(game => (
                 <div key={game.id} className="game-card-wrapper">
                   {viewMode === 'list' ? renderGameCardList(game) : renderGameCardGrid(game)}
                   {viewMode === 'list' && filterDlc !== 'Solo DLC' && renderDlcContainer(game)}
+                </div>
+              ))}
+            </div>
+            */}
+            {/* LIST VIEW (forced) */}
+            <div className={`games-grid list-view`}>
+              {filteredGames.filter(g => g.pinned).map(game => (
+                <div key={game.id} className="game-card-wrapper">
+                  {renderGameCardList(game)}
+                  {filterDlc !== 'Solo DLC' && renderDlcContainer(game)}
                 </div>
               ))}
             </div>
@@ -1134,11 +1147,22 @@ const App = () => {
         {!showStats && filteredGames.filter(g => !g.pinned).length > 0 && (
           <div>
             <h3 className="section-title-games">GIOCHI ({filteredGames.filter(g => !g.pinned).length})</h3>
+            {/* GRID VIEW - Hidden but kept for future use
             <div className={`games-grid ${viewMode === 'list' ? 'list-view' : ''}`}>
               {filteredGames.filter(g => !g.pinned).map(game => (
                 <div key={game.id} className="game-card-wrapper">
                   {viewMode === 'list' ? renderGameCardList(game) : renderGameCardGrid(game)}
                   {viewMode === 'list' && filterDlc !== 'Solo DLC' && renderDlcContainer(game)}
+                </div>
+              ))}
+            </div>
+            */}
+            {/* LIST VIEW (forced) */}
+            <div className={`games-grid list-view`}>
+              {filteredGames.filter(g => !g.pinned).map(game => (
+                <div key={game.id} className="game-card-wrapper">
+                  {renderGameCardList(game)}
+                  {filterDlc !== 'Solo DLC' && renderDlcContainer(game)}
                 </div>
               ))}
             </div>
