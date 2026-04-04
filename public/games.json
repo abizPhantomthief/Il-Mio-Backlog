@@ -10916,5 +10916,36 @@
     "dlcType": "dlc",
     "parentId": 156,
     "id": 1775293618252
+  },
+  {
+    "titolo": "Alan Wake: The Signal",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ybw.webp",
+    "saga": "Remedy Connected Universe",
+    "annoUscita": "2010",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 12,
+    "includeInCount": false,
+    "id": 1775298167379
+  },
+  {
+    "titolo": "Alan Wake: The Writer",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ybi.webp",
+    "saga": "Remedy Connected Universe",
+    "annoUscita": "2010",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 12,
+    "id": 1775298213154
   }
 ]
