@@ -1647,7 +1647,7 @@
     "annoUscita": "2023",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4v9d.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "categoria": ""
   },
   {
@@ -3434,9 +3434,9 @@
     "titolo": "Hitman 2",
     "piattaforma": "",
     "annoUscita": "2018",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2qcq.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 329,
@@ -10909,7 +10909,7 @@
     "annoUscita": "2024",
     "annoGiocato": "2026",
     "piattaforma": "PS5",
-    "stato": "In corso",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
