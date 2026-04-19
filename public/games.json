@@ -3432,7 +3432,7 @@
     "id": 328,
     "saga": "Hitman: World of Assassination",
     "titolo": "Hitman 2",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2018",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2qcq.webp",
@@ -10947,5 +10947,21 @@
     "dlcType": "dlc",
     "parentId": 12,
     "id": 1775298213154
+  },
+  {
+    "titolo": "Hitman: Patient Zero",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/iwzgzniqtyoxpa56rolv.webp",
+    "saga": "Hitman: World of Assassination",
+    "annoUscita": "2017",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 327,
+    "includeInCount": false,
+    "id": 1776634299729
   }
 ]
