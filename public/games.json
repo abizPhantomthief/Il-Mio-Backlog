@@ -4908,7 +4908,7 @@
     "annoUscita": "2020",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co227z.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 472,
@@ -8856,7 +8856,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "In Uscita",
+    "categoria": "",
     "pinned": false,
     "id": 1770064431691
   },
@@ -10963,5 +10963,34 @@
     "parentId": 327,
     "includeInCount": false,
     "id": 1776634299729
+  },
+  {
+    "titolo": "Saros",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coajye.webp",
+    "saga": "",
+    "annoUscita": "2026",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1777751299254
+  },
+  {
+    "titolo": "Nine Sols",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4l2s.webp",
+    "saga": "",
+    "annoUscita": "2024",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1777751359946
   }
 ]
