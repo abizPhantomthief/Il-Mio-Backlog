@@ -5670,11 +5670,12 @@
     "id": 546,
     "saga": "Pokémon Series",
     "titolo": "Pokémon HeartGold",
-    "piattaforma": "",
+    "piattaforma": "NDS",
     "annoUscita": "2009",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1z57.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso",
+    "categoria": "Emulato"
   },
   {
     "id": 547,
