@@ -10993,5 +10993,36 @@
     "categoria": "",
     "pinned": false,
     "id": 1777751359946
+  },
+  {
+    "titolo": "Hitman: Sniper Assassin",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2oxf.webp",
+    "saga": "Hitman: World of Assassination",
+    "annoUscita": "2018",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "In corso",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 328,
+    "includeInCount": false,
+    "id": 1777930229025
+  },
+  {
+    "titolo": "Hitman 3: Ambrose Island",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7bd7.webp",
+    "saga": "Hitman: World of Assassination",
+    "annoUscita": "2022",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 329,
+    "id": 1777930324534
   }
 ]
