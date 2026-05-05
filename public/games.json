@@ -11001,7 +11001,7 @@
     "annoUscita": "2018",
     "annoGiocato": "2026",
     "piattaforma": "PS5",
-    "stato": "In corso",
+    "stato": "Sospeso",
     "note": "",
     "categoria": "",
     "pinned": false,
@@ -11024,5 +11024,37 @@
     "dlcType": "dlc",
     "parentId": 329,
     "id": 1777930324534
+  },
+  {
+    "titolo": "Hitman 2: New York",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pg0.webp",
+    "saga": "Hitman: World of Assassination",
+    "annoUscita": "2019",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "In corso",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 328,
+    "includeInCount": false,
+    "id": 1778017178601
+  },
+  {
+    "titolo": "Hitman 2: Haven Island",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pg1.webp",
+    "saga": "Hitman: World of Assassination",
+    "annoUscita": "2019",
+    "annoGiocato": "-",
+    "piattaforma": "PS5",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 328,
+    "includeInCount": false,
+    "id": 1778017235257
   }
 ]
