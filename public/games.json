@@ -1753,7 +1753,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mqf.webp",
     "stato": "Non Giocato",
     "dlcType": "espansione",
-    "parentId": 165
+    "parentId": 165,
+    "includeInCount": false
   },
   {
     "id": 167,
@@ -2132,7 +2133,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pd2.webp",
     "stato": "Completato",
     "dlcType": "espansione",
-    "parentId": 201
+    "parentId": 201,
+    "includeInCount": false
   },
   {
     "id": 203,
@@ -2389,7 +2391,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4xep.webp",
     "stato": "Completato",
     "dlcType": "espansione",
-    "parentId": 226
+    "parentId": 226,
+    "includeInCount": true
   },
   {
     "id": 228,
@@ -2628,7 +2631,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpp.webp",
     "stato": "Completato",
     "dlcType": "espansione",
-    "parentId": 249
+    "parentId": 249,
+    "includeInCount": false
   },
   {
     "id": 251,
@@ -3436,7 +3440,7 @@
     "annoUscita": "2018",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2qcq.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 329,
@@ -3632,7 +3636,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ygu.webp",
     "stato": "Completato",
     "dlcType": "espansione",
-    "parentId": 346
+    "parentId": 346,
+    "includeInCount": false
   },
   {
     "id": 348,
@@ -4418,7 +4423,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dwe.webp",
     "stato": "Completato",
     "dlcType": "espansione",
-    "parentId": 422
+    "parentId": 422,
+    "includeInCount": false
   },
   {
     "id": 424,
@@ -4666,7 +4672,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v88.webp",
     "stato": "Completato",
     "dlcType": "espansione",
-    "parentId": 448
+    "parentId": 448,
+    "includeInCount": false
   },
   {
     "id": 448,
@@ -5751,11 +5758,11 @@
     "id": 554,
     "saga": "",
     "titolo": "Psychonauts",
-    "piattaforma": "",
+    "piattaforma": "PS4",
     "annoUscita": "2005",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co38t0.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 555,
@@ -8512,7 +8519,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21et.webp",
     "stato": "Completato",
     "dlcType": "espansione",
-    "parentId": 827
+    "parentId": 827,
+    "includeInCount": false
   },
   {
     "id": 829,
@@ -8913,7 +8921,8 @@
     "pinned": false,
     "id": 1770585553154,
     "dlcType": "espansione",
-    "parentId": 12
+    "parentId": 12,
+    "includeInCount": false
   },
   {
     "titolo": "Hades II",
@@ -8981,7 +8990,8 @@
     "voto": "",
     "dlcType": "espansione",
     "parentId": 20,
-    "id": 1773003403664
+    "id": 1773003403664,
+    "includeInCount": false
   },
   {
     "titolo": "Assassin's Creed II: La Battaglia di Forlì",
@@ -9086,7 +9096,8 @@
     "pinned": false,
     "dlcType": "espansione",
     "parentId": 37,
-    "id": 1773004495122
+    "id": 1773004495122,
+    "includeInCount": false
   },
   {
     "titolo": "Assassin's Creed Revelations: Gli Archivi Perduti",
@@ -10302,7 +10313,8 @@
     "pinned": false,
     "dlcType": "espansione",
     "parentId": 573,
-    "id": 1773051931573
+    "id": 1773051931573,
+    "includeInCount": false
   },
   {
     "titolo": "Resident Evil 2: The Ghost Survivors",
@@ -11048,7 +11060,7 @@
     "annoUscita": "2019",
     "annoGiocato": "2026",
     "piattaforma": "PS5",
-    "stato": "In corso",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
@@ -11056,5 +11068,21 @@
     "parentId": 328,
     "includeInCount": false,
     "id": 1778017235257
+  },
+  {
+    "titolo": "Metal Slug X",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ish.webp",
+    "saga": "Metal Slug Anthology",
+    "annoUscita": "1999",
+    "annoGiocato": "2021",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "riedizione",
+    "parentId": 450,
+    "includeInCount": false,
+    "id": 1778268362819
   }
 ]

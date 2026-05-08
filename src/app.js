@@ -1237,7 +1237,7 @@ const App = () => {
                 >
                   <option value="">Gioco Principale</option>
                   <option value="dlc">DLC</option>
-                  <option value="espansione">Espansione</option>
+                  <option value="w">Espansione</option>
                   <option value="riedizione">Riedizione</option>
                 </select>
                 {editedGameData.dlcType && (
