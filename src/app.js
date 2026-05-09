@@ -106,9 +106,9 @@ const App = () => {
     return games.filter(g => g.parentId === gameId);
   };
 
-  useEffect(() => { localStorage.setItem('spinHistory', JSON.stringify(history)); }, [history]);
+   useEffect(() => { localStorage.setItem('spinHistory', JSON.stringify(history)); }, [history]);
 
-  useEffect(() => { localStorage.setItem('darkMode', JSON.stringify(isDarkMode)); }, [isDarkMode]);
+   useEffect(() => { localStorage.setItem('darkMode', JSON.stringify(isDarkMode)); }, [isDarkMode]);
 
   const fetchGames = async () => {
     try {
@@ -135,15 +135,15 @@ const App = () => {
     }
   };
 
-  const getColorStatoTransparent = (stato) => {
-    switch (stato) {
-      case 'Completato': return 'rgba(39, 174, 96, 0.15)';
-      case 'In corso': return 'rgba(241, 196, 15, 0.15)';
-      case 'Droppato': return 'rgba(231, 76, 60, 0.15)';
-      case 'Sospeso': return 'rgba(230, 126, 34, 0.15)';
-      default: return 'rgba(127, 140, 141, 0.15)';
-    }
-  };
+   const getColorStatoTransparent = (stato) => {
+     switch (stato) {
+       case 'Completato': return 'rgba(39, 174, 96, 0.15)';
+       case 'In corso': return 'rgba(241, 196, 15, 0.15)';
+       case 'Droppato': return 'rgba(231, 76, 60, 0.15)';
+       case 'Sospeso': return 'rgba(230, 126, 34, 0.15)';
+       default: return 'transparent';
+     }
+   };
 
   const getMetacriticColor = (voto) => {
     if (!voto || voto === '-' || voto === '') return '#555';
@@ -169,24 +169,6 @@ const App = () => {
 
     return (
       <div key={game.id} className={`game-card ${game.pinned ? 'pinned' : ''}`}>
-        {(isAdmin || game.pinned) && (
-          <>
-            <div
-              className="pin-btn"
-              onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
-              title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
-              style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
-            >
-              {game.pinned ? '📌' : '📍'}
-            </div>
-            {isAdmin && (
-              <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
-                ⚙️
-              </button>
-            )}
-          </>
-        )}
-
         {hasDlcs && (
           <button
             className="dlc-expand-btn"
@@ -198,6 +180,21 @@ const App = () => {
         )}
 
         <div className="image-container">
+          {(isAdmin || game.pinned) && (
+            <div
+              className="pin-btn"
+              onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
+              title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
+              style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
+            >
+              {game.pinned ? '📌' : '📍'}
+            </div>
+          )}
+          {isAdmin && (
+            <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
+              ⚙️
+            </button>
+          )}
           <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
           <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
           {/* <div className="metacritic-score-card" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
@@ -281,30 +278,12 @@ const App = () => {
     const hasDlcs = dlcs.length > 0;
     const isExpanded = expandedDlcs[game.id] || false;
 
-    return (
-      <div
-        key={game.id}
-        className={`game-card ${game.pinned ? 'pinned' : ''}`}
-        style={{ backgroundColor: getColorStatoTransparent(game.stato) }}
-      >
-        {(isAdmin || game.pinned) && (
-          <>
-            <div
-              className="pin-btn"
-              onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
-              title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
-              style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
-            >
-              {game.pinned ? '📌' : '📍'}
-            </div>
-            {isAdmin && (
-              <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
-                ⚙️
-              </button>
-            )}
-          </>
-        )}
-
+      return (
+        <div
+          key={game.id}
+          className={`game-card ${game.pinned ? 'pinned' : ''}`}
+          style={{ backgroundColor: getColorStatoTransparent(game.stato) }}
+        >
         {hasDlcs && (
           <button
             className="dlc-expand-btn"
@@ -316,6 +295,21 @@ const App = () => {
         )}
 
         <div className="image-container">
+          {(isAdmin || game.pinned) && (
+            <div
+              className="pin-btn"
+              onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
+              title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
+              style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
+            >
+              {game.pinned ? '📌' : '📍'}
+            </div>
+          )}
+          {isAdmin && (
+            <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
+              ⚙️
+            </button>
+          )}
           <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
           <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
           {isAdmin && (
@@ -486,9 +480,9 @@ const App = () => {
     });
     return stats;
   };
-  const sagaStats = getSagaStats();
+   const sagaStats = getSagaStats();
 
-  const getStatisticheTotali = () => {
+   const getStatisticheTotali = () => {
     const gamesWithoutDlcs = games.filter(g => !isDlc(g));
     const dlcGames = games.filter(g => isDlc(g));
     const totale = gamesWithoutDlcs.length;
@@ -779,10 +773,47 @@ const App = () => {
                       <div className="preview-section">
                         <p className="preview-label">Anteprima Card</p>
                         <div className="game-card">
-                          <div className="image-container">
-                            <div className="blur-bg" style={{ backgroundImage: `url(${newGame.copertina})` }}></div>
-                            <img src={newGame.copertina || 'https://via.placeholder.com/300x400?text=Copertina'} className="main-img" alt="Preview" />
-                          </div>
+        <div className="image-container">
+          {(isAdmin || game.pinned) && (
+            <div
+              className="pin-btn"
+              onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
+              title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
+              style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
+            >
+              {game.pinned ? '📌' : '📍'}
+            </div>
+          )}
+          {isAdmin && (
+            <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
+              ⚙️
+            </button>
+          )}
+          <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
+          <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
+          {/* <div className="metacritic-score-card" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
+            {game.voto && game.voto !== '-' && game.voto !== '' ? game.voto : '-'}
+          </div> */}
+          <div className="info-mask">
+            {isAdmin ? (
+              <div className="info-mask-admin">
+                <button className="delete-btn" onClick={() => eliminaGioco(game.id, game.titolo)}>ELIMINA 🗑</button>
+                <p className="info-mask-hint">Usa l'ingranaggio per modificare</p>
+              </div>
+            ) : (
+              <div className="info-mask-center">
+                {game.saga && game.saga !== "-" && <h3 className="saga-info">{game.saga}</h3>}
+                <div className="category-tags">
+                  {dividiStringa(game.categoria).map((c, i) => (
+                    <span key={i} className="category-tag">#{c}</span>
+                  ))}
+                </div>
+                <p className="played-info">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
+                {game.note && <p className="note-text">{game.note}</p>}
+              </div>
+            )}
+          </div>
+        </div>
                           <div className="card-content">
                             <div className="status-badge" style={{ backgroundColor: getColorStato(newGame.stato) }}><span className="status-display">{formatStatoDisplay(newGame.stato)}</span></div>
                             <h4 className="card-title">{newGame.titolo || 'Titolo del Gioco'}</h4>
