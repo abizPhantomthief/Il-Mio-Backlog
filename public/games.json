@@ -133,7 +133,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dft.webp",
     "stato": "Completato",
     "note": "",
-    "voto": "79"
+    "voto": "79",
+    "pinned": false
   },
   {
     "id": 13,

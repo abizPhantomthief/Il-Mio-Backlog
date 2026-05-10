@@ -106,9 +106,9 @@ const App = () => {
     return games.filter(g => g.parentId === gameId);
   };
 
-   useEffect(() => { localStorage.setItem('spinHistory', JSON.stringify(history)); }, [history]);
+  useEffect(() => { localStorage.setItem('spinHistory', JSON.stringify(history)); }, [history]);
 
-   useEffect(() => { localStorage.setItem('darkMode', JSON.stringify(isDarkMode)); }, [isDarkMode]);
+  useEffect(() => { localStorage.setItem('darkMode', JSON.stringify(isDarkMode)); }, [isDarkMode]);
 
   const fetchGames = async () => {
     try {
@@ -135,15 +135,15 @@ const App = () => {
     }
   };
 
-   const getColorStatoTransparent = (stato) => {
-     switch (stato) {
-       case 'Completato': return 'rgba(39, 174, 96, 0.15)';
-       case 'In corso': return 'rgba(241, 196, 15, 0.15)';
-       case 'Droppato': return 'rgba(231, 76, 60, 0.15)';
-       case 'Sospeso': return 'rgba(230, 126, 34, 0.15)';
-       default: return 'transparent';
-     }
-   };
+  const getColorStatoTransparent = (stato) => {
+    switch (stato) {
+      case 'Completato': return 'rgba(39, 174, 96, 0.15)';
+      case 'In corso': return 'rgba(241, 196, 15, 0.15)';
+      case 'Droppato': return 'rgba(231, 76, 60, 0.15)';
+      case 'Sospeso': return 'rgba(230, 126, 34, 0.15)';
+      default: return 'transparent';
+    }
+  };
 
   const getMetacriticColor = (voto) => {
     if (!voto || voto === '-' || voto === '') return '#555';
@@ -241,7 +241,7 @@ const App = () => {
         {hasDlcs && isExpanded && (
           <div className="dlc-container">
             {dlcs.map(dlc => (
-              <div key={dlc.id} className="dlc-card">
+              <div key={dlc.id} className="dlc-card" data-status={dlc.stato}>
                 <img src={dlc.copertina} className="dlc-img" alt={dlc.titolo} />
                 <div className="dlc-content">
                   <h5 className="dlc-title">
@@ -278,12 +278,12 @@ const App = () => {
     const hasDlcs = dlcs.length > 0;
     const isExpanded = expandedDlcs[game.id] || false;
 
-      return (
-        <div
-          key={game.id}
-          className={`game-card ${game.pinned ? 'pinned' : ''}`}
-          style={{ backgroundColor: getColorStatoTransparent(game.stato) }}
-        >
+    return (
+      <div
+        key={game.id}
+        className={`game-card ${game.pinned ? 'pinned' : ''}`}
+        style={{ backgroundColor: getColorStatoTransparent(game.stato) }}
+      >
         {hasDlcs && (
           <button
             className="dlc-expand-btn"
@@ -365,7 +365,7 @@ const App = () => {
     return (
       <div className="dlc-container list-view">
         {dlcs.map(dlc => (
-          <div key={dlc.id} className="dlc-card">
+          <div key={dlc.id} className="dlc-card" data-status={dlc.stato}>
             <img src={dlc.copertina} className="dlc-img" alt={dlc.titolo} />
             <div className="dlc-content">
               <h5 className="dlc-title">
@@ -480,9 +480,9 @@ const App = () => {
     });
     return stats;
   };
-   const sagaStats = getSagaStats();
+  const sagaStats = getSagaStats();
 
-   const getStatisticheTotali = () => {
+  const getStatisticheTotali = () => {
     const gamesWithoutDlcs = games.filter(g => !isDlc(g));
     const dlcGames = games.filter(g => isDlc(g));
     const totale = gamesWithoutDlcs.length;
@@ -770,58 +770,44 @@ const App = () => {
                           </div>
                         </form>
                       </div>
+                      {/* Sostituisci il contenuto di <div className="preview-section"> con questo: */}
                       <div className="preview-section">
                         <p className="preview-label">Anteprima Card</p>
-                        <div className="game-card">
-        <div className="image-container">
-          {(isAdmin || game.pinned) && (
-            <div
-              className="pin-btn"
-              onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
-              title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
-              style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
-            >
-              {game.pinned ? '📌' : '📍'}
-            </div>
-          )}
-          {isAdmin && (
-            <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
-              ⚙️
-            </button>
-          )}
-          <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
-          <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
-          {/* <div className="metacritic-score-card" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
-            {game.voto && game.voto !== '-' && game.voto !== '' ? game.voto : '-'}
-          </div> */}
-          <div className="info-mask">
-            {isAdmin ? (
-              <div className="info-mask-admin">
-                <button className="delete-btn" onClick={() => eliminaGioco(game.id, game.titolo)}>ELIMINA 🗑</button>
-                <p className="info-mask-hint">Usa l'ingranaggio per modificare</p>
-              </div>
-            ) : (
-              <div className="info-mask-center">
-                {game.saga && game.saga !== "-" && <h3 className="saga-info">{game.saga}</h3>}
-                <div className="category-tags">
-                  {dividiStringa(game.categoria).map((c, i) => (
-                    <span key={i} className="category-tag">#{c}</span>
-                  ))}
-                </div>
-                <p className="played-info">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
-                {game.note && <p className="note-text">{game.note}</p>}
-              </div>
-            )}
-          </div>
-        </div>
+                        <div className="game-card" data-status={newGame.stato}>
+                          <div className="image-container">
+                            {/* Usiamo newGame invece di game */}
+                            {(isAdmin || newGame.pinned) && (
+                              <div
+                                className="pin-btn"
+                                style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: 'none' }}
+                              >
+                                {newGame.pinned ? '📌' : '📍'}
+                              </div>
+                            )}
+                            <div className="blur-bg" style={{ backgroundImage: `url(${newGame.copertina})` }}></div>
+                            <img src={newGame.copertina} className="main-img" alt={newGame.titolo} />
+
+                            <div className="info-mask">
+                              <div className="info-mask-center">
+                                {newGame.saga && <h3 className="saga-info">{newGame.saga}</h3>}
+                                <div className="category-tags">
+                                  {dividiStringa(newGame.categoria).map((c, i) => (
+                                    <span key={i} className="category-tag">#{c}</span>
+                                  ))}
+                                </div>
+                                <p className="played-info">Giocato nel: <b>{newGame.annoGiocato || '---'}</b></p>
+                              </div>
+                            </div>
+                          </div>
                           <div className="card-content">
-                            <div className="status-badge" style={{ backgroundColor: getColorStato(newGame.stato) }}><span className="status-display">{formatStatoDisplay(newGame.stato)}</span></div>
+                            <div className="status-badge" style={{ backgroundColor: getColorStato(newGame.stato) }}>
+                              <span className="status-display">{formatStatoDisplay(newGame.stato)}</span>
+                            </div>
                             <h4 className="card-title">{newGame.titolo || 'Titolo del Gioco'}</h4>
-                            {/* <div className="metacritic-score" style={{ backgroundColor: getMetacriticColor(newGame.voto) }}>
-                              {newGame.voto && newGame.voto !== '' ? newGame.voto : '-'}
-                            </div> */}
                             <div className="platforms-tags">
-                              {dividiStringa(newGame.piattaforma).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
+                              {dividiStringa(newGame.piattaforma).map((p, i) => (
+                                <span key={i} className="platform-chip">{p}</span>
+                              ))}
                             </div>
                           </div>
                         </div>
@@ -1096,41 +1082,41 @@ const App = () => {
           </div>
         ) : (
           <div className="filter-bar">
-          <input id="search" name="search" type="text" placeholder="🔍 Cerca tra i tuoi giochi..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="search-input" />
-          <select id="filterStatus" name="filterStatus" value={filterStatus} onChange={e => setFilterStatus(e.target.value)} className="filter-select" style={{ color: filterStatus === 'Tutti' ? 'var(--text-primary)' : getColorStato(filterStatus) }}>
-            <option value="Tutti">Stato di Gioco</option>
-            {['Non Giocato', 'In corso', 'Completato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
-          </select>
-          <select id="filterYear" name="filterYear" value={filterYear} onChange={e => setFilterYear(e.target.value)} className="filter-select">
-            <option value="Tutti">Anno di Gioco</option>
-            {anniPerFiltro.map(y => <option key={y} value={y}>{y}</option>)}
-          </select>
-          <select id="filterCategory" name="filterCategory" value={filterCategory} onChange={e => setFilterCategory(e.target.value)} className="filter-select">
-            <option value="Tutte">Categoria</option>
-            {suggerimentiCategorie.map(c => <option key={c} value={c}>{c}</option>)}
-          </select>
-          <select id="filterDlc" name="filterDlc" value={filterDlc} onChange={e => setFilterDlc(e.target.value)} className="filter-select">
-            <option value="Solo Base">Giochi Base</option>
-            <option value="Solo DLC">Solo DLC/Espansioni</option>
-          </select>
-          <select id="sortTitle" name="sortTitle" value={sortTitle} onChange={e => setSortTitle(e.target.value)} className="filter-select">
-            <option value="Default">Ordine Titolo</option>
-            <option value="A-Z">A-Z</option>
-            <option value="Z-A">Z-A</option>
-          </select>
-          <select id="sortYear" name="sortYear" value={sortYear} onChange={e => setSortYear(e.target.value)} className="filter-select">
-            <option value="Default">Anno Uscita</option>
-            <option value="Crescente">Crescente</option>
-            <option value="Decrescente">Decrescente</option>
-            <optgroup label="Anno Specifico">
-              {anniUscita.map(anno => <option key={anno} value={anno}>{anno}</option>)}
-            </optgroup>
-          </select>
-          <select id="sortPlatform" name="sortPlatform" value={sortPlatform} onChange={e => setSortPlatform(e.target.value)} className="filter-select">
-            <option value="Default">Piattaforme</option>
-            {suggerimentiPiattaforme.map(p => <option key={p} value={p}>{p}</option>)}
-          </select>
-          {/* GRID VIEW TOGGLE - Hidden but kept for future use
+            <input id="search" name="search" type="text" placeholder="🔍 Cerca tra i tuoi giochi..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="search-input" />
+            <select id="filterStatus" name="filterStatus" value={filterStatus} onChange={e => setFilterStatus(e.target.value)} className="filter-select" style={{ color: filterStatus === 'Tutti' ? 'var(--text-primary)' : getColorStato(filterStatus) }}>
+              <option value="Tutti">Stato di Gioco</option>
+              {['Non Giocato', 'In corso', 'Completato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
+            </select>
+            <select id="filterYear" name="filterYear" value={filterYear} onChange={e => setFilterYear(e.target.value)} className="filter-select">
+              <option value="Tutti">Anno di Gioco</option>
+              {anniPerFiltro.map(y => <option key={y} value={y}>{y}</option>)}
+            </select>
+            <select id="filterCategory" name="filterCategory" value={filterCategory} onChange={e => setFilterCategory(e.target.value)} className="filter-select">
+              <option value="Tutte">Categoria</option>
+              {suggerimentiCategorie.map(c => <option key={c} value={c}>{c}</option>)}
+            </select>
+            <select id="filterDlc" name="filterDlc" value={filterDlc} onChange={e => setFilterDlc(e.target.value)} className="filter-select">
+              <option value="Solo Base">Giochi Base</option>
+              <option value="Solo DLC">Solo DLC/Espansioni</option>
+            </select>
+            <select id="sortTitle" name="sortTitle" value={sortTitle} onChange={e => setSortTitle(e.target.value)} className="filter-select">
+              <option value="Default">Ordine Titolo</option>
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+            </select>
+            <select id="sortYear" name="sortYear" value={sortYear} onChange={e => setSortYear(e.target.value)} className="filter-select">
+              <option value="Default">Anno Uscita</option>
+              <option value="Crescente">Crescente</option>
+              <option value="Decrescente">Decrescente</option>
+              <optgroup label="Anno Specifico">
+                {anniUscita.map(anno => <option key={anno} value={anno}>{anno}</option>)}
+              </optgroup>
+            </select>
+            <select id="sortPlatform" name="sortPlatform" value={sortPlatform} onChange={e => setSortPlatform(e.target.value)} className="filter-select">
+              <option value="Default">Piattaforme</option>
+              {suggerimentiPiattaforme.map(p => <option key={p} value={p}>{p}</option>)}
+            </select>
+            {/* GRID VIEW TOGGLE - Hidden but kept for future use
           <div className="view-toggle">
             <button
               className={`view-btn ${viewMode === 'grid' ? 'active' : ''}`}
@@ -1148,7 +1134,7 @@ const App = () => {
             </button>
           </div>
           */}
-        </div>
+          </div>
         )}
         {!showStats && filteredGames.filter(g => g.pinned).length > 0 && (
           <div>

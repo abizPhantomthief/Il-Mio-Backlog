@@ -1747,7 +1747,7 @@ datalist {
   border-top: none;
   border-left: 3px solid var(--accent-primary);
   margin: 0;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 0px 0px 0px 10px;
   width: 100%;
 }
 
@@ -1940,4 +1940,30 @@ datalist {
   height: 16px;
   cursor: pointer;
   accent-color: var(--accent-primary);
+}
+
+/* --- COLORI DINAMICI (Fix DLC) --- */
+.game-card[data-status="Completato"], .dlc-card[data-status="Completato"] { --status-rgb: 40, 167, 69; --status-color: #28a745; }
+.game-card[data-status="In corso"], .dlc-card[data-status="In corso"] { --status-rgb: 255, 193, 7; --status-color: #ffc107; }
+.game-card[data-status="Sospeso"], .dlc-card[data-status="Sospeso"] { --status-rgb: 255, 184, 77; --status-color: #cc7a00; }
+.game-card[data-status="Droppato"], .dlc-card[data-status="Droppato"] { --status-rgb: 220, 53, 69; --status-color: #dc3545; }
+.game-card[data-status="Non giocato"], .dlc-card[data-status="Non giocato"] { --status-rgb: 108, 117, 125; --status-color: #6c757d; }
+
+/* Stile Card Principale */
+.game-card .card-content {
+    background: linear-gradient(135deg, rgba(var(--status-rgb), 0.15) 0%, var(--bg-secondary) 100%) !important;
+    position: relative;
+    border-top: 1px solid rgba(var(--status-rgb), 0.3);
+}
+
+/* Stile DLC (La casella che indicavi nella foto) */
+.dlc-card {
+    border-left: 4px solid var(--status-color) !important;
+    background: rgba(var(--status-rgb), 0.1) !important; /* Questo colora l'interno della casella */
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dlc-card:hover {
+    background: rgba(var(--status-rgb), 0.2) !important; /* Si illumina al passaggio */
 }
