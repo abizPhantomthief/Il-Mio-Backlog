@@ -1082,7 +1082,7 @@ const App = () => {
           </div>
         ) : (
           <div className="filter-bar">
-            <input id="search" name="search" type="text" placeholder="🔍 Cerca tra i tuoi giochi..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="search-input" />
+            <input id="search" name="search" type="text" placeholder="Cerca tra i tuoi giochi..." value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="search-input" />
             <select id="filterStatus" name="filterStatus" value={filterStatus} onChange={e => setFilterStatus(e.target.value)} className="filter-select" style={{ color: filterStatus === 'Tutti' ? 'var(--text-primary)' : getColorStato(filterStatus) }}>
               <option value="Tutti">Stato di Gioco</option>
               {['Non Giocato', 'In corso', 'Completato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
