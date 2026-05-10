@@ -1397,16 +1397,6 @@
     "stato": "Non Giocato"
   },
   {
-    "id": 133,
-    "saga": "",
-    "titolo": "Coromon",
-    "piattaforma": "",
-    "annoUscita": "2020",
-    "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ixx.webp",
-    "stato": "Non Giocato"
-  },
-  {
     "id": 134,
     "saga": "Crash Series",
     "titolo": "Crash Bandicoot",
@@ -2937,7 +2927,7 @@
   },
   {
     "id": 280,
-    "saga": "Deponia",
+    "saga": "",
     "titolo": "Fuga da Deponia",
     "piattaforma": "",
     "annoUscita": "2012",
@@ -3298,7 +3288,8 @@
     "annoUscita": "2021",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lby.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Possibile Rimozione"
   },
   {
     "id": 315,
@@ -4466,16 +4457,6 @@
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x7q.webp",
     "stato": "In corso"
-  },
-  {
-    "id": 428,
-    "saga": "Mass Effect Saga",
-    "titolo": "Mass Effect: Andromeda",
-    "piattaforma": "",
-    "annoUscita": "2017",
-    "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39vk.webp",
-    "stato": "Non Giocato"
   },
   {
     "id": 429,
