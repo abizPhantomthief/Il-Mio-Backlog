@@ -1967,3 +1967,35 @@ datalist {
 .dlc-card:hover {
     background: rgba(var(--status-rgb), 0.2) !important; /* Si illumina al passaggio */
 }
+
+/* Container della Cronologia */
+.history-page {
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.history-item {
+  background: var(--bg-secondary);
+  border-left: 4px solid #17a2b8; /* Blu di default */
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0; /* Squadrato! */
+}
+
+/* Colori dinamici per i log */
+.history-item[data-azione="Aggiunto"] { border-left-color: #28a745; }
+.history-item[data-azione="Eliminato"] { border-left-color: #dc3545; }
+.history-item[data-azione="Cambio Stato"] { border-left-color: #ffc107; }
+
+.history-info h4 { margin: 0; font-size: 16px; color: var(--text-primary); }
+.history-info p { margin: 5px 0 0; font-size: 13px; color: var(--text-secondary); }
+.history-date { font-size: 12px; color: var(--text-muted); font-family: monospace; }

@@ -22,6 +22,19 @@ const App = () => {
   const [editingGame, setEditingGame] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
   const [editedGameData, setEditedGameData] = useState(null);
+  const [logs, setLogs] = useState([]);
+  const [showHistory, setShowHistory] = useState(false); // Per switchare pagina
+
+  const addActivityLog = (azione, titoloGioco, dettaglio = "") => {
+    const nuovoLog = {
+      id: Date.now(),
+      azione,
+      titoloGioco,
+      dettaglio,
+      data: new Date().toLocaleString('it-IT')
+    };
+    setLogs(prev => [nuovoLog, ...prev]);
+  };
 
   const openEditModal = (game) => {
     setEditingGame(game);
@@ -36,6 +49,7 @@ const App = () => {
   const saveGameChanges = async () => {
     setIsSaving(true);
     await new Promise(resolve => setTimeout(resolve, 800));
+    addActivityLog("Modificato", editedGameData.titolo, "Informazioni del gioco aggiornate tramite editor");
     const nuovaLista = games.map(g => g.id === editedGameData.id ? editedGameData : g);
     setGames(nuovaLista);
     if (window.location.hostname === 'localhost') {
@@ -105,6 +119,17 @@ const App = () => {
   const getDlcsForGame = (gameId) => {
     return games.filter(g => g.parentId === gameId);
   };
+
+  // Carica i log all'avvio
+  useEffect(() => {
+    const savedLogs = localStorage.getItem('gameLogs');
+    if (savedLogs) setLogs(JSON.parse(savedLogs));
+  }, []);
+
+  // Salva i log ogni volta che cambiano
+  useEffect(() => {
+    localStorage.setItem('gameLogs', JSON.stringify(logs));
+  }, [logs]);
 
   useEffect(() => { localStorage.setItem('spinHistory', JSON.stringify(history)); }, [history]);
 
@@ -399,6 +424,13 @@ const App = () => {
     if (!isAdmin && campo !== 'pinned') return;
     if (campo === 'pinned' && !isAdmin) return;
 
+    const giocoOriginale = games.find(g => g.id === id);
+
+    // AGGIUNGI QUESTO BLOCCO PER LO STATO
+    if (campo === 'stato' && giocoOriginale.stato !== valore) {
+      addActivityLog("Cambio Stato", giocoOriginale.titolo, `Stato aggiornato: ${giocoOriginale.stato} ➔ ${valore}`);
+    }
+
     const nuovaLista = games.map(g => g.id === id ? { ...g, [campo]: valore } : g);
     setGames(nuovaLista);
     if (window.location.hostname === 'localhost') {
@@ -410,6 +442,9 @@ const App = () => {
     e.preventDefault();
     const nuovoGiocoConId = { ...newGame, id: Date.now() };
     const nuovaLista = [...games, nuovoGiocoConId];
+
+    addActivityLog("Aggiunto", nuovoGiocoConId.titolo, "Nuovo gioco inserito in libreria");
+
     setGames(nuovaLista);
     if (window.location.hostname === 'localhost') {
       await axios.post('http://localhost:5000/api/games/update', nuovaLista);
@@ -422,6 +457,9 @@ const App = () => {
     if (!isAdmin) return;
     if (window.confirm(`Eliminare "${titolo}"?`)) {
       const nuovaLista = games.filter(g => g.id !== id);
+
+      addActivityLog("Eliminato", titolo, "Rimosso definitivamente dalla collezione");
+
       setGames(nuovaLista);
       if (window.location.hostname === 'localhost') {
         await axios.post('http://localhost:5000/api/games/update', nuovaLista);
@@ -677,6 +715,12 @@ const App = () => {
             <button onClick={() => setIsCollapsed(!isCollapsed)}>
               {isCollapsed ? '➡' : '⬅'}
             </button>
+            <button
+              className={`nav-btn ${showHistory ? 'active' : ''}`}
+              onClick={() => { setShowHistory(true); setShowStats(false); }}
+            >
+              📜
+            </button>
           </div>
         </div>
 
@@ -839,7 +883,33 @@ const App = () => {
 
       {/* Main Content */}
       <div className="main-content">
-        {showStats ? (
+        {showHistory ? (
+          /* 1. PAGINA CRONOLOGIA */
+          <div className="history-page">
+            <div className="statistics-header">
+              <h2>📜 CRONOLOGIA ATTIVITÀ</h2>
+              <button className="back-btn" onClick={() => setShowHistory(false)}>← TORNA AI GIOCHI</button>
+            </div>
+
+            <div className="history-list">
+              {logs.length === 0 ? (
+                <p style={{ textAlign: 'center', marginTop: '40px', color: 'var(--text-secondary)' }}>
+                  Nessuna attività registrata ancora...
+                </p>
+              ) : (
+                logs.map(log => (
+                  <div key={log.id} className="history-item" data-azione={log.azione}>
+                    <div className="history-info">
+                      <h4>{log.azione}: {log.titoloGioco}</h4>
+                      <p>{log.dettaglio}</p>
+                    </div>
+                    <div className="history-date">{log.data}</div>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        ) : showStats ? (
           <div className="statistics-page">
             <div className="statistics-header">
               <h2>📊 STATISTICHE TOTALI</h2>
