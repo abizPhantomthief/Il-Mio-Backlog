@@ -23,7 +23,6 @@ const App = () => {
   const [isSaving, setIsSaving] = useState(false);
   const [editedGameData, setEditedGameData] = useState(null);
   const [logs, setLogs] = useState([]);
-  const [showHistory, setShowHistory] = useState(false); // Per switchare pagina
 
   const addActivityLog = (azione, titoloGioco, dettaglio = "") => {
     const nuovoLog = {
@@ -117,7 +116,15 @@ const App = () => {
   };
 
   const getDlcsForGame = (gameId) => {
-    return games.filter(g => g.parentId === gameId);
+    return games
+      .filter(g => g.parentId === gameId)
+      .sort((a, b) => {
+        // Convertiamo in numeri per il confronto (gestendo eventuali stringhe vuote o "-")
+        const annoA = parseInt(a.annoUscita) || 0;
+        const annoB = parseInt(b.annoUscita) || 0;
+
+        return annoA - annoB; // Dall'uscita più vecchia alla più recente
+      });
   };
 
   // Carica i log all'avvio
@@ -130,8 +137,6 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem('gameLogs', JSON.stringify(logs));
   }, [logs]);
-
-  useEffect(() => { localStorage.setItem('spinHistory', JSON.stringify(history)); }, [history]);
 
   useEffect(() => { localStorage.setItem('darkMode', JSON.stringify(isDarkMode)); }, [isDarkMode]);
 
@@ -715,12 +720,6 @@ const App = () => {
             <button onClick={() => setIsCollapsed(!isCollapsed)}>
               {isCollapsed ? '➡' : '⬅'}
             </button>
-            <button
-              className={`nav-btn ${showHistory ? 'active' : ''}`}
-              onClick={() => { setShowHistory(true); setShowStats(false); }}
-            >
-              📜
-            </button>
           </div>
         </div>
 
@@ -883,33 +882,7 @@ const App = () => {
 
       {/* Main Content */}
       <div className="main-content">
-        {showHistory ? (
-          /* 1. PAGINA CRONOLOGIA */
-          <div className="history-page">
-            <div className="statistics-header">
-              <h2>📜 CRONOLOGIA ATTIVITÀ</h2>
-              <button className="back-btn" onClick={() => setShowHistory(false)}>← TORNA AI GIOCHI</button>
-            </div>
-
-            <div className="history-list">
-              {logs.length === 0 ? (
-                <p style={{ textAlign: 'center', marginTop: '40px', color: 'var(--text-secondary)' }}>
-                  Nessuna attività registrata ancora...
-                </p>
-              ) : (
-                logs.map(log => (
-                  <div key={log.id} className="history-item" data-azione={log.azione}>
-                    <div className="history-info">
-                      <h4>{log.azione}: {log.titoloGioco}</h4>
-                      <p>{log.dettaglio}</p>
-                    </div>
-                    <div className="history-date">{log.data}</div>
-                  </div>
-                ))
-              )}
-            </div>
-          </div>
-        ) : showStats ? (
+        {showStats ? (
           <div className="statistics-page">
             <div className="statistics-header">
               <h2>📊 STATISTICHE TOTALI</h2>

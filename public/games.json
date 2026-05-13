@@ -2383,7 +2383,7 @@
     "stato": "Completato",
     "dlcType": "espansione",
     "parentId": 226,
-    "includeInCount": true
+    "includeInCount": false
   },
   {
     "id": 228,
@@ -11090,7 +11090,7 @@
     "annoUscita": "2012",
     "annoGiocato": "2026",
     "piattaforma": "PS4",
-    "stato": "In corso",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
