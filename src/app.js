@@ -192,161 +192,81 @@ const App = () => {
     return String(saga).replace(/Series/gi, "").replace(/Saga/gi, "").trim();
   };
 
-  const renderGameCardGrid = (game) => {
-    const dlcs = getDlcsForGame(game.id);
-    const hasDlcs = dlcs.length > 0;
-    const isExpanded = expandedDlcs[game.id] || false;
-
-    return (
-      <div key={game.id} className={`game-card ${game.pinned ? 'pinned' : ''}`}>
-        {hasDlcs && (
-          <button
-            className="dlc-expand-btn"
-            onClick={() => toggleDlcExpand(game.id)}
-            title={isExpanded ? "Nascondi DLC" : "Mostra DLC"}
-          >
-            {isExpanded ? '▲' : '▼'} {dlcs.length} DLC/Espansioni/Riedizioni
-          </button>
-        )}
-
-        <div className="image-container">
-          {(isAdmin || game.pinned) && (
-            <div
-              className="pin-btn"
-              onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
-              title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
-              style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
-            >
-              {game.pinned ? '📌' : '📍'}
-            </div>
-          )}
-          {isAdmin && (
-            <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
-              ⚙️
-            </button>
-          )}
-          <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
-          <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
-          {/* <div className="metacritic-score-card" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
-            {game.voto && game.voto !== '-' && game.voto !== '' ? game.voto : '-'}
-          </div> */}
-          <div className="info-mask">
-            {isAdmin ? (
-              <div className="info-mask-admin">
-                <button className="delete-btn" onClick={() => eliminaGioco(game.id, game.titolo)}>ELIMINA 🗑</button>
-                <p className="info-mask-hint">Usa l'ingranaggio per modificare</p>
-              </div>
-            ) : (
-              <div className="info-mask-center">
-                {game.saga && game.saga !== "-" && <h3 className="saga-info">{game.saga}</h3>}
-                <div className="category-tags">
-                  {dividiStringa(game.categoria).map((c, i) => (
-                    <span key={i} className="category-tag">#{c}</span>
-                  ))}
-                </div>
-                <p className="played-info">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
-                {game.note && <p className="note-text">{game.note}</p>}
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div className="card-content">
-          <div className="status-badge" style={{ backgroundColor: getColorStato(game.stato) }}><span className="status-display">{formatStatoDisplay(game.stato)}</span></div>
-          <h4 className="card-title">
-            {game.titolo}
-            {game.annoUscita && <span className="year">({game.annoUscita})</span>}
-          </h4>
-          {game.dlcType && (
-            <div className="dlc-type-badge" style={{ background: getDlcTypeColor(game.dlcType) }}>
-              {getDlcTypeLabel(game.dlcType)}
-            </div>
-          )}
-          <div className="platforms-tags">
-            {dividiStringa(game.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
-            {dividiStringa(game.categoria).map((c, i) => <span key={i} className="category-chip">{c}</span>)}
-          </div>
-        </div>
-
-        {hasDlcs && isExpanded && (
-          <div className="dlc-container">
-            {dlcs.map(dlc => (
-              <div key={dlc.id} className="dlc-card" data-status={dlc.stato}>
-                <img src={dlc.copertina} className="dlc-img" alt={dlc.titolo} />
-                <div className="dlc-content">
-                  <h5 className="dlc-title">
-                    {dlc.titolo}
-                    {dlc.annoUscita && <span className="dlc-year"> ({dlc.annoUscita})</span>}
-                  </h5>
-                  <div className="dlc-meta">
-                    <span className="dlc-status" style={{ color: getColorStato(dlc.stato) }}>{formatStatoDisplay(dlc.stato)}</span>
-                    {dlc.voto && dlc.voto !== '-' && dlc.voto !== '' && (
-                      <span className="dlc-vote" style={{ backgroundColor: getMetacriticColor(dlc.voto) }}>{dlc.voto}</span>
-                    )}
-                  </div>
-                  <div className="dlc-played-platform">
-                    <span className="dlc-played-info">Giocato nel: <b>{dlc.annoGiocato || '---'}</b></span>
-                    <div className="dlc-platforms">
-                      {dividiStringa(dlc.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
-                    </div>
-                  </div>
-                </div>
-                <div className="dlc-type-badge" style={{ background: getDlcTypeColor(dlc.dlcType || 'dlc') }}>{getDlcTypeLabel(dlc.dlcType || 'dlc')}</div>
-                {isAdmin && (
-                  <button className="dlc-edit-btn" onClick={() => openEditModal(dlc)}>⚙️</button>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    );
-  };
-
   const renderGameCardList = (game) => {
     const dlcs = getDlcsForGame(game.id);
     const hasDlcs = dlcs.length > 0;
     const isExpanded = expandedDlcs[game.id] || false;
 
+    const isWishlist = dividiStringa(game.categoria).includes('Wishlist');
+
     return (
       <div
         key={game.id}
-        className={`game-card ${game.pinned ? 'pinned' : ''}`}
+        className={`game-card ${game.pinned ? 'pinned' : ''} ${isWishlist ? 'wishlist-card' : ''}`}
         style={{ backgroundColor: getColorStatoTransparent(game.stato) }}
       >
+        {/* 1. NUOVO CONTENITORE ADMIN (In alto a destra) */}
+        {isAdmin && (
+          <div className="admin-controls-overlay">
+            {/* Tasto Wishlist (Stella) */}
+            <button
+              className={`admin-btn-action ${isWishlist ? 'active-star' : ''}`} // Cambiata la classe active
+              onClick={() => {
+                const categorieAttuali = dividiStringa(game.categoria);
+                const nuoveCategorie = isWishlist
+                  ? categorieAttuali.filter(c => c !== 'Wishlist').join(', ')
+                  : [...categorieAttuali, 'Wishlist'].join(', ');
+                modificaCampo(game.id, 'categoria', nuoveCategorie);
+              }}
+              title="Aggiungi/Rimuovi Wishlist"
+            >
+              {isWishlist ? '⭐' : '☆'} {/* Stella piena se in wishlist, vuota se no */}
+            </button>
+
+            {/* Tasto Pin */}
+            <button
+              className={`admin-btn-action ${game.pinned ? 'active' : ''}`}
+              onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
+              title="Pin"
+            >
+              📌
+            </button>
+
+            {/* Tasto Modifica */}
+            <button className="admin-btn-action" onClick={() => openEditModal(game)} title="Modifica">
+              ⚙️
+            </button>
+
+            {/* Tasto Elimina */}
+            <button
+              className="admin-btn-action delete"
+              onClick={() => eliminaGioco(game.id, game.titolo)}
+              title="Elimina"
+            >
+              🗑️
+            </button>
+          </div>
+        )}
+
+        {/* Espansione DLC (Resta dove era) */}
         {hasDlcs && (
           <button
             className="dlc-expand-btn"
             onClick={() => toggleDlcExpand(game.id)}
             title={isExpanded ? "Nascondi DLC" : "Mostra DLC"}
           >
-            {isExpanded ? '▲' : '▼'} {dlcs.length} DLC/Espansioni/Riedizioni
+            {isExpanded ? '▲' : '▼'} {dlcs.length} DLC/Espansioni
           </button>
         )}
 
+        {/* 2. IMAGE CONTAINER (Pulito dai vecchi tasti e maschere) */}
         <div className="image-container">
-          {(isAdmin || game.pinned) && (
-            <div
-              className="pin-btn"
-              onClick={() => modificaCampo(game.id, 'pinned', !game.pinned)}
-              title={game.pinned ? "Rimuovi Pin" : "Pinna in alto"}
-              style={{ opacity: isAdmin ? 1 : 0.8, pointerEvents: isAdmin ? 'all' : 'none' }}
-            >
-              {game.pinned ? '📌' : '📍'}
-            </div>
-          )}
-          {isAdmin && (
-            <button className="edit-btn-card" onClick={() => openEditModal(game)} title="Modifica gioco">
-              ⚙️
-            </button>
-          )}
           <div className="blur-bg" style={{ backgroundImage: `url(${game.copertina})` }}></div>
           <img src={game.copertina} className="main-img" alt={game.titolo} loading="lazy" />
-          {isAdmin && (
-            <div className="info-mask">
-              <button className="delete-btn" onClick={() => eliminaGioco(game.id, game.titolo)}>ELIMINA 🗑</button>
-              <p className="info-mask-hint">Usa l'ingranaggio per modificare</p>
-            </div>
+
+          {/* Se NON sei admin ma il gioco è pinned, mostriamo solo l'iconcina fissa */}
+          {!isAdmin && game.pinned && (
+            <div className="pin-indicator">📌</div>
           )}
         </div>
 
@@ -372,13 +292,11 @@ const App = () => {
               {dividiStringa(game.categoria).map((c, i) => <span key={i} className="category-chip">{c}</span>)}
             </div>
           </div>
+
           <div className="status-badge-wrapper">
             <div className="status-badge" style={{ backgroundColor: getColorStato(game.stato) }}>
               <span className="status-display">{formatStatoDisplay(game.stato)}</span>
             </div>
-            {/* <div className="metacritic-score" style={{ backgroundColor: getMetacriticColor(game.voto) }}>
-              {game.voto && game.voto !== '-' && game.voto !== '' ? game.voto : '-'}
-            </div> */}
           </div>
         </div>
       </div>
@@ -526,7 +444,7 @@ const App = () => {
   const sagaStats = getSagaStats();
 
   const getStatisticheTotali = () => {
-    const gamesWithoutDlcs = games.filter(g => !isDlc(g));
+    const gamesWithoutDlcs = games.filter(g => !isDlc(g) && !dividiStringa(g.categoria).includes('Wishlist'));
     const dlcGames = games.filter(g => isDlc(g));
     const totale = gamesWithoutDlcs.length;
     const totaleDlcs = dlcGames.length;
@@ -654,13 +572,25 @@ const App = () => {
       return !isDlc(game);
     })
     .filter(game => {
+      const isWishlist = dividiStringa(game.categoria).includes('Wishlist');
       const matchesSearch = game.titolo?.toLowerCase().includes(searchTerm.toLowerCase());
+
+      // LOGICA WISHLIST MODIFICATA:
+      // Se c'è una ricerca in corso (searchTerm), ignora i blocchi e mostra il gioco se il titolo coincide.
+      // Se NON c'è ricerca, mantieni il comportamento dei filtri per categoria.
+      if (!searchTerm) {
+        if (filterCategory === 'Tutte' && isWishlist) return false;
+        if (filterCategory !== 'Wishlist' && isWishlist) return false;
+        if (filterCategory === 'Wishlist' && !isWishlist) return false;
+      }
+
       const matchesYear = filterYear === 'Tutti' || dividiStringa(game.annoGiocato).includes(filterYear) || gameHasDlcWithYear(game.id, filterYear);
       const matchesSaga = selectedSaga === 'Tutte' || (selectedSaga === 'Senza Saga' ? !pulisciNomeSaga(game.saga) : pulisciNomeSaga(game.saga) === selectedSaga);
       const matchesStatus = filterStatus === 'Tutti' || game.stato === filterStatus;
-      const matchesCategory = filterCategory === 'Tutte' || dividiStringa(game.categoria).includes(filterCategory);
+      const matchesCategory = filterCategory === 'Tutte' || matchesSearch || dividiStringa(game.categoria).includes(filterCategory); // Aggiunto matchesSearch qui
       const matchesPlatform = sortPlatform === 'Default' || dividiStringa(game.piattaforma).includes(sortPlatform);
       const matchesReleaseYear = sortYear === 'Default' || sortYear === 'Crescente' || sortYear === 'Decrescente' || String(game.annoUscita).trim() === sortYear;
+
       return matchesSearch && matchesYear && matchesSaga && matchesStatus && matchesCategory && matchesPlatform && matchesReleaseYear;
     })
     .sort((a, b) => {
@@ -726,7 +656,17 @@ const App = () => {
         {!isCollapsed && (
           <>
             <div className="sidebar-stats" onClick={() => setShowStats(true)} style={{ cursor: 'pointer' }}>
-              Totale: <b>{games.filter(g => !isDlc(g)).length}</b> | Da giocare: <b>{games.filter(g => !isDlc(g) && g.stato === 'Non Giocato').length}</b>
+              Totale: <b>
+                {games.filter(g => !isDlc(g) && !dividiStringa(g.categoria).includes('Wishlist')).length}
+              </b>
+              &nbsp; | Da giocare: <b>
+                {games.filter(g =>
+                  !isDlc(g) &&
+                  g.stato === 'Non Giocato' &&
+                  !dividiStringa(g.categoria).includes('Wishlist')
+                ).length}
+              </b>
+
               {isAdmin && (
                 <div className="admin-status">
                   <span className="admin-badge">● ADMIN ATTIVO</span>

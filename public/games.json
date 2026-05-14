@@ -555,7 +555,8 @@
     "annoUscita": "2023",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9oe3.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Wishlist"
   },
   {
     "id": 53,
@@ -1394,7 +1395,8 @@
     "annoUscita": "2009",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dcg.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Wishlist"
   },
   {
     "id": 134,
@@ -11112,5 +11114,60 @@
     "dlcType": "dlc",
     "parentId": 427,
     "id": 1778534768657
+  },
+  {
+    "titolo": "Mass Effect 3: From the Ashes",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5w9p.webp",
+    "saga": "Mass Effect Saga",
+    "annoUscita": "2012",
+    "annoGiocato": "2026",
+    "piattaforma": "PS4",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 427,
+    "includeInCount": false,
+    "id": 1778752635449
+  },
+  {
+    "titolo": "Star Wars Outlaws",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9nh7.webp",
+    "saga": "",
+    "annoUscita": "2024",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1778752760178
+  },
+  {
+    "titolo": "Broken Sword: Il Segreto dei Templari",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4wpw.webp",
+    "saga": "",
+    "annoUscita": "1996",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1778753274350
+  },
+  {
+    "titolo": "Enotria: The Last Song",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7nng.webp",
+    "saga": "",
+    "annoUscita": "2024",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1778753437110
   }
 ]
