@@ -5745,13 +5745,13 @@
   },
   {
     "id": 554,
-    "saga": "",
+    "saga": "Psychonauts Saga",
     "titolo": "Psychonauts",
     "piattaforma": "PS4",
     "annoUscita": "2005",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co38t0.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 555,
@@ -11081,9 +11081,9 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5716.webp",
     "saga": "Mass Effect Saga",
     "annoUscita": "2013",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "piattaforma": "PS4",
-    "stato": "Non Giocato",
+    "stato": "In corso",
     "note": "",
     "categoria": "",
     "pinned": false,
@@ -11231,5 +11231,34 @@
     "categoria": "Wishlist, In Uscita",
     "pinned": false,
     "id": 1778836269627
+  },
+  {
+    "titolo": "Psychonauts 2",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob7mx.webp",
+    "saga": "Psychonauts Saga",
+    "annoUscita": "2021",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1778872163884
+  },
+  {
+    "titolo": "Castlevania: Harmony of Dissonance",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9a6.webp",
+    "saga": "Castlevania Series",
+    "annoUscita": "2002",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1778872220886
   }
 ]
