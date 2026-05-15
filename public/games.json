@@ -1013,7 +1013,8 @@
     "annoUscita": "2023",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5bqu.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Wishlist"
   },
   {
     "id": 96,
@@ -1396,7 +1397,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dcg.webp",
     "stato": "Non Giocato",
-    "categoria": "Wishlist"
+    "categoria": ""
   },
   {
     "id": 134,
@@ -1479,7 +1480,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55md.webp",
     "stato": "Non Giocato",
     "note": "Giocarlo su PC è un'opzione preferibile.",
-    "categoria": "Possibile Rimozione",
+    "categoria": "Possibile Rimozione, Wishlist",
     "pinned": false
   },
   {
@@ -2459,7 +2460,8 @@
     "annoUscita": "2025",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95gk.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Wishlist"
   },
   {
     "id": 235,
@@ -2915,7 +2917,8 @@
     "annoUscita": "2013",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3zuq.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Possibile Rimozione"
   },
   {
     "id": 279,
@@ -3007,7 +3010,8 @@
     "annoUscita": "1985",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3u7r.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Wishlist"
   },
   {
     "id": 288,
@@ -4200,7 +4204,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mbt.webp",
     "stato": "Non Giocato",
-    "categoria": "Possibile Rimozione"
+    "categoria": "Possibile Rimozione, Wishlist"
   },
   {
     "id": 403,
@@ -5072,7 +5076,8 @@
     "annoUscita": "2017",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ovg.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Wishlist"
   },
   {
     "id": 489,
@@ -5979,7 +5984,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6lnp.webp",
     "stato": "Non Giocato",
-    "categoria": "Possibile Rimozione"
+    "categoria": "Possibile Rimozione, Wishlist"
   },
   {
     "id": 578,
@@ -6667,7 +6672,8 @@
     "annoUscita": "2022",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39sa.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Wishlist"
   },
   {
     "id": 645,
@@ -7917,7 +7923,8 @@
     "annoUscita": "2014",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7q.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Possibile Rimozione"
   },
   {
     "id": 772,
@@ -8585,7 +8592,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1paz.webp",
     "stato": "Non Giocato",
-    "categoria": "Non Tradotto"
+    "categoria": "Non Tradotto, Wishlist"
   },
   {
     "id": 837,
@@ -8917,7 +8924,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "Possibile Rimozione",
+    "categoria": "Possibile Rimozione, Wishlist",
     "pinned": false,
     "id": 1770585650305
   },
@@ -10776,7 +10783,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "",
+    "categoria": "Wishlist",
     "pinned": false,
     "id": 1773349704677
   },
@@ -11169,5 +11176,60 @@
     "categoria": "",
     "pinned": false,
     "id": 1778753437110
+  },
+  {
+    "titolo": "The Thaumaturge",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob3e3.webp",
+    "saga": "",
+    "annoUscita": "2024",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Wishlist",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1778835913397
+  },
+  {
+    "titolo": "Crimson Desert",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaqai.webp",
+    "saga": "",
+    "annoUscita": "2026",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Wishlist",
+    "pinned": false,
+    "id": 1778835993326
+  },
+  {
+    "titolo": "Directive 8020",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8t96.webp",
+    "saga": "",
+    "annoUscita": "2026",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1778836185668
+  },
+  {
+    "titolo": "007: First Light",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaoiz.webp",
+    "saga": "",
+    "annoUscita": "2026",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Wishlist, In Uscita",
+    "pinned": false,
+    "id": 1778836269627
   }
 ]
