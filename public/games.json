@@ -6422,26 +6422,6 @@
     "stato": "Completato"
   },
   {
-    "id": 620,
-    "saga": "Shin Megami Tensei Series",
-    "titolo": "Shin Megami Tensei",
-    "piattaforma": "",
-    "annoUscita": "1992",
-    "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co26i0.webp",
-    "stato": "Non Giocato"
-  },
-  {
-    "id": 621,
-    "saga": "Shin Megami Tensei Series",
-    "titolo": "Shin Megami Tensei II",
-    "piattaforma": "",
-    "annoUscita": "1994",
-    "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7xrd.webp",
-    "stato": "Non Giocato"
-  },
-  {
     "id": 622,
     "saga": "Shin Megami Tensei Series",
     "titolo": "Shin Megami Tensei III: Nocturne",
