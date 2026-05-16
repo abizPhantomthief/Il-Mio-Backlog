@@ -1392,12 +1392,12 @@
     "id": 132,
     "saga": "",
     "titolo": "Coraline",
-    "piattaforma": "",
+    "piattaforma": "PS2",
     "annoUscita": "2009",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dcg.webp",
-    "stato": "Non Giocato",
-    "categoria": ""
+    "stato": "In corso",
+    "categoria": "Emulato"
   },
   {
     "id": 134,
