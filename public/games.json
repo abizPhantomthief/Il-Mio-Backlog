@@ -4539,11 +4539,13 @@
     "id": 436,
     "saga": "Metal Gear Saga",
     "titolo": "Snake's Revenge",
-    "piattaforma": "",
+    "piattaforma": "NES",
     "annoUscita": "1990",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co987l.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso",
+    "categoria": "Emulato",
+    "note": "Apocrifo"
   },
   {
     "id": 437,
@@ -11094,7 +11096,7 @@
     "annoUscita": "2012",
     "annoGiocato": "2026",
     "piattaforma": "PS4",
-    "stato": "In corso",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
