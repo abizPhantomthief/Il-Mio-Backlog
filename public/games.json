@@ -2175,11 +2175,12 @@
     "id": 207,
     "saga": "Donkey Kong Series",
     "titolo": "Donkey Kong Country 2: Diddy's Kong Quest",
-    "piattaforma": "",
+    "piattaforma": "SNES",
     "annoUscita": "1995",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co217m.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso",
+    "categoria": "Emulato"
   },
   {
     "id": 208,
