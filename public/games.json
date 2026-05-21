@@ -4047,13 +4047,13 @@
   {
     "id": 387,
     "saga": "",
-    "titolo": "LEGO Batman: Legacy of the Dark Knight",
+    "titolo": "LEGO Batman: L'Eredità del Cavaliere Oscuro",
     "piattaforma": "",
     "annoUscita": "2026",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab09.webp",
     "stato": "Non Giocato",
-    "categoria": "In Uscita"
+    "categoria": ""
   },
   {
     "id": 388,
@@ -6499,11 +6499,12 @@
     "id": 629,
     "saga": "Silent Hill Series",
     "titolo": "Silent Hill 2: Restless Dreams",
-    "piattaforma": "",
+    "piattaforma": "PS2",
     "annoUscita": "2001",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3weh.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso",
+    "categoria": "Emulato"
   },
   {
     "id": 630,
