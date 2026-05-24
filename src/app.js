@@ -571,13 +571,12 @@ const App = () => {
       if (filterDlc === 'Solo Base') return !isDlc(game);
       return !isDlc(game);
     })
-    .filter(game => {
+.filter(game => {
       const isWishlist = dividiStringa(game.categoria).includes('Wishlist');
       const matchesSearch = game.titolo?.toLowerCase().includes(searchTerm.toLowerCase());
 
-      // LOGICA WISHLIST MODIFICATA:
-      // Se c'è una ricerca in corso (searchTerm), ignora i blocchi e mostra il gioco se il titolo coincide.
-      // Se NON c'è ricerca, mantieni il comportamento dei filtri per categoria.
+      // 1. LOGICA WISHLIST: 
+      // Se NON c'è una ricerca attiva, applichiamo i vecchi blocchi rigidi della Wishlist
       if (!searchTerm) {
         if (filterCategory === 'Tutte' && isWishlist) return false;
         if (filterCategory !== 'Wishlist' && isWishlist) return false;
@@ -587,7 +586,17 @@ const App = () => {
       const matchesYear = filterYear === 'Tutti' || dividiStringa(game.annoGiocato).includes(filterYear) || gameHasDlcWithYear(game.id, filterYear);
       const matchesSaga = selectedSaga === 'Tutte' || (selectedSaga === 'Senza Saga' ? !pulisciNomeSaga(game.saga) : pulisciNomeSaga(game.saga) === selectedSaga);
       const matchesStatus = filterStatus === 'Tutti' || game.stato === filterStatus;
-      const matchesCategory = filterCategory === 'Tutte' || matchesSearch || dividiStringa(game.categoria).includes(filterCategory); // Aggiunto matchesSearch qui
+      
+      // 2. RIPRISTINO FILTRO CATEGORIA:
+      // Ritorniamo alla logica standard per tutte le categorie...
+      let matchesCategory = filterCategory === 'Tutte' || dividiStringa(game.categoria).includes(filterCategory);
+      
+      // ...MA se stiamo cercando via testo e il gioco è in wishlist, permettiamo di mostrarlo 
+      // anche se la categoria selezionata nel menu non è impostata su "Wishlist".
+      if (searchTerm && isWishlist && matchesSearch) {
+        matchesCategory = true;
+      }
+
       const matchesPlatform = sortPlatform === 'Default' || dividiStringa(game.piattaforma).includes(sortPlatform);
       const matchesReleaseYear = sortYear === 'Default' || sortYear === 'Crescente' || sortYear === 'Decrescente' || String(game.annoUscita).trim() === sortYear;
 
@@ -1237,7 +1246,7 @@ const App = () => {
                 >
                   <option value="">Gioco Principale</option>
                   <option value="dlc">DLC</option>
-                  <option value="w">Espansione</option>
+                  <option value="espansione">Espansione</option>
                   <option value="riedizione">Riedizione</option>
                 </select>
                 {editedGameData.dlcType && (

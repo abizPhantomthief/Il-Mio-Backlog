@@ -11244,5 +11244,21 @@
     "categoria": "",
     "pinned": false,
     "id": 1778872220886
+  },
+  {
+    "titolo": "Metal Gear Solid: VR Missions",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2s8n.webp",
+    "saga": "Metal Gear Saga",
+    "annoUscita": "1999",
+    "annoGiocato": "2023",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 438,
+    "includeInCount": false,
+    "id": 1779447349342
   }
 ]
