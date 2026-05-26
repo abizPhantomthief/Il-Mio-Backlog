@@ -1069,7 +1069,7 @@ textarea {
   line-height: 1.2;
   color: var(--text-primary);
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .card-title .year {
@@ -1092,24 +1092,37 @@ textarea {
 .platforms-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 5px; /* Crea uno spazietto identico e pulito tra un chip e l'altro */
+  align-items: center; /* Allinea perfettamente i chip sulla linea orizzontale */
+  margin-top: 8px;
 }
 
 .platform-chip {
-  background: #4a4a4a;
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 6px;
+  align-items: center;
+  padding: 4px 8px;
   font-size: 11px;
-  font-weight: bold;
+  font-weight: 750;
+  border-radius: 4px;
+  border: 1px solid;
+  text-transform: uppercase;
+  line-height: 1; /* Sincronizzato con la categoria */
 }
 
 .category-chip {
-  background: rgba(14, 165, 233, 0.15);
-  color: var(--accent-text);
-  padding: 4px 10px;
-  border-radius: 6px;
+  background: #22252a; /* Grigio scuro solido e neutro, sta bene con OGNI console */
+  color: #c5c6c7; /* Testo chiaro ma non accecante */
+  border: 1px solid #343a40; /* Un micro bordo per dargli struttura */
+  
+  padding: 4px 8px;
+  border-radius: 4px;
+  
+  /* Testo leggermente superiore alla piattaforma (11px) */
   font-size: 11px;
+  font-weight: 500;
+  
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .saga-info {

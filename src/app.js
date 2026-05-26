@@ -288,7 +288,27 @@ const App = () => {
             <p className="played-info-list">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
             {game.note && <p className="note-text-list">{game.note}</p>}
             <div className="platforms-tags">
-              {dividiStringa(game.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
+              {/* BLOCCO PIATTAFORME MODIFICATO */}
+              {dividiStringa(game.piattaforma).slice(0, 3).map((p, i) => {
+                const consoleKey = p.trim();
+                const config = coloriConsole[consoleKey] || coloriConsole['Default'];
+
+                return (
+                  <span
+                    key={i}
+                    className="platform-chip"
+                    style={{
+                      backgroundColor: config.bg,
+                      color: config.text,
+                      borderColor: config.border
+                    }}
+                  >
+                    {p}
+                  </span>
+                );
+              })}
+
+              {/* Le categorie rimangono intatte come prima */}
               {dividiStringa(game.categoria).map((c, i) => <span key={i} className="category-chip">{c}</span>)}
             </div>
           </div>
@@ -571,7 +591,7 @@ const App = () => {
       if (filterDlc === 'Solo Base') return !isDlc(game);
       return !isDlc(game);
     })
-.filter(game => {
+    .filter(game => {
       const isWishlist = dividiStringa(game.categoria).includes('Wishlist');
       const matchesSearch = game.titolo?.toLowerCase().includes(searchTerm.toLowerCase());
 
@@ -586,11 +606,11 @@ const App = () => {
       const matchesYear = filterYear === 'Tutti' || dividiStringa(game.annoGiocato).includes(filterYear) || gameHasDlcWithYear(game.id, filterYear);
       const matchesSaga = selectedSaga === 'Tutte' || (selectedSaga === 'Senza Saga' ? !pulisciNomeSaga(game.saga) : pulisciNomeSaga(game.saga) === selectedSaga);
       const matchesStatus = filterStatus === 'Tutti' || game.stato === filterStatus;
-      
+
       // 2. RIPRISTINO FILTRO CATEGORIA:
       // Ritorniamo alla logica standard per tutte le categorie...
       let matchesCategory = filterCategory === 'Tutte' || dividiStringa(game.categoria).includes(filterCategory);
-      
+
       // ...MA se stiamo cercando via testo e il gioco è in wishlist, permettiamo di mostrarlo 
       // anche se la categoria selezionata nel menu non è impostata su "Wishlist".
       if (searchTerm && isWishlist && matchesSearch) {
@@ -630,6 +650,34 @@ const App = () => {
       }
       return a.titolo.localeCompare(b.titolo);
     });
+
+
+  const coloriConsole = {
+    // PlayStation
+    'PS1': { bg: '#2e2e3e', text: '#a3b8cc', border: '#4f4f6f' },
+    'PS2': { bg: '#003791', text: '#ffffff', border: '#00225c' },
+    'PS3': { bg: '#0f0f0f', text: '#e0e0e0', border: '#333333' },
+    'PS4': { bg: '#00439c', text: '#ffffff', border: '#002d69' },
+    'PS5': { bg: '#ffffff', text: '#00439c', border: '#ced4da' },
+    'PSP': { bg: '#1c242c', text: '#00a8ff', border: '#2c3e50' }, // Grigio scuro con accento azzurro PlayStation Portable
+
+    // Nintendo (Fisse)
+    'NES': { bg: '#d3d3d3', text: '#ff0000', border: '#a9a9a9' }, // Grigio retro con testo rosso opaco
+    'SNES': { bg: '#8a8bb0', text: '#ffffff', border: '#5e5f88' }, // Il classico viola/grigio dei tasti dello SNES americano/pal
+    'NGC': { bg: '#4b1fb8', text: '#ffffff', border: '#32147a' }, // L'iconico viola "Indigo" del GameCube
+    'Switch': { bg: '#e60012', text: '#ffffff', border: '#99000c' },
+
+    // Nintendo (Portatili)
+    'GB': { bg: '#8b956d', text: '#0f380f', border: '#306230' },  // Il verde "Matrix" dello schermo del Game Boy originale
+    'GBA': { bg: '#281263', text: '#fd9f24', border: '#1c0c45' }, // Il viola/blu del GBA unito all'arancione del logo
+    'NDS': { bg: '#5c6f7b', text: '#ffffff', border: '#414f58' }, // Grigio metallizzato del primo DS ciccio
+    'N3DS': { bg: '#ce181e', text: '#ffffff', border: '#8b1014' }, // Rosso acceso del brand 3DS
+
+    // PC, Xbox & Mobile
+    'Xbox': { bg: '#107c10', text: '#ffffff', border: '#0b520b' },
+    'PC': { bg: '#bc1414', text: '#ffffff', border: '#7a0d0d' },
+    'Mobile': { bg: '#00bcd4', text: '#ffffff', border: '#00838f' }, // Un azzurro/cyan moderno per iOS/Android
+  };
 
   return (
     <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
