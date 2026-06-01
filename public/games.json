@@ -11261,5 +11261,34 @@
     "parentId": 438,
     "includeInCount": false,
     "id": 1779447349342
+  },
+  {
+    "titolo": "Shadows of Memories",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coabdc.webp",
+    "saga": "",
+    "annoUscita": "2001",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "Consigliato da: Falconero e Raiden (Playerinside).",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1780344743146
+  },
+  {
+    "titolo": "Shadow Hearts",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7nmo.webp",
+    "saga": "",
+    "annoUscita": "2001",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1780344813225
   }
 ]
