@@ -50,7 +50,7 @@
     "id": 5,
     "saga": "A Plague Tale Saga",
     "titolo": "A Plague Tale: Innocence",
-    "piattaforma": "PS4",
+    "piattaforma": "PS5",
     "annoUscita": "2019",
     "annoGiocato": 2021,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1lat.webp",
@@ -1842,7 +1842,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4nzt.webp",
     "stato": "Non Giocato",
     "categoria": "Obiettivo 2026",
-    "pinned": true,
+    "pinned": false,
     "voto": ""
   },
   {
@@ -2411,7 +2411,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yq.webp",
     "stato": "Non Giocato",
     "categoria": "Obiettivo 2026",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 230,
@@ -3184,7 +3184,7 @@
     "titolo": "Grand Theft Auto: Liberty City Stories",
     "piattaforma": "PSP",
     "annoUscita": 2005,
-    "annoGiocato": 2026,
+    "annoGiocato": "2025",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbg.webp",
     "stato": "Completato",
     "categoria": "Emulato",
@@ -4163,7 +4163,7 @@
     "titolo": "Lies of P",
     "piattaforma": "PS5",
     "annoUscita": 2023,
-    "annoGiocato": 2026,
+    "annoGiocato": "2025",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6lxr.webp",
     "stato": "Completato"
   },
@@ -8881,7 +8881,7 @@
     "stato": "Non Giocato",
     "note": "",
     "categoria": "Obiettivo 2026",
-    "pinned": true,
+    "pinned": false,
     "id": 1770323533929
   },
   {
