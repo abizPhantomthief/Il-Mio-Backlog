@@ -1130,11 +1130,11 @@
     "id": 107,
     "saga": "Castlevania Series",
     "titolo": "Castlevania: Circle of the Moon",
-    "piattaforma": "",
+    "piattaforma": "PS4",
     "annoUscita": "2001",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2zq1.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 108,
@@ -7405,7 +7405,7 @@
     "annoUscita": "2017",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20pq.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "pinned": false
   },
   {
@@ -11298,7 +11298,7 @@
     "annoUscita": "2018",
     "annoGiocato": "2026",
     "piattaforma": "PS4",
-    "stato": "In corso",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
@@ -11312,9 +11312,9 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9jrv.webp",
     "saga": "Middle-Earth Saga",
     "annoUscita": "2018",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "piattaforma": "PS4",
-    "stato": "Non Giocato",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
