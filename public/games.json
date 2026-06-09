@@ -1134,7 +1134,7 @@
     "annoUscita": "2001",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2zq1.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 108,
@@ -4049,11 +4049,11 @@
     "id": 387,
     "saga": "",
     "titolo": "LEGO Batman: L'Eredità del Cavaliere Oscuro",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2026",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab09.webp",
-    "stato": "Non Giocato",
+    "stato": "In corso",
     "categoria": ""
   },
   {
@@ -11321,5 +11321,21 @@
     "dlcType": "espansione",
     "parentId": 722,
     "id": 1780678264739
+  },
+  {
+    "titolo": "Lords of the Fallen",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co72u9.webp",
+    "saga": "",
+    "annoUscita": "2023",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1781033890111
   }
 ]
