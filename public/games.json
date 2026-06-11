@@ -6023,12 +6023,13 @@
   {
     "id": 581,
     "saga": "Resident Evil Series",
-    "titolo": "Resident Evil: Code Veronica X",
+    "titolo": "Resident Evil Code: Veronica X",
     "piattaforma": "PS4",
     "annoUscita": 2000,
-    "annoGiocato": 2020,
+    "annoGiocato": "2020, 2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vzv.webp",
-    "stato": "Completato"
+    "stato": "In corso",
+    "note": "Rigiocato"
   },
   {
     "id": 582,
@@ -9905,7 +9906,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9e24.webp",
     "saga": "",
     "annoUscita": "2025",
-    "annoGiocato": "2026",
+    "annoGiocato": "2025",
     "piattaforma": "PS5",
     "stato": "Completato",
     "note": "",
@@ -11337,5 +11338,21 @@
     "parentId": null,
     "includeInCount": false,
     "id": 1781033890111
+  },
+  {
+    "titolo": "Mina the Hollower",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4g15.webp",
+    "saga": "",
+    "annoUscita": "2026",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1781172010849
   }
 ]
