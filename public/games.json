@@ -11445,5 +11445,21 @@
     "dlcType": "dlc",
     "parentId": 393,
     "id": 1781176349390
+  },
+  {
+    "titolo": "Crypt of the Serpent King",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1z2l.webp",
+    "saga": "",
+    "annoUscita": "2015",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1781548736527
   }
 ]
