@@ -23,6 +23,7 @@ const App = () => {
   const [isSaving, setIsSaving] = useState(false);
   const [editedGameData, setEditedGameData] = useState(null);
   const [logs, setLogs] = useState([]);
+  const [isHoveredInCorso, setIsHoveredInCorso] = useState(false);
 
   const addActivityLog = (azione, titoloGioco, dettaglio = "") => {
     const nuovoLog = {
@@ -712,20 +713,86 @@ const App = () => {
 
         {!isCollapsed && (
           <>
-            <div className="sidebar-stats" onClick={() => setShowStats(true)} style={{ cursor: 'pointer' }}>
-              Totale: <b>
-                {games.filter(g => !isDlc(g) && !dividiStringa(g.categoria).includes('Wishlist')).length}
-              </b>
-              &nbsp; | Da giocare: <b>
-                {games.filter(g =>
-                  !isDlc(g) &&
-                  g.stato === 'Non Giocato' &&
-                  !dividiStringa(g.categoria).includes('Wishlist')
-                ).length}
-              </b>
+            <div className="sidebar-stats" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
 
+              {/* 1. RIGA: IN CORSO */}
+              <div
+                className={`stat-clickable-row row-in-corso ${filterStatus === 'In corso' ? 'active-corso' : ''}`}
+                style={{ position: 'relative' }}
+                onMouseEnter={() => setIsHoveredInCorso(true)}
+                onMouseLeave={() => setIsHoveredInCorso(false)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setFilterStatus('In corso');
+                  setShowStats(false); // <--- Chiude la modale quando filtri
+                }}
+              >
+                In corso: <b>
+                  {games.filter(g => !isDlc(g) && g.stato === 'In corso' && !dividiStringa(g.categoria).includes('Wishlist')).length}
+                </b>
+
+                {/* LA FINESTRELLA IN HOVER */}
+                {isHoveredInCorso && (
+                  <div className="games-preview-tooltip">
+                    {games
+                      .filter(g => !isDlc(g) && g.stato === 'In corso' && !dividiStringa(g.categoria).includes('Wishlist'))
+                      .map((g, idx) => (
+                        <img key={idx} src={g.copertina} alt={g.titolo} className="tooltip-preview-img" title={g.titolo} />
+                      ))}
+                    {games.filter(g => !isDlc(g) && g.stato === 'In corso' && !dividiStringa(g.categoria).includes('Wishlist')).length === 0 && (
+                      <p style={{ margin: 0, fontSize: '11px', color: '#aaa' }}>Nessun gioco in corso</p>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              {/* 2. RIGA: COMPLETATO */}
+              <div
+                className={`stat-clickable-row row-completato ${filterStatus === 'Completato' ? 'active-completato' : ''}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setFilterStatus('Completato');
+                  setShowStats(false); // <--- Chiude la modale quando filtri
+                }}
+              >
+                Completato: <b>
+                  {games.filter(g => !isDlc(g) && g.stato === 'Completato' && !dividiStringa(g.categoria).includes('Wishlist')).length}
+                </b>
+              </div>
+
+              {/* 3. RIGA: DA GIOCARE */}
+              <div
+                className={`stat-clickable-row row-da-giocare ${filterStatus === 'Non Giocato' ? 'active-standard' : ''}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setFilterStatus('Non Giocato');
+                  setShowStats(false); // <--- Chiude la modale quando filtri
+                }}
+              >
+                Da giocare: <b>
+                  {games.filter(g => !isDlc(g) && g.stato === 'Non Giocato' && !dividiStringa(g.categoria).includes('Wishlist')).length}
+                </b>
+              </div>
+
+              {/* 4. RIGA: TOTALE */}
+              <div
+                className="stat-clickable-row"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setFilterStatus('Tutti');
+
+                  // <--- EFFETTO TOGGLE: se è true diventa false, se è false diventa true
+                  setShowStats(prev => !prev);
+                }}
+              >
+                Totale: <b>
+                  {games.filter(g => !isDlc(g) && !dividiStringa(g.categoria).includes('Wishlist')).length}
+                </b>
+              </div>
+
+              {/* SEZIONE ADMIN */}
               {isAdmin && (
-                <div className="admin-status">
+                <div className="admin-status" onClick={(e) => e.stopPropagation()}>
                   <span className="admin-badge">● ADMIN ATTIVO</span>
                   <button className="admin-exit-btn" onClick={(e) => { e.stopPropagation(); setIsAdmin(false); }}>ESCI</button>
                 </div>

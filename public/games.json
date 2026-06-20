@@ -11461,5 +11461,21 @@
     "parentId": null,
     "includeInCount": false,
     "id": 1781548736527
+  },
+  {
+    "titolo": "Rise of the Ronin",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co59v0.webp",
+    "saga": "",
+    "annoUscita": "2024",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Wishlist",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1781949936350
   }
 ]

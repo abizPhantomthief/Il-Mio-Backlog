@@ -2073,3 +2073,87 @@ datalist {
   /* Un piccolo salto verso l'alto */
 }
 
+/* Il contenitore fluttua SOPRA tutto il viewport */
+.games-preview-tooltip {
+  position: fixed; /* Evade da overflow: hidden/auto della sidebar */
+  
+  /* Posizionamento dinamico rispetto al punto di ancoraggio */
+  margin-left: 20px; /* Crea uno stacco orizzontale dalla sidebar */
+  transform: translateY(-30%); /* Centra verticalmente il tooltip rispetto alla riga */
+  
+  background: #15171e;
+  border: 1px solid #2a2e3d;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 220px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Ombra ancora più marcata */
+  z-index: 99999; /* Valore altissimo per stare sopra a card e layout */
+  pointer-events: none;
+}
+
+/* Le miniature rimangono invariate */
+.tooltip-preview-img {
+  width: 45px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Base comune per tutte le righe (senza sfondi) */
+.stat-clickable-row {
+  cursor: pointer;
+  padding: 4px 0;
+  width: fit-content;
+  color: var(--text-primary, #fff);
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* --- STATO: IN CORSO (GIALLO) --- */
+.stat-clickable-row.row-in-corso:hover,
+.stat-clickable-row.active-corso {
+  color: #ffca28 !important;
+  text-shadow: 0 0 8px rgba(255, 202, 40, 0.6), 0 0 15px rgba(255, 202, 40, 0.3);
+}
+.stat-clickable-row.row-in-corso:hover b,
+.stat-clickable-row.active-corso b {
+  color: #ffca28 !important;
+}
+
+/* --- STATO: COMPLETATO (VERDE) --- */
+.stat-clickable-row.row-completato:hover,
+.stat-clickable-row.active-completato {
+  color: #4caf50 !important;
+  text-shadow: 0 0 8px rgba(76, 175, 80, 0.6), 0 0 15px rgba(76, 175, 80, 0.3);
+}
+.stat-clickable-row.row-completato:hover b,
+.stat-clickable-row.active-completato b {
+  color: #4caf50 !important;
+}
+
+/* --- STATO: DA GIOCARE (GRIGIO IN HOVER/CLICK) --- */
+/* Di base è bianco standard come le altre righe */
+.stat-clickable-row.row-da-giocare {
+  color: var(--text-primary, #fff);
+}
+
+/* In HOVER o quando IL FILTRO È ATTIVO, diventa grigio con glow metallico/argento */
+.stat-clickable-row.row-da-giocare:hover,
+.stat-clickable-row.active-standard {
+  color: #888888 !important; /* Grigio */
+  /* Glow argentato sottile per farlo risaltare anche se è grigio */
+  text-shadow: 0 0 8px rgba(136, 136, 136, 0.6), 0 0 15px rgba(136, 136, 136, 0.3);
+}
+.stat-clickable-row.row-da-giocare:hover b,
+.stat-clickable-row.active-standard b {
+  color: #888888 !important;
+}
+
+/* --- ALTRE RIGHE (TOTALE) --- */
+.stat-clickable-row:not(.row-in-corso):not(.row-completato):not(.row-da-giocare):hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
