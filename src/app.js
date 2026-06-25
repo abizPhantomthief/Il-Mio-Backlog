@@ -24,6 +24,7 @@ const App = () => {
   const [editedGameData, setEditedGameData] = useState(null);
   const [logs, setLogs] = useState([]);
   const [isHoveredInCorso, setIsHoveredInCorso] = useState(false);
+  const [showHidden, setShowHidden] = useState(false);
 
   const addActivityLog = (azione, titoloGioco, dettaglio = "") => {
     const nuovoLog = {
@@ -198,30 +199,31 @@ const App = () => {
     const hasDlcs = dlcs.length > 0;
     const isExpanded = expandedDlcs[game.id] || false;
 
-    const isWishlist = dividiStringa(game.categoria).includes('Wishlist');
+    const isNascosto = dividiStringa(game.categoria).includes('Nascosto');
+
 
     return (
       <div
         key={game.id}
-        className={`game-card ${game.pinned ? 'pinned' : ''} ${isWishlist ? 'wishlist-card' : ''}`}
+        className={`game-card ${game.pinned ? 'pinned' : ''} ${isNascosto ? 'Nascosto-card' : ''}`}
         style={{ backgroundColor: getColorStatoTransparent(game.stato) }}
       >
         {/* 1. NUOVO CONTENITORE ADMIN (In alto a destra) */}
         {isAdmin && (
           <div className="admin-controls-overlay">
-            {/* Tasto Wishlist (Stella) */}
+            {/* Tasto Nascosto (Stella) */}
             <button
-              className={`admin-btn-action ${isWishlist ? 'active-star' : ''}`} // Cambiata la classe active
+              className={`admin-btn-action ${isNascosto ? 'active-star' : ''}`} // Cambiata la classe active
               onClick={() => {
                 const categorieAttuali = dividiStringa(game.categoria);
-                const nuoveCategorie = isWishlist
-                  ? categorieAttuali.filter(c => c !== 'Wishlist').join(', ')
-                  : [...categorieAttuali, 'Wishlist'].join(', ');
+                const nuoveCategorie = isNascosto
+                  ? categorieAttuali.filter(c => c !== 'Nascosto').join(', ')
+                  : [...categorieAttuali, 'Nascosto'].join(', ');
                 modificaCampo(game.id, 'categoria', nuoveCategorie);
               }}
-              title="Aggiungi/Rimuovi Wishlist"
+              title="Aggiungi/Rimuovi Nascosto"
             >
-              {isWishlist ? '⭐' : '☆'} {/* Stella piena se in wishlist, vuota se no */}
+              {isNascosto ? '⭐' : '☆'} {/* Stella piena se in Nascosto, vuota se no */}
             </button>
 
             {/* Tasto Pin */}
@@ -465,7 +467,7 @@ const App = () => {
   const sagaStats = getSagaStats();
 
   const getStatisticheTotali = () => {
-    const gamesWithoutDlcs = games.filter(g => !isDlc(g) && !dividiStringa(g.categoria).includes('Wishlist'));
+    const gamesWithoutDlcs = games.filter(g => !isDlc(g) && !dividiStringa(g.categoria).includes('Nascosto'));
     const dlcGames = games.filter(g => isDlc(g));
     const totale = gamesWithoutDlcs.length;
     const totaleDlcs = dlcGames.length;
@@ -587,35 +589,57 @@ const App = () => {
 
   const filteredGames = games
     .filter(game => {
-      if (filterDlc === 'Tutti') return !isDlc(game);
+      // --- CORREZIONE DEL FILTRO DLC ---
+      // Se l'utente seleziona 'Tutti', dobbiamo ritornare true per far passare sia i Giochi Base che i DLC!
+      if (filterDlc === 'Tutti') return true;
+
+      // Se seleziona 'Solo DLC', passano solo gli elementi che sono effettivamente DLC
       if (filterDlc === 'Solo DLC') return isDlc(game);
+
+      // Se seleziona 'Solo Base', passano solo gli elementi che NON sono DLC
       if (filterDlc === 'Solo Base') return !isDlc(game);
+
+      // Di default (se lo stato è vuoto o indefinito), mostriamo solo i giochi base
       return !isDlc(game);
     })
     .filter(game => {
-      const isWishlist = dividiStringa(game.categoria).includes('Wishlist');
+      const isNascosto = dividiStringa(game.categoria).includes('Nascosto');
+
+      // Controlliamo se l'utente sta effettuando una ricerca testuale reale
+      const hasSearchTerm = searchTerm && searchTerm.trim() !== '';
       const matchesSearch = game.titolo?.toLowerCase().includes(searchTerm.toLowerCase());
 
-      // 1. LOGICA WISHLIST: 
-      // Se NON c'è una ricerca attiva, applichiamo i vecchi blocchi rigidi della Wishlist
-      if (!searchTerm) {
-        if (filterCategory === 'Tutte' && isWishlist) return false;
-        if (filterCategory !== 'Wishlist' && isWishlist) return false;
-        if (filterCategory === 'Wishlist' && !isWishlist) return false;
+      // --- LOGICA GIOCHI NASCOSTI ---
+      if (isNascosto) {
+        // Un elemento nascosto passa solo se lo switch è acceso, se è cercato per nome o se la categoria è proprio "Nascosto"
+        const canShowHidden = showHidden || (hasSearchTerm && matchesSearch) || filterCategory === 'Nascosto';
+
+        if (!canShowHidden) {
+          return false; // Esclude l'elemento nascosto corrente
+        }
+      } else {
+        // Se l'elemento NON è nascosto, ma il filtro categoria è impostato su "Nascosto", lo escludiamo
+        if (filterCategory === 'Nascosto') return false;
       }
 
+      // --- ALTRI FILTRI STANDARD ---
       const matchesYear = filterYear === 'Tutti' || dividiStringa(game.annoGiocato).includes(filterYear) || gameHasDlcWithYear(game.id, filterYear);
       const matchesSaga = selectedSaga === 'Tutte' || (selectedSaga === 'Senza Saga' ? !pulisciNomeSaga(game.saga) : pulisciNomeSaga(game.saga) === selectedSaga);
       const matchesStatus = filterStatus === 'Tutti' || game.stato === filterStatus;
 
-      // 2. RIPRISTINO FILTRO CATEGORIA:
-      // Ritorniamo alla logica standard per tutte le categorie...
-      let matchesCategory = filterCategory === 'Tutte' || dividiStringa(game.categoria).includes(filterCategory);
+      // --- LOGICA CATEGORIA CORRETTA E COESISTENTE ---
+      let matchesCategory = false;
 
-      // ...MA se stiamo cercando via testo e il gioco è in wishlist, permettiamo di mostrarlo 
-      // anche se la categoria selezionata nel menu non è impostata su "Wishlist".
-      if (searchTerm && isWishlist && matchesSearch) {
-        matchesCategory = true;
+      if (isNascosto) {
+        if (showHidden || (hasSearchTerm && matchesSearch)) {
+          // Se mostrato tramite switch o ricerca, deve comunque rispettare i filtri di categoria coesistenti (es. "Non Tradotto")
+          matchesCategory = filterCategory === 'Tutte' || filterCategory === 'Nascosto' || dividiStringa(game.categoria).includes(filterCategory);
+        } else if (filterCategory === 'Nascosto') {
+          matchesCategory = true;
+        }
+      } else {
+        // Gli elementi normali seguono la classica selezione della categoria dal menu a tendina
+        matchesCategory = filterCategory === 'Tutte' || dividiStringa(game.categoria).includes(filterCategory);
       }
 
       const matchesPlatform = sortPlatform === 'Default' || dividiStringa(game.piattaforma).includes(sortPlatform);
@@ -728,18 +752,18 @@ const App = () => {
                 }}
               >
                 In corso: <b>
-                  {games.filter(g => !isDlc(g) && g.stato === 'In corso' && !dividiStringa(g.categoria).includes('Wishlist')).length}
+                  {games.filter(g => !isDlc(g) && g.stato === 'In corso' && !dividiStringa(g.categoria).includes('Nascosto')).length}
                 </b>
 
                 {/* LA FINESTRELLA IN HOVER */}
                 {isHoveredInCorso && (
                   <div className="games-preview-tooltip">
                     {games
-                      .filter(g => !isDlc(g) && g.stato === 'In corso' && !dividiStringa(g.categoria).includes('Wishlist'))
+                      .filter(g => !isDlc(g) && g.stato === 'In corso' && !dividiStringa(g.categoria).includes('Nascosto'))
                       .map((g, idx) => (
                         <img key={idx} src={g.copertina} alt={g.titolo} className="tooltip-preview-img" title={g.titolo} />
                       ))}
-                    {games.filter(g => !isDlc(g) && g.stato === 'In corso' && !dividiStringa(g.categoria).includes('Wishlist')).length === 0 && (
+                    {games.filter(g => !isDlc(g) && g.stato === 'In corso' && !dividiStringa(g.categoria).includes('Nascosto')).length === 0 && (
                       <p style={{ margin: 0, fontSize: '11px', color: '#aaa' }}>Nessun gioco in corso</p>
                     )}
                   </div>
@@ -756,7 +780,7 @@ const App = () => {
                 }}
               >
                 Completato: <b>
-                  {games.filter(g => !isDlc(g) && g.stato === 'Completato' && !dividiStringa(g.categoria).includes('Wishlist')).length}
+                  {games.filter(g => !isDlc(g) && g.stato === 'Completato' && !dividiStringa(g.categoria).includes('Nascosto')).length}
                 </b>
               </div>
 
@@ -770,7 +794,7 @@ const App = () => {
                 }}
               >
                 Da giocare: <b>
-                  {games.filter(g => !isDlc(g) && g.stato === 'Non Giocato' && !dividiStringa(g.categoria).includes('Wishlist')).length}
+                  {games.filter(g => !isDlc(g) && g.stato === 'Non Giocato' && !dividiStringa(g.categoria).includes('Nascosto')).length}
                 </b>
               </div>
 
@@ -786,7 +810,7 @@ const App = () => {
                 }}
               >
                 Totale: <b>
-                  {games.filter(g => !isDlc(g) && !dividiStringa(g.categoria).includes('Wishlist')).length}
+                  {games.filter(g => !isDlc(g) && !dividiStringa(g.categoria).includes('Nascosto')).length}
                 </b>
               </div>
 
@@ -1271,16 +1295,20 @@ const App = () => {
         {!showStats && filteredGames.filter(g => !g.pinned).length > 0 && (
           <div>
             <h3 className="section-title-games">GIOCHI ({filteredGames.filter(g => !g.pinned).length})</h3>
-            {/* GRID VIEW - Hidden but kept for future use
-            <div className={`games-grid ${viewMode === 'list' ? 'list-view' : ''}`}>
-              {filteredGames.filter(g => !g.pinned).map(game => (
-                <div key={game.id} className="game-card-wrapper">
-                  {viewMode === 'list' ? renderGameCardList(game) : renderGameCardGrid(game)}
-                  {viewMode === 'list' && filterDlc !== 'Solo DLC' && renderDlcContainer(game)}
-                </div>
-              ))}
+
+            {/* TOGGLE INTERRUTTORE MOSTRA NASCOSTI */}
+            <div className="show-hidden-toggle-container">
+              <label className="switch-label">
+                <input
+                  type="checkbox"
+                  checked={showHidden}
+                  onChange={(e) => setShowHidden(e.target.checked)}
+                />
+                <span className="slider-switch"></span>
+              </label>
+              <span className="switch-text">Mostra Nascosti</span>
             </div>
-            */}
+
             {/* LIST VIEW (forced) */}
             <div className={`games-grid list-view`}>
               {filteredGames.filter(g => !g.pinned).map(game => (

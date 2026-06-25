@@ -872,7 +872,7 @@ textarea {
   background: var(--accent-danger);
 }
 
-/* Se è attivo (wishlist o pin) */
+/* Se è attivo (Nascosto o pin) */
 .admin-btn-action.active {
   background: var(--accent-primary);
   border-color: white;
@@ -2056,15 +2056,15 @@ datalist {
   /* Si illumina al passaggio */
 }
 
-/* Card in Wishlist: Stile Neon Blue */
-.game-card.wishlist-card {
+/* Card in Nascosto: Stile Neon Blue */
+.game-card.Nascosto-card {
   border: 2px solid #00d2ff !important;
   /* Azzurro vivace */
   box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
   /* Leggero bagliore esterno */
 }
 
-.game-card.wishlist-card:hover {
+.game-card.Nascosto-card:hover {
   opacity: 1;
   filter: saturate(1.2);
   box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
@@ -2156,4 +2156,81 @@ datalist {
 .stat-clickable-row:not(.row-in-corso):not(.row-completato):not(.row-da-giocare):hover {
   color: #fff;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Contenitore dello switch */
+.show-hidden-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px; /* Spazio prima dell'inizio della lista giochi */
+  padding: 2px 0;
+}
+
+/* Testo a fianco dello switch */
+.switch-text {
+  font-size: 13px;
+  color: #888;
+  user-select: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* La struttura del checkbox nascosto */
+.switch-label {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.switch-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Lo sfondo dello switch (spento) */
+.slider-switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a2d32;
+  border: 1px solid #3d4450;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+
+/* Il pallino interno (spento) */
+.slider-switch:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #aaa;
+  border-radius: 50%;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Stato ACCESO dello switch: cambia sfondo (usiamo l'azzurro tech della card) */
+.switch-label input:checked + .slider-switch {
+  background-color: rgba(0, 145, 234, 0.2);
+  border-color: #0091ea;
+  box-shadow: 0 0 10px rgba(0, 145, 234, 0.4);
+}
+
+/* Sposta il pallino a destra e lo fa diventare bianco lucido */
+.switch-label input:checked + .slider-switch:before {
+  transform: translateX(18px);
+  background-color: #ffffff;
+}
+
+/* Illumina anche il testo quando lo switch è attivo */
+.switch-label input:checked ~ .switch-text {
+  color: #ffffff;
 }

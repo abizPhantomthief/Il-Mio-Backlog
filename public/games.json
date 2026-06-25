@@ -483,7 +483,8 @@
     "annoUscita": "2018",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2nul.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 46,
@@ -494,7 +495,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ed3.webp",
     "stato": "Non Giocato",
-    "categoria": ""
+    "categoria": "Nascosto"
   },
   {
     "id": 47,
@@ -504,7 +505,8 @@
     "annoUscita": "2023",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co57sj.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 48,
@@ -556,7 +558,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9oe3.webp",
     "stato": "Non Giocato",
-    "categoria": "Wishlist"
+    "categoria": "Nascosto"
   },
   {
     "id": 53,
@@ -902,7 +904,8 @@
     "annoUscita": "2019",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20r3.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 86,
@@ -912,7 +915,8 @@
     "annoUscita": "2022",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co390m.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 87,
@@ -1014,7 +1018,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5bqu.webp",
     "stato": "Non Giocato",
-    "categoria": "Wishlist"
+    "categoria": "Nascosto"
   },
   {
     "id": 96,
@@ -1480,7 +1484,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55md.webp",
     "stato": "Non Giocato",
     "note": "Giocarlo su PC è un'opzione preferibile.",
-    "categoria": "Possibile Rimozione, Wishlist",
+    "categoria": "Possibile Rimozione, Nascosto",
     "pinned": false
   },
   {
@@ -1967,7 +1971,8 @@
     "annoUscita": "2003",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v3e.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 188,
@@ -2463,7 +2468,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95gk.webp",
     "stato": "Non Giocato",
-    "categoria": "Wishlist"
+    "categoria": "Nascosto"
   },
   {
     "id": 235,
@@ -2565,7 +2570,8 @@
     "annoUscita": "1998",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ado.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 245,
@@ -3013,7 +3019,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3u7r.webp",
     "stato": "Non Giocato",
-    "categoria": "Wishlist"
+    "categoria": "Nascosto"
   },
   {
     "id": 288,
@@ -4206,7 +4212,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mbt.webp",
     "stato": "Non Giocato",
-    "categoria": "Possibile Rimozione, Wishlist"
+    "categoria": "Possibile Rimozione, Nascosto"
   },
   {
     "id": 403,
@@ -5081,7 +5087,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ovg.webp",
     "stato": "Non Giocato",
-    "categoria": "Wishlist"
+    "categoria": "Nascosto"
   },
   {
     "id": 489,
@@ -5101,7 +5107,7 @@
     "annoUscita": "2009",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ymx.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 491,
@@ -5111,7 +5117,8 @@
     "annoUscita": "2012",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p9b.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": ""
   },
   {
     "id": 492,
@@ -5173,7 +5180,8 @@
     "annoUscita": "2023",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ds7.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 498,
@@ -5486,7 +5494,8 @@
     "annoUscita": "2014",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6jpi.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 529,
@@ -5988,7 +5997,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6lnp.webp",
     "stato": "Non Giocato",
-    "categoria": "Possibile Rimozione, Wishlist"
+    "categoria": "Possibile Rimozione, Nascosto"
   },
   {
     "id": 578,
@@ -6659,7 +6668,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39sa.webp",
     "stato": "Non Giocato",
-    "categoria": "Wishlist"
+    "categoria": "Nascosto"
   },
   {
     "id": 645,
@@ -6792,7 +6801,8 @@
     "annoUscita": "2008",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pz9.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 658,
@@ -8517,7 +8527,8 @@
     "annoUscita": "2019",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21by.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 831,
@@ -8578,7 +8589,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1paz.webp",
     "stato": "Non Giocato",
-    "categoria": "Non Tradotto, Wishlist"
+    "categoria": "Non Tradotto, Nascosto"
   },
   {
     "id": 837,
@@ -8910,7 +8921,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "Possibile Rimozione, Wishlist",
+    "categoria": "Possibile Rimozione, Nascosto",
     "pinned": false,
     "id": 1770585650305
   },
@@ -10769,7 +10780,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "Wishlist",
+    "categoria": "Nascosto",
     "pinned": false,
     "id": 1773349704677
   },
@@ -11172,7 +11183,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "Wishlist",
+    "categoria": "Nascosto",
     "pinned": false,
     "dlcType": "",
     "parentId": null,
@@ -11188,7 +11199,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "Wishlist",
+    "categoria": "Nascosto",
     "pinned": false,
     "id": 1778835993326
   },
@@ -11471,11 +11482,40 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "Wishlist",
+    "categoria": "Nascosto",
     "pinned": false,
     "dlcType": "",
     "parentId": null,
     "includeInCount": false,
     "id": 1781949936350
+  },
+  {
+    "titolo": "Ninja Gaiden: Ragebound",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9qrg.webp",
+    "saga": "Ninja Gaiden Series",
+    "annoUscita": "2025",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Nascosto",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1782421416493
+  },
+  {
+    "titolo": "Ninja Gaiden 4",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9b3p.webp",
+    "saga": "Ninja Gaiden Series",
+    "annoUscita": "2025",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Nascosto",
+    "pinned": false,
+    "id": 1782421488656
   }
 ]
