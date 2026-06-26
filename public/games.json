@@ -2131,7 +2131,7 @@
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pd2.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 201,
     "includeInCount": false
   },
@@ -2391,7 +2391,7 @@
     "annoGiocato": 2017,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4xep.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 226,
     "includeInCount": false
   },
@@ -2633,7 +2633,7 @@
     "annoGiocato": 2024,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpp.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 249,
     "includeInCount": false
   },
@@ -3215,7 +3215,7 @@
     "annoGiocato": 2013,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1th2.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 305
   },
   {
@@ -3227,7 +3227,7 @@
     "annoGiocato": 2013,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28od.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 305
   },
   {
@@ -3641,7 +3641,7 @@
     "annoGiocato": 2023,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ygu.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 346,
     "includeInCount": false
   },
@@ -4428,7 +4428,7 @@
     "annoGiocato": 2021,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dwe.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 422,
     "includeInCount": false
   },
@@ -4669,7 +4669,7 @@
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v88.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 448,
     "includeInCount": false
   },
@@ -8310,7 +8310,7 @@
     "annoGiocato": 2021,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tp9.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 808,
     "includeInCount": false
   },
@@ -8505,7 +8505,7 @@
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21et.webp",
     "stato": "Completato",
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 827,
     "includeInCount": false
   },
@@ -8908,7 +8908,7 @@
     "categoria": "",
     "pinned": false,
     "id": 1770585553154,
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 12,
     "includeInCount": false
   },
@@ -9082,7 +9082,7 @@
     "note": "",
     "categoria": "",
     "pinned": false,
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 37,
     "id": 1773004495122,
     "includeInCount": false
@@ -10299,7 +10299,7 @@
     "note": "",
     "categoria": "",
     "pinned": false,
-    "dlcType": "espansione",
+    "dlcType": "espansione_standalone",
     "parentId": 573,
     "id": 1773051931573,
     "includeInCount": false
@@ -11517,5 +11517,21 @@
     "categoria": "Nascosto",
     "pinned": false,
     "id": 1782421488656
+  },
+  {
+    "titolo": "The Adventures of Elliot: The Millenium Tales",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coblri.webp",
+    "saga": "",
+    "annoUscita": "2026",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Nascosto",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1782501264647
   }
 ]

@@ -9,7 +9,7 @@ const App = () => {
   const [filterYear, setFilterYear] = useState('Tutti');
   const [filterStatus, setFilterStatus] = useState('Tutti');
   const [filterCategory, setFilterCategory] = useState('Tutte');
-  const [filterDlc, setFilterDlc] = useState('Tutti');
+  const [filterDlc, setFilterDlc] = useState('Giochi Base');
   const [sortTitle, setSortTitle] = useState('Default');
   const [sortYear, setSortYear] = useState('Default');
   const [sortPlatform, setSortPlatform] = useState('Default');
@@ -103,6 +103,7 @@ const App = () => {
     switch (type) {
       case 'dlc': return '📦 DLC';
       case 'espansione': return '🎮 Espansione';
+      case 'espansione_standalone': return '🎮 Espansione Standalone';
       case 'riedizione': return '🔄 Riedizione';
       default: return '📦 DLC';
     }
@@ -110,9 +111,10 @@ const App = () => {
 
   const getDlcTypeColor = (type) => {
     switch (type) {
-      case 'dlc': return 'linear-gradient(135deg, #f39c12, #e67e22)';
-      case 'espansione': return 'linear-gradient(135deg, #9b59b6, #8e44ad)';
-      case 'riedizione': return 'linear-gradient(135deg, #3498db, #2980b9)';
+      case 'dlc': return 'linear-gradient(135deg, #f39c12, #e67e22)'; // Arancione
+      case 'espansione': return 'linear-gradient(135deg, #9b59b6, #8e44ad)'; // Viola
+      case 'espansione_standalone': return 'linear-gradient(135deg, #e84393, #b5179e)'; // Magenta / Rubino
+      case 'riedizione': return 'linear-gradient(135deg, #3498db, #2980b9)'; // Blu
       default: return 'linear-gradient(135deg, #f39c12, #e67e22)';
     }
   };
@@ -869,6 +871,7 @@ const App = () => {
                               <option value="">Gioco Principale</option>
                               <option value="dlc">DLC</option>
                               <option value="espansione">Espansione</option>
+                              <option value="espansione_standalone">Espansione Standalone</option>
                               <option value="riedizione">Riedizione</option>
                             </select>
                             {newGame.dlcType && (
@@ -1390,6 +1393,7 @@ const App = () => {
                   <option value="">Gioco Principale</option>
                   <option value="dlc">DLC</option>
                   <option value="espansione">Espansione</option>
+                  <option value="espansione_standalone">Espansione Standalone</option>
                   <option value="riedizione">Riedizione</option>
                 </select>
                 {editedGameData.dlcType && (
