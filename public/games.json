@@ -566,10 +566,11 @@
     "titolo": "Baldur's Gate III",
     "piattaforma": "PC",
     "annoUscita": "2023",
-    "annoGiocato": 2025,
+    "annoGiocato": "2025, 2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.webp",
-    "stato": "Completato",
-    "voto": "82"
+    "stato": "In corso",
+    "voto": "82",
+    "note": "Rigiocato"
   },
   {
     "id": 54,
