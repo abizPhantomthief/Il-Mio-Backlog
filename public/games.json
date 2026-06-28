@@ -303,7 +303,7 @@
     "annoUscita": 2015,
     "annoGiocato": 2019,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co493k.webp",
-    "stato": "Completato",
+    "stato": "Giocato",
     "voto": "20"
   },
   {
@@ -1369,7 +1369,7 @@
     "annoUscita": 2018,
     "annoGiocato": 2019,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6nv0.webp",
-    "stato": "Completato",
+    "stato": "Giocato",
     "voto": "20"
   },
   {
@@ -2612,7 +2612,7 @@
     "annoUscita": 1986,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co56c0.webp",
-    "stato": "Completato",
+    "stato": "Giocato",
     "note": "Minigiochi in Yakuza/LaD"
   },
   {
@@ -2969,7 +2969,7 @@
     "annoUscita": "2020",
     "annoGiocato": "2022, 2024",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co480t.webp",
-    "stato": "Completato"
+    "stato": "Giocato"
   },
   {
     "id": 283,
@@ -3060,7 +3060,7 @@
     "annoUscita": 2014,
     "annoGiocato": 2020,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7xyj.webp",
-    "stato": "Completato"
+    "stato": "Giocato"
   },
   {
     "id": 292,
@@ -4790,9 +4790,9 @@
     "titolo": "Minecraft",
     "piattaforma": "PS3, PS4",
     "annoUscita": 2011,
-    "annoGiocato": "-",
+    "annoGiocato": "2019",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.webp",
-    "stato": "Completato"
+    "stato": "Giocato"
   },
   {
     "id": 460,
@@ -4956,7 +4956,7 @@
     "annoUscita": 2016,
     "annoGiocato": 2018,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co86yv.webp",
-    "stato": "Completato"
+    "stato": "Giocato"
   },
   {
     "id": 476,
@@ -5332,7 +5332,7 @@
     "annoUscita": 1986,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2oj4.webp",
-    "stato": "Completato",
+    "stato": "Giocato",
     "note": "Minigioco in Yakuza/LaD"
   },
   {
@@ -5361,9 +5361,9 @@
     "titolo": "Overwatch",
     "piattaforma": "PS4, PS5",
     "annoUscita": "2016",
-    "annoGiocato": "-",
+    "annoGiocato": "2017, 2022",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rcb.webp",
-    "stato": "Completato"
+    "stato": "Giocato"
   },
   {
     "id": 516,
@@ -5391,9 +5391,9 @@
     "titolo": "Paladins",
     "piattaforma": "PS4",
     "annoUscita": 2017,
-    "annoGiocato": "-",
+    "annoGiocato": "2017",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p3u.webp",
-    "stato": "Completato"
+    "stato": "Giocato"
   },
   {
     "id": 519,
@@ -6699,7 +6699,7 @@
     "annoUscita": 1985,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20ff.webp",
-    "stato": "Completato",
+    "stato": "Giocato",
     "note": "Minigioco in Yakuza/LaD"
   },
   {
@@ -6986,7 +6986,7 @@
     "annoUscita": 1987,
     "annoGiocato": 2022,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4yk4.webp",
-    "stato": "Completato",
+    "stato": "Giocato",
     "note": "Minigioco in Yakuza/LaD"
   },
   {
@@ -7387,7 +7387,7 @@
     "annoUscita": 2013,
     "annoGiocato": 2016,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co83wo.webp",
-    "stato": "Completato"
+    "stato": "Giocato"
   },
   {
     "id": 720,
@@ -8798,9 +8798,9 @@
     "titolo": "Yu-Gi-Oh! Master Duel",
     "piattaforma": "PS5",
     "annoUscita": 2022,
-    "annoGiocato": "-",
+    "annoGiocato": "2022",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co86z9.webp",
-    "stato": "Completato"
+    "stato": "Giocato"
   },
   {
     "id": 857,

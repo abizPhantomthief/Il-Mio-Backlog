@@ -161,7 +161,9 @@ const App = () => {
 
   const getColorStato = (stato) => {
     switch (stato) {
-      case 'Completato': return '#27ae60';
+      case 'Completato':
+      case 'Giocato': // <--- Condivide lo stesso identico ritorno di 'Completato'
+        return '#27ae60';
       case 'In corso': return '#f1c40f';
       case 'Droppato': return '#e74c3c';
       case 'Sospeso': return '#e67e22';
@@ -171,7 +173,9 @@ const App = () => {
 
   const getColorStatoTransparent = (stato) => {
     switch (stato) {
-      case 'Completato': return 'rgba(39, 174, 96, 0.15)';
+      case 'Completato':
+      case 'Giocato': // <--- Condivide la stessa trasparenza verde di 'Completato'
+        return 'rgba(39, 174, 96, 0.15)';
       case 'In corso': return 'rgba(241, 196, 15, 0.15)';
       case 'Droppato': return 'rgba(231, 76, 60, 0.15)';
       case 'Sospeso': return 'rgba(230, 126, 34, 0.15)';
@@ -473,7 +477,9 @@ const App = () => {
     const dlcGames = games.filter(g => isDlc(g));
     const totale = gamesWithoutDlcs.length;
     const totaleDlcs = dlcGames.length;
-    const completati = gamesWithoutDlcs.filter(g => g.stato === 'Completato').length;
+
+    // Conteggio Stati Giochi (Includendo il nuovo stato 'Giocato' insieme a 'Completato' o separandoli se preferisci)
+    const completati = gamesWithoutDlcs.filter(g => g.stato === 'Completato' || g.stato === 'Giocato').length;
     const inCorso = gamesWithoutDlcs.filter(g => g.stato === 'In corso').length;
     const droppati = gamesWithoutDlcs.filter(g => g.stato === 'Droppato').length;
     const sospesi = gamesWithoutDlcs.filter(g => g.stato === 'Sospeso').length;
@@ -510,14 +516,15 @@ const App = () => {
       });
     });
 
-    // DLC Stats
-    const dlcPerTipo = { dlc: 0, espansione: 0, riedizione: 0 };
+    // DLC Stats - AGGIORNATO con espansione_standalone
+    const dlcPerTipo = { dlc: 0, espansione: 0, espansione_standalone: 0, riedizione: 0 };
     dlcGames.forEach(g => {
       const type = g.dlcType || 'dlc';
       dlcPerTipo[type] = (dlcPerTipo[type] || 0) + 1;
     });
 
-    const dlcCompletati = dlcGames.filter(g => g.stato === 'Completato').length;
+    // Conteggio Stati DLC (Includendo 'Giocato')
+    const dlcCompletati = dlcGames.filter(g => g.stato === 'Completato' || g.stato === 'Giocato').length;
     const dlcInCorso = dlcGames.filter(g => g.stato === 'In corso').length;
     const dlcDroppati = dlcGames.filter(g => g.stato === 'Droppato').length;
     const dlcSospesi = dlcGames.filter(g => g.stato === 'Sospeso').length;
@@ -627,7 +634,9 @@ const App = () => {
       // --- ALTRI FILTRI STANDARD ---
       const matchesYear = filterYear === 'Tutti' || dividiStringa(game.annoGiocato).includes(filterYear) || gameHasDlcWithYear(game.id, filterYear);
       const matchesSaga = selectedSaga === 'Tutte' || (selectedSaga === 'Senza Saga' ? !pulisciNomeSaga(game.saga) : pulisciNomeSaga(game.saga) === selectedSaga);
-      const matchesStatus = filterStatus === 'Tutti' || game.stato === filterStatus;
+      // NUOVO CONTROLLO AGGIORNATO
+      const matchesStatus = filterStatus === 'Tutti' ||
+        (filterStatus === 'Completato' ? (game.stato === 'Completato' || game.stato === 'Giocato') : game.stato === filterStatus);
 
       // --- LOGICA CATEGORIA CORRETTA E COESISTENTE ---
       let matchesCategory = false;
@@ -782,7 +791,7 @@ const App = () => {
                 }}
               >
                 Completato: <b>
-                  {games.filter(g => !isDlc(g) && g.stato === 'Completato' && !dividiStringa(g.categoria).includes('Nascosto')).length}
+                  {games.filter(g => !isDlc(g) && (g.stato === 'Completato' || g.stato === 'Giocato') && !dividiStringa(g.categoria).includes('Nascosto')).length}
                 </b>
               </div>
 
@@ -850,7 +859,7 @@ const App = () => {
                             <input id="annoGiocato" name="annoGiocato" type="text" placeholder="Anno Giocato" className="form-input" value={newGame.annoGiocato} onChange={e => setNewGame({ ...newGame, annoGiocato: e.target.value })} />
                           </div>
                           <select id="stato" name="stato" className="form-select" value={newGame.stato} onChange={e => setNewGame({ ...newGame, stato: e.target.value })}>
-                            {['Non Giocato', 'In corso', 'Completato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
+                            {['Non Giocato', 'In corso', 'Completato', 'Giocato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
                           </select>
                           {/* <div className="form-row">
                             <input id="voto" name="voto" type="number" min="1" max="100" placeholder="Voto (1-100)" className="form-input" value={newGame.voto} onChange={e => setNewGame({ ...newGame, voto: e.target.value })} />
@@ -1326,7 +1335,7 @@ const App = () => {
       </div>
 
       {/* Modale di Modifica Gioco */}
-      {editingGame && editedGameData && (
+{editingGame && editedGameData && (
         <div className="modal-overlay">
           <div className="modal-content edit-game-modal">
             <h2>Modifica Gioco</h2>
@@ -1367,7 +1376,7 @@ const App = () => {
                 <div className="edit-form-group">
                   <label>Stato</label>
                   <select className="form-select" value={editedGameData.stato} onChange={e => setEditedGameData({ ...editedGameData, stato: e.target.value })}>
-                    {['Non Giocato', 'In corso', 'Completato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
+                    {['Non Giocato', 'In corso', 'Completato', 'Giocato', 'Sospeso', 'Droppato'].map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
                 </div>
               </div>
