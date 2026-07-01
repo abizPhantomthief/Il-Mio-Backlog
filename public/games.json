@@ -1725,12 +1725,12 @@
     "id": 164,
     "saga": "Dead Rising Series",
     "titolo": "Dead Rising 2: Case Zero",
-    "piattaforma": "",
+    "piattaforma": "X360",
     "annoUscita": "2010",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2pvb.webp",
-    "stato": "Non Giocato",
-    "categoria": ""
+    "stato": "Completato",
+    "categoria": "Emulato"
   },
   {
     "id": 165,

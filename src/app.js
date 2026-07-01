@@ -710,7 +710,7 @@ const App = () => {
     'N3DS': { bg: '#ce181e', text: '#ffffff', border: '#8b1014' }, // Rosso acceso del brand 3DS
 
     // PC, Xbox & Mobile
-    'Xbox 360': { bg: '#107c10', text: '#ffffff', border: '#0b520b' },
+    'X360': { bg: '#107c10', text: '#ffffff', border: '#0b520b' },
     'PC': { bg: '#bc1414', text: '#ffffff', border: '#7a0d0d' },
     'Mobile': { bg: '#00bcd4', text: '#ffffff', border: '#00838f' }, // Un azzurro/cyan moderno per iOS/Android
   };
