@@ -1736,11 +1736,11 @@
     "id": 165,
     "saga": "Dead Rising Series",
     "titolo": "Dead Rising 2",
-    "piattaforma": "",
+    "piattaforma": "PC",
     "annoUscita": "2010",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gzw.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 166,
@@ -11534,5 +11534,21 @@
     "parentId": null,
     "includeInCount": false,
     "id": 1782501264647
+  },
+  {
+    "titolo": "CrossCode",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28wy.webp",
+    "saga": "",
+    "annoUscita": "2018",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Nascosto",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1783012493667
   }
 ]
