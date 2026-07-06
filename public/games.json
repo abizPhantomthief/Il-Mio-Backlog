@@ -10,7 +10,8 @@
     "stato": "Non Giocato",
     "note": "",
     "categoria": "",
-    "voto": ""
+    "voto": "",
+    "pinned": false
   },
   {
     "id": 2,
@@ -144,7 +145,7 @@
     "annoUscita": "2016",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8gsr.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 14,
