@@ -1146,11 +1146,11 @@
     "id": 108,
     "saga": "Castlevania Series",
     "titolo": "Castlevania: Aria of Sorrow",
-    "piattaforma": "",
+    "piattaforma": "PS4",
     "annoUscita": "2003",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nh5.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 109,
@@ -1741,20 +1741,21 @@
     "annoUscita": "2010",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gzw.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 166,
     "saga": "Dead Rising Series",
     "titolo": "Dead Rising 2: Case West",
-    "piattaforma": "",
+    "piattaforma": "X360",
     "annoUscita": "2010",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mqf.webp",
-    "stato": "Non Giocato",
-    "dlcType": "espansione",
+    "stato": "Completato",
+    "dlcType": "espansione_standalone",
     "parentId": 165,
-    "includeInCount": false
+    "includeInCount": false,
+    "categoria": "Emulato"
   },
   {
     "id": 167,
