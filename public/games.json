@@ -1627,7 +1627,8 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n1f.webp",
     "stato": "Non Giocato",
-    "categoria": "Possibile Rimozione"
+    "categoria": "Possibile Rimozione",
+    "pinned": true
   },
   {
     "id": 155,
@@ -1767,7 +1768,8 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1t1w.webp",
     "stato": "Completato",
     "dlcType": "riedizione",
-    "parentId": 165
+    "parentId": 165,
+    "includeInCount": true
   },
   {
     "id": 168,
@@ -5555,7 +5557,8 @@
     "isDlc": true,
     "parentId": 530,
     "voto": "",
-    "dlcType": "riedizione"
+    "dlcType": "riedizione",
+    "includeInCount": true
   },
   {
     "id": 534,
@@ -6660,7 +6663,8 @@
     "annoUscita": "1991",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6yzr.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": true
   },
   {
     "id": 644,
@@ -7239,7 +7243,8 @@
     "annoUscita": "2000",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gft.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Possibile Rimozione, Nascosto"
   },
   {
     "id": 705,
@@ -11073,7 +11078,7 @@
     "pinned": false,
     "dlcType": "riedizione",
     "parentId": 450,
-    "includeInCount": false,
+    "includeInCount": true,
     "id": 1778268362819
   },
   {
