@@ -11557,5 +11557,52 @@
     "parentId": null,
     "includeInCount": false,
     "id": 1783012493667
+  },
+  {
+    "titolo": "Wo Long: Fallen Dynasty  - Battaglia di Zhongyuan",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6kmd.webp",
+    "saga": "",
+    "annoUscita": "2023",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "In corso",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 831,
+    "includeInCount": false,
+    "id": 1783893507466
+  },
+  {
+    "titolo": "Wo Long: Fallen Dynasty - Conquistatore di Jiangdong",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7wyz.webp",
+    "saga": "",
+    "annoUscita": "2023",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 831,
+    "includeInCount": false,
+    "id": 1783939309912
+  },
+  {
+    "titolo": "Wo Long: Fallen Dynasty - Insurrezione di Jingxiang",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7wz0.webp",
+    "saga": "",
+    "annoUscita": "2023",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 831,
+    "id": 1783939377823
   }
 ]
