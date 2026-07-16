@@ -571,7 +571,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.webp",
     "stato": "Completato",
     "voto": "82",
-    "note": "Rigiocato"
+    "note": ""
   },
   {
     "id": 54,
@@ -8546,7 +8546,7 @@
     "annoUscita": "2023",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4v34.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 832,
@@ -11595,9 +11595,9 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7wz0.webp",
     "saga": "",
     "annoUscita": "2023",
-    "annoGiocato": "-",
-    "piattaforma": "",
-    "stato": "Non Giocato",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
