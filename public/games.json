@@ -5100,9 +5100,10 @@
     "titolo": "Ninja Gaiden Σ",
     "piattaforma": "PS4",
     "annoUscita": 2007,
-    "annoGiocato": 2025,
+    "annoGiocato": "2025, 2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k8n.webp",
-    "stato": "Completato"
+    "stato": "In corso",
+    "note": "Rigiocato"
   },
   {
     "id": 490,
@@ -5343,11 +5344,11 @@
     "id": 513,
     "saga": "Overcooked! All You Can Eat",
     "titolo": "Overcooked!",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2016",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co262g.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 514,
