@@ -11696,5 +11696,36 @@
     "dlcType": "dlc",
     "parentId": 408,
     "id": 1784112685776
+  },
+  {
+    "titolo": "Overcooked! All You Can Eat : World Food Festival",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7g2f.webp",
+    "saga": "Overcooked! All You Can Eat",
+    "annoUscita": "2022",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 514,
+    "includeInCount": false,
+    "id": 1784566599694
+  },
+  {
+    "titolo": "Overcooked!: The Lost Morsel",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/fcaxyuych9yi8niuemcl.webp",
+    "saga": "Overcooked! All You Can Eat",
+    "annoUscita": "2016",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "In corso",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 513,
+    "id": 1784566770906
   }
 ]
