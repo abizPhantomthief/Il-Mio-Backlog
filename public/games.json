@@ -2328,11 +2328,11 @@
   {
     "id": 221,
     "saga": "Dragon Quest Series",
-    "titolo": "Dragon Quest I HD-2D Remake",
+    "titolo": "Dragon Quest III HD-2D Remake",
     "piattaforma": "",
-    "annoUscita": "2025",
+    "annoUscita": "2024",
     "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaro0.webp",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8d90.webp",
     "stato": "Non Giocato"
   },
   {
@@ -11923,5 +11923,34 @@
     "dlcType": "dlc",
     "parentId": 514,
     "id": 1784627151303
+  },
+  {
+    "titolo": "Dragon Quest I HD-2D Remake",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaro0.webp",
+    "saga": "Dragon Quest Series",
+    "annoUscita": "2025",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1784798185468
+  },
+  {
+    "titolo": "Dragon Quest II HD-2D Remake",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaro1.webp",
+    "saga": "Dragon Quest Series",
+    "annoUscita": "2025",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1784798230584
   }
 ]
