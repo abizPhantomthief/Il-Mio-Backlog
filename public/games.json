@@ -5102,7 +5102,7 @@
     "annoUscita": 2007,
     "annoGiocato": "2025, 2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2k8n.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "note": "Rigiocato"
   },
   {
@@ -11794,9 +11794,9 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ksy.webp",
     "saga": "Overcooked! All You Can Eat",
     "annoUscita": "2019",
-    "annoGiocato": "-",
-    "piattaforma": "",
-    "stato": "Non Giocato",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "In corso",
     "note": "",
     "categoria": "",
     "pinned": false,
@@ -11952,5 +11952,21 @@
     "categoria": "",
     "pinned": false,
     "id": 1784798230584
+  },
+  {
+    "titolo": "Signalis",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co62ig.webp",
+    "saga": "",
+    "annoUscita": "2022",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1785318737137
   }
 ]
