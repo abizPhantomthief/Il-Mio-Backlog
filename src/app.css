@@ -64,7 +64,7 @@ body {
 
 /* Light Mode */
 .app-container.light-mode {
-  --bg-primary: #f5f5f5;
+  --bg-primary: rgb(237, 240, 241);
   --bg-secondary: #ffffff;
   --bg-tertiary: #f0f0f0;
   --bg-hover: #e8e8e8;

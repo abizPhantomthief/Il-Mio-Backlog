@@ -11968,5 +11968,21 @@
     "parentId": null,
     "includeInCount": false,
     "id": 1785318737137
+  },
+  {
+    "titolo": "Denshattack!",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaawz.webp",
+    "saga": "",
+    "annoUscita": "2026",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Nascosto",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1785577831104
   }
 ]
