@@ -11984,5 +11984,37 @@
     "parentId": null,
     "includeInCount": false,
     "id": 1785577831104
+  },
+  {
+    "titolo": "Astral Chain",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobd39.webp",
+    "saga": "",
+    "annoUscita": "2019",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Nascosto",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1786127941064
+  },
+  {
+    "titolo": "Marvel Tōkon: Fighting Souls",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cociit.webp",
+    "saga": "",
+    "annoUscita": "2026",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Nascosto",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1786356012562
   }
 ]
