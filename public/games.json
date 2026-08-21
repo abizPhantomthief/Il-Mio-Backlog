@@ -2168,7 +2168,8 @@
     "annoUscita": "2017",
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6p5e.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "categoria": "Nascosto"
   },
   {
     "id": 206,
@@ -5123,7 +5124,7 @@
     "annoUscita": "2012",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p9b.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "categoria": ""
   },
   {
@@ -5404,11 +5405,12 @@
     "id": 519,
     "saga": "",
     "titolo": "Paperino Operazione Papero",
-    "piattaforma": "",
+    "piattaforma": "PS2",
     "annoUscita": "2000",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co434r.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso",
+    "categoria": "Emulato"
   },
   {
     "id": 520,
@@ -6665,7 +6667,7 @@
     "annoGiocato": "-",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6yzr.webp",
     "stato": "Non Giocato",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 644,
