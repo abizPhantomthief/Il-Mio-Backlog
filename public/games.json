@@ -1845,11 +1845,11 @@
     "id": 175,
     "saga": "",
     "titolo": "Deathloop",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2021",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4nzt.webp",
-    "stato": "Non Giocato",
+    "stato": "In corso",
     "categoria": "Obiettivo 2026",
     "pinned": false,
     "voto": ""
@@ -2776,11 +2776,11 @@
     "id": 263,
     "saga": "Final Fantasy Series",
     "titolo": "Final Fantasy VIII",
-    "piattaforma": "",
+    "piattaforma": "PS4",
     "annoUscita": "1999",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2z7d.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 264,
