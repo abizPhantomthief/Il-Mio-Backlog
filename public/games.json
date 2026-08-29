@@ -4773,11 +4773,11 @@
     "id": 457,
     "saga": "Metro Saga",
     "titolo": "Metro: Last Light",
-    "piattaforma": "",
+    "piattaforma": "PS4",
     "annoUscita": "2013",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h9d.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 458,
@@ -6649,7 +6649,7 @@
   },
   {
     "id": 642,
-    "saga": "",
+    "saga": "Sonic Series",
     "titolo": "Sonic Championship",
     "piattaforma": "PS5",
     "annoUscita": 1996,
@@ -6660,13 +6660,13 @@
   },
   {
     "id": 643,
-    "saga": "",
+    "saga": "Sonic Series",
     "titolo": "Sonic the Hedgehog",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "1991",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6yzr.webp",
-    "stato": "Non Giocato",
+    "stato": "In corso",
     "pinned": false
   },
   {
@@ -11509,7 +11509,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "Nascosto",
+    "categoria": "",
     "pinned": false,
     "dlcType": "",
     "parentId": null,
@@ -11525,7 +11525,7 @@
     "piattaforma": "",
     "stato": "Non Giocato",
     "note": "",
-    "categoria": "Nascosto",
+    "categoria": "",
     "pinned": false,
     "id": 1782421488656
   },
@@ -12018,5 +12018,62 @@
     "parentId": null,
     "includeInCount": false,
     "id": 1786356012562
+  },
+  {
+    "titolo": "Sonic the Hedgehog 2",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5kkj.webp",
+    "saga": "Sonic Series",
+    "annoUscita": "1992",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1788030480802
+  },
+  {
+    "titolo": "Sonic CD",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co53t2.webp",
+    "saga": "Sonic Series",
+    "annoUscita": "1993",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1788030555278
+  },
+  {
+    "titolo": "Sonic the Hedgehog 3",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zut.webp",
+    "saga": "Sonic Series",
+    "annoUscita": "1994",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1788030643678
+  },
+  {
+    "titolo": "Sonic & Knuckles",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ups.webp",
+    "saga": "Sonic Series",
+    "annoUscita": "1994",
+    "annoGiocato": "-",
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione_standalone",
+    "parentId": 1788030643678,
+    "id": 1788030710574
   }
 ]
