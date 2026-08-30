@@ -6666,7 +6666,7 @@
     "annoUscita": "1991",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6yzr.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "pinned": false
   },
   {
@@ -12024,9 +12024,9 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5kkj.webp",
     "saga": "Sonic Series",
     "annoUscita": "1992",
-    "annoGiocato": "-",
-    "piattaforma": "",
-    "stato": "Non Giocato",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
