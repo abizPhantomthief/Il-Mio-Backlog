@@ -496,14 +496,16 @@ const App = () => {
 
   const getSagaStats = () => {
     const stats = { 'Senza Saga': 0 };
-    games.filter(g => !isDlc(g)).forEach(g => {
-      const nomePulito = pulisciNomeSaga(g.saga);
-      if (!nomePulito || nomePulito === "" || nomePulito === "-") {
-        stats['Senza Saga']++;
-      } else {
-        stats[nomePulito] = (stats[nomePulito] || 0) + 1;
-      }
-    });
+    games
+      .filter(g => !isDlc(g) && !dividiStringa(g.categoria).includes('Nascosto'))
+      .forEach(g => {
+        const nomePulito = pulisciNomeSaga(g.saga);
+        if (!nomePulito || nomePulito === "" || nomePulito === "-") {
+          stats['Senza Saga']++;
+        } else {
+          stats[nomePulito] = (stats[nomePulito] || 0) + 1;
+        }
+      });
     return stats;
   };
   const sagaStats = getSagaStats();
@@ -749,6 +751,18 @@ const App = () => {
     'X360': { bg: '#107c10', text: '#ffffff', border: '#0b520b' },
     'PC': { bg: '#bc1414', text: '#ffffff', border: '#7a0d0d' },
     'Mobile': { bg: '#00bcd4', text: '#ffffff', border: '#00838f' }, // Un azzurro/cyan moderno per iOS/Android
+  };
+
+  const getStatusColor = (stato) => {
+    switch (stato) {
+      case 'Completato': return '#27ae60'; // Verde
+      case 'Giocato': return '#2ecc71'; // Verde chiaro
+      case 'In corso': return '#f39c12'; // Arancione
+      case 'Sospeso': return '#e67e22'; // Arancione scuro/Marrone
+      case 'Droppato': return '#e74c3c'; // Rosso
+      case 'Non Giocato':
+      default: return '#4a4a4a'; // Grigio scuro (Incompleto/Da iniziare)
+    }
   };
 
   return (
@@ -1032,18 +1046,74 @@ const App = () => {
 
             <div className="saga-section">
               <p className="saga-label">Saghe</p>
-              <div className={`saga-item ${selectedSaga === 'Tutte' ? 'active' : ''}`}
-                onClick={() => { setSelectedSaga('Tutte'); setIsMobileOpen(false); }}>Tutte le Saghe</div>
-              <div className={`saga-item ${selectedSaga === 'Senza Saga' ? 'active' : ''}`}
-                onClick={() => { setSelectedSaga('Senza Saga'); setIsMobileOpen(false); }}>
+
+              {/* Opzione "Tutte le Saghe" */}
+              <div
+                className={`saga-item ${selectedSaga === 'Tutte' ? 'active' : ''}`}
+                onClick={() => { setSelectedSaga('Tutte'); setIsMobileOpen(false); }}
+              >
+                Tutte le Saghe
+              </div>
+
+              {/* Opzione "Senza Saga" */}
+              <div
+                className={`saga-item ${selectedSaga === 'Senza Saga' ? 'active' : ''}`}
+                onClick={() => { setSelectedSaga('Senza Saga'); setIsMobileOpen(false); }}
+              >
                 Senza Saga <span className="saga-count">({sagaStats['Senza Saga']} {sagaStats['Senza Saga'] === 1 ? 'titolo' : 'titoli'})</span>
               </div>
-              {Object.keys(sagaStats).filter(s => s !== 'Senza Saga').sort().map(s => (
-                <div key={s} className={`saga-item ${selectedSaga === s ? 'active' : ''}`}
-                  onClick={() => { setSelectedSaga(s); setIsMobileOpen(false); }}>
-                  {s} <span className="saga-count">({sagaStats[s]} {sagaStats[s] === 1 ? 'titolo' : 'titoli'})</span>
-                </div>
-              ))}
+
+              {/* Mappatura delle singole Saghe con le tacchette di stato */}
+              {Object.keys(sagaStats).filter(s => s !== 'Senza Saga').sort().map(s => {
+                // Troviamo i giochi escludendo DLC e Nascosti, poi li ordiniamo per anno di uscita
+                const giochiSaga = games
+                  .filter(g =>
+                    !isDlc(g) &&
+                    !dividiStringa(g.categoria).includes('Nascosto') &&
+                    pulisciNomeSaga(g.saga) === s
+                  )
+                  .sort((a, b) => {
+                    const annoA = parseInt(a.annoUscita || a.anno) || 0;
+                    const annoB = parseInt(b.annoUscita || b.anno) || 0;
+                    return annoA - annoB;
+                  });
+
+                return (
+                  <div
+                    key={s}
+                    className={`saga-item ${selectedSaga === s ? 'active' : ''}`}
+                    onClick={() => { setSelectedSaga(s); setIsMobileOpen(false); }}
+                    style={{ display: 'flex', flexDirection: 'column', gap: '4px', padding: '8px 10px' }}
+                  >
+                    {/* Intestazione della Saga */}
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+                      <span>{s}</span>
+                      <span className="saga-count">
+                        ({sagaStats[s]} {sagaStats[s] === 1 ? 'titolo' : 'titoli'})
+                      </span>
+                    </div>
+
+                    {/* Barretta con le tacchette di stato per i soli titoli visibili */}
+                    {giochiSaga.length > 0 && (
+                      <div style={{ display: 'flex', gap: '3px', width: '100%', marginTop: '2px' }}>
+                        {giochiSaga.map(game => (
+                          <div
+                            key={game.id}
+                            title={`${game.titolo} (${game.annoUscita || 'N/D'}) - ${game.stato}`}
+                            style={{
+                              flex: 1,
+                              height: '3px',
+                              backgroundColor: getColorStato(game.stato),
+                              borderRadius: '2px',
+                              opacity: 0.85
+                            }}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </>
         )}
