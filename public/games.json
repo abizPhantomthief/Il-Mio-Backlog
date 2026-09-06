@@ -7989,6 +7989,22 @@
     "stato": "In corso"
   },
   {
+    "titolo": "Persona 4 Arena Ultimax: P4A Story",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6qqi.webp",
+    "saga": "Persona Series",
+    "annoUscita": "2014",
+    "annoGiocato": "2026",
+    "piattaforma": "PS4",
+    "stato": "In corso",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 527,
+    "includeInCount": false,
+    "id": 1788732140730
+  },
+  {
     "id": 526,
     "saga": "Persona Series",
     "titolo": "Persona 4 Golden",
