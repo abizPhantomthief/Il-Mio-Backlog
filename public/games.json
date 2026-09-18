@@ -3719,11 +3719,11 @@
     "id": 243,
     "saga": "Fallout Series",
     "titolo": "Fallout: A Post Nuclear Role Playing Game",
-    "piattaforma": "",
+    "piattaforma": "PC",
     "annoUscita": "1997",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ybn.webp",
-    "stato": "Non Giocato"
+    "stato": "In corso"
   },
   {
     "id": 246,
@@ -3916,7 +3916,7 @@
     "annoUscita": "1999",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2z7d.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 265,
@@ -11530,7 +11530,8 @@
     "annoUscita": 2010,
     "annoGiocato": 2025,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7sax.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "note": "Versione PSP"
   },
   {
     "id": 800,
