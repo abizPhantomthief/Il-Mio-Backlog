@@ -3640,17 +3640,6 @@
     "voto": "79"
   },
   {
-    "id": 244,
-    "saga": "Fallout Series",
-    "titolo": "Fallout 2",
-    "piattaforma": "",
-    "annoUscita": "1998",
-    "annoGiocato": "-",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ado.webp",
-    "stato": "Non Giocato",
-    "categoria": "Nascosto"
-  },
-  {
     "id": 245,
     "saga": "Fallout Series",
     "titolo": "Fallout 3",
@@ -3723,7 +3712,7 @@
     "annoUscita": "1997",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ybn.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 246,
