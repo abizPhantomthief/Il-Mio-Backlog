@@ -4796,7 +4796,7 @@
     "annoUscita": "2018",
     "annoGiocato": "2026",
     "piattaforma": "PS5",
-    "stato": "Sospeso",
+    "stato": "In corso",
     "note": "",
     "categoria": "",
     "pinned": false,
@@ -5801,11 +5801,11 @@
     "id": 851,
     "saga": "Like a Dragon Saga",
     "titolo": "Like a Dragon: Infinite Wealth",
-    "piattaforma": "",
+    "piattaforma": "PS5",
     "annoUscita": "2024",
-    "annoGiocato": "-",
+    "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8356.webp",
-    "stato": "Non Giocato",
+    "stato": "In corso",
     "categoria": ""
   },
   {
@@ -8011,7 +8011,7 @@
     "annoUscita": "2015",
     "annoGiocato": "2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4hmn.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "id": 530,
@@ -9246,6 +9246,19 @@
     "stato": "Non Giocato"
   },
   {
+    "titolo": "Sega Bass Fishing",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co40xx.webp",
+    "saga": "",
+    "annoUscita": "1997",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "Minigioco in Like a Dragon: Infinite Wealth",
+    "categoria": "",
+    "pinned": false,
+    "id": 1790340319366
+  },
+  {
     "id": 614,
     "saga": "",
     "titolo": "Sekiro: Shadows Die Twice",
@@ -9797,6 +9810,22 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2acb.webp",
     "stato": "Completato",
     "categoria": "Streaming Playstation Plus"
+  },
+  {
+    "titolo": "SpikeOut: Final Edition",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8wwk.webp",
+    "saga": "",
+    "annoUscita": "1999",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "Minigioco in Like a Dragon: Infinite Wealth",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1790340060346
   },
   {
     "id": 649,
@@ -11722,7 +11751,7 @@
   },
   {
     "id": 817,
-    "saga": "",
+    "saga": "Virtua Fighter Series",
     "titolo": "Virtua Fighter 2",
     "piattaforma": "PS4",
     "annoUscita": 1994,
@@ -11730,6 +11759,19 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25zx.webp",
     "stato": "Completato",
     "note": "Minigioco in Yakuza/LaD"
+  },
+  {
+    "titolo": "Virtua Fighter 3tb",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4t3y.webp",
+    "saga": "Virtua Fighter Series",
+    "annoUscita": "1997",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Completato",
+    "note": "Minigioco in Like a Dragon: Infinite Wealth",
+    "categoria": "",
+    "pinned": false,
+    "id": 1790340148104
   },
   {
     "id": 818,
