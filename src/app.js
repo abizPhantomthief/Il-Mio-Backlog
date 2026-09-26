@@ -428,16 +428,37 @@ const App = () => {
 
   const aggiungiGioco = async (e) => {
     e.preventDefault();
-    const nuovoGiocoConId = { ...newGame, id: Date.now() };
+
+    const nuovoGiocoConId = {
+      ...newGame,
+      id: Date.now(),
+      annoUscita: newGame.annoUscita ? parseInt(newGame.annoUscita, 10) : 0,
+      annoGiocato: newGame.annoGiocato ? parseInt(newGame.annoGiocato, 10) : 0
+    };
+
     const nuovaLista = [...games, nuovoGiocoConId];
 
     addActivityLog("Aggiunto", nuovoGiocoConId.titolo, "Nuovo gioco inserito in libreria");
 
     setGames(nuovaLista);
+
     if (window.location.hostname === 'localhost') {
       await axios.post('http://localhost:5000/api/games/update', nuovaLista);
     }
-    setNewGame({ titolo: '', copertina: '', saga: '', annoUscita: '', annoGiocato: '', piattaforma: '', stato: 'Non Giocato', note: '', categoria: '', pinned: false });
+
+    setNewGame({
+      titolo: '',
+      copertina: '',
+      saga: '',
+      annoUscita: 0,
+      annoGiocato: 0,
+      piattaforma: '',
+      stato: 'Non Giocato',
+      note: '',
+      categoria: '',
+      pinned: false
+    });
+
     setShowAddForm(false);
   };
 

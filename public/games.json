@@ -2542,7 +2542,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n1f.webp",
     "stato": "Non Giocato",
     "categoria": "Possibile Rimozione",
-    "pinned": true
+    "pinned": false
   },
   {
     "id": 155,
@@ -3800,7 +3800,7 @@
   },
   {
     "id": 255,
-    "saga": "",
+    "saga": "Fighting Vipers Series",
     "titolo": "Fighting Vipers",
     "piattaforma": "PS5",
     "annoUscita": 1995,
@@ -3808,6 +3808,22 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co407w.webp",
     "stato": "Completato",
     "note": "Minigioco in Yakuza/LaD"
+  },
+  {
+    "titolo": "Fighting Vipers 2",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coclqb.webp",
+    "saga": "Fighting Vipers Series",
+    "annoUscita": "1998",
+    "annoGiocato": "2026",
+    "piattaforma": "PS5",
+    "stato": "Giocato",
+    "note": "Minigioco in Like a Dragon Gaiden: The Man Who Erased His Name",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1790417233770
   },
   {
     "id": 256,
