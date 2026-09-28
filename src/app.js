@@ -47,15 +47,44 @@ const App = () => {
     setEditedGameData(null);
   };
 
+  // Riusiamo la stessa helper (puoi metterla fuori dal componente o in un file utility)
+  const parseAnnoGiocato = (valore) => {
+    if (!valore || valore.toString().trim() === '') return null;
+
+    const stringVal = valore.toString().trim();
+
+    // Se contiene una virgola, è un elenco di anni (es. "2020, 2023") -> Restituisci la stringa
+    if (stringVal.includes(',')) {
+      return stringVal;
+    }
+
+    // Altrimenti converti in numero intero
+    const parsed = parseInt(stringVal, 10);
+    return isNaN(parsed) ? null : parsed;
+  };
+
   const saveGameChanges = async () => {
     setIsSaving(true);
     await new Promise(resolve => setTimeout(resolve, 800));
-    addActivityLog("Modificato", editedGameData.titolo, "Informazioni del gioco aggiornate tramite editor");
-    const nuovaLista = games.map(g => g.id === editedGameData.id ? editedGameData : g);
+
+    // Sanifichiamo e formattiamo i dati modificati prima del salvataggio
+    const giocoSanificato = {
+      ...editedGameData,
+      annoUscita: editedGameData.annoUscita ? parseInt(editedGameData.annoUscita, 10) : null,
+      annoGiocato: parseAnnoGiocato(editedGameData.annoGiocato)
+    };
+
+    addActivityLog("Modificato", giocoSanificato.titolo, "Informazioni del gioco aggiornate tramite editor");
+
+    // Applichiamo il gioco sanificato alla lista
+    const nuovaLista = games.map(g => g.id === giocoSanificato.id ? giocoSanificato : g);
+
     setGames(nuovaLista);
+
     if (window.location.hostname === 'localhost') {
       await axios.post('http://localhost:5000/api/games/update', nuovaLista);
     }
+
     setIsSaving(false);
     setEditingGame(null);
     setEditedGameData(null);
@@ -330,7 +359,9 @@ const App = () => {
                 {getDlcTypeLabel(game.dlcType)}
               </span>
             )}
-            <p className="played-info-list">Giocato nel: <b>{game.annoGiocato || '---'}</b></p>
+            <p className="played-info-list">
+              Giocato nel: <b>{game.annoGiocato ? game.annoGiocato : '-'}</b>
+            </p>
             {game.note && <p className="note-text-list">{game.note}</p>}
             <div className="platforms-tags">
               {/* BLOCCO PIATTAFORME MODIFICATO */}
@@ -387,12 +418,9 @@ const App = () => {
               </h5>
               <div className="dlc-meta">
                 <span className="dlc-status" style={{ color: getColorStato(dlc.stato) }}>{formatStatoDisplay(dlc.stato)}</span>
-                {/* {dlc.voto && dlc.voto !== '-' && dlc.voto !== '' && (
-                  <span className="dlc-vote" style={{ backgroundColor: getMetacriticColor(dlc.voto) }}>{dlc.voto}</span>
-                )} */}
               </div>
               <div className="dlc-played-platform">
-                <span className="dlc-played-info">Giocato nel: <b>{dlc.annoGiocato || '---'}</b></span>
+                <span className="dlc-played-info">Giocato nel: <b>{dlc.annoGiocato ? dlc.annoGiocato : '-'}</b></span>
                 <div className="dlc-platforms">
                   {dividiStringa(dlc.piattaforma).slice(0, 3).map((p, i) => <span key={i} className="platform-chip">{p}</span>)}
                 </div>
@@ -432,8 +460,10 @@ const App = () => {
     const nuovoGiocoConId = {
       ...newGame,
       id: Date.now(),
-      annoUscita: newGame.annoUscita ? parseInt(newGame.annoUscita, 10) : 0,
-      annoGiocato: newGame.annoGiocato ? parseInt(newGame.annoGiocato, 10) : 0
+      // Anno Uscita: Int o null se non specificato
+      annoUscita: newGame.annoUscita ? parseInt(newGame.annoUscita, 10) : null,
+      // Anno Giocato: gestisce null, Int o Stringa con virgole
+      annoGiocato: parseAnnoGiocato(newGame.annoGiocato)
     };
 
     const nuovaLista = [...games, nuovoGiocoConId];
@@ -446,12 +476,13 @@ const App = () => {
       await axios.post('http://localhost:5000/api/games/update', nuovaLista);
     }
 
+    // Reset dello stato iniziale del form
     setNewGame({
       titolo: '',
       copertina: '',
       saga: '',
-      annoUscita: 0,
-      annoGiocato: 0,
+      annoUscita: '',
+      annoGiocato: '',
       piattaforma: '',
       stato: 'Non Giocato',
       note: '',
