@@ -687,7 +687,8 @@
     "annoGiocato": null,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xiq.webp",
     "stato": "Non Giocato",
-    "categoria": ""
+    "categoria": "",
+    "pinned": true
   },
   {
     "id": 46,
@@ -1995,7 +1996,8 @@
     "annoUscita": 2020,
     "annoGiocato": null,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2glx.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": true
   },
   {
     "id": 123,
@@ -2542,7 +2544,7 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n1f.webp",
     "stato": "Non Giocato",
     "categoria": "Possibile Rimozione",
-    "pinned": false
+    "pinned": true
   },
   {
     "id": 155,
@@ -9371,7 +9373,8 @@
     "annoUscita": 2014,
     "annoGiocato": null,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sqz.webp",
-    "stato": "Non Giocato"
+    "stato": "Non Giocato",
+    "pinned": true
   },
   {
     "id": 619,
@@ -11756,7 +11759,7 @@
     "annoUscita": 2025,
     "annoGiocato": 2026,
     "piattaforma": "PS4",
-    "stato": "Sospeso",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
