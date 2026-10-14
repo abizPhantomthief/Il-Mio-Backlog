@@ -5827,6 +5827,22 @@
     "categoria": ""
   },
   {
+    "titolo": "Like a Dragon: Infinite Wealth - Pacchetto Maestro di Vacanze",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9s3j.webp",
+    "saga": "Like a Dragon Saga",
+    "annoUscita": 2024,
+    "annoGiocato": null,
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 851,
+    "includeInCount": false,
+    "id": 1792013598862
+  },
+  {
     "id": 849,
     "saga": "Like a Dragon Saga",
     "titolo": "Like a Dragon: Ishin!",
@@ -11735,7 +11751,7 @@
     "annoUscita": 2022,
     "annoGiocato": 2026,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bzv.webp",
-    "stato": "In corso"
+    "stato": "Completato"
   },
   {
     "titolo": "Vampire Survivors: Ante Chamber",
@@ -11789,7 +11805,7 @@
     "annoUscita": 2026,
     "annoGiocato": 2026,
     "piattaforma": "PS4",
-    "stato": "In corso",
+    "stato": "Completato",
     "note": "",
     "categoria": "",
     "pinned": false,
@@ -11820,7 +11836,7 @@
     "annoUscita": 2024,
     "annoGiocato": 2026,
     "piattaforma": "PS4",
-    "stato": "In corso",
+    "stato": "Droppato",
     "note": "",
     "categoria": "",
     "pinned": false,
