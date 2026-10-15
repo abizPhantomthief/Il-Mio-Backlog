@@ -5559,6 +5559,22 @@
     "categoria": ""
   },
   {
+    "titolo": "LEGO Batman: L'Eredità del Cavaliere Oscuro - Modalità Caos",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocxp7.webp",
+    "saga": "",
+    "annoUscita": 2026,
+    "annoGiocato": 2026,
+    "piattaforma": "PS5",
+    "stato": "In corso",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 387,
+    "includeInCount": false,
+    "id": 1792082559426
+  },
+  {
     "id": 388,
     "saga": "",
     "titolo": "LEGO Gli Incredibili",
