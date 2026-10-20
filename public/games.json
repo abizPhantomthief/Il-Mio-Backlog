@@ -1568,6 +1568,21 @@
     "stato": "In corso"
   },
   {
+    "titolo": "Borderlands: The Pre-Sequel - Shock Drop Slaughter Pit",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bu7.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": 2014,
+    "annoGiocato": null,
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 84,
+    "id": 1792490824652
+  },
+  {
     "titolo": "Borderlands: The Pre-Sequel - The Holodome Onlsaught",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bu6.webp",
     "saga": "Borderlands Series",
@@ -1808,6 +1823,19 @@
     "annoGiocato": 2026,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nh5.webp",
     "stato": "Completato"
+  },
+  {
+    "titolo": "Castlevania: Belmont's Curse",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cod5fk.webp",
+    "saga": "Castlevania Series",
+    "annoUscita": 2026,
+    "annoGiocato": null,
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1792490186390
   },
   {
     "id": 107,
@@ -2149,6 +2177,19 @@
     "annoGiocato": null,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2evj.webp",
     "stato": "Non Giocato"
+  },
+  {
+    "titolo": "Control Resonant",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc64f.webp",
+    "saga": "Remedy Connected Universe",
+    "annoUscita": 2026,
+    "annoGiocato": null,
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1792490122550
   },
   {
     "id": 132,
@@ -5878,9 +5919,9 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9s3j.webp",
     "saga": "Like a Dragon Saga",
     "annoUscita": 2024,
-    "annoGiocato": null,
-    "piattaforma": "",
-    "stato": "Non Giocato",
+    "annoGiocato": 2026,
+    "piattaforma": "PS5",
+    "stato": "In corso",
     "note": "",
     "categoria": "",
     "pinned": false,
@@ -6329,6 +6370,22 @@
     "dlcType": "dlc",
     "parentId": 422,
     "id": 1773049630880
+  },
+  {
+    "titolo": "Marvel's Wolverine",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob5mk.webp",
+    "saga": "",
+    "annoUscita": 2026,
+    "annoGiocato": null,
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Nascosto",
+    "pinned": false,
+    "dlcType": "",
+    "parentId": null,
+    "includeInCount": false,
+    "id": 1792490040348
   },
   {
     "id": 425,
@@ -10481,6 +10538,21 @@
     "stato": "Completato"
   },
   {
+    "titolo": "Tales of Arise: Beyond the Dawn",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob92r.webp",
+    "saga": "Tales Series",
+    "annoUscita": 2023,
+    "annoGiocato": null,
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "espansione",
+    "parentId": 714,
+    "id": 1792490520426
+  },
+  {
     "id": 713,
     "saga": "Tales Series",
     "titolo": "Tales of Berseria",
@@ -10745,6 +10817,19 @@
     "annoGiocato": 2018,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1lbm.webp",
     "stato": "Droppato"
+  },
+  {
+    "titolo": "The Blood of Dawnwalker",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob7ym.webp",
+    "saga": "",
+    "annoUscita": 2026,
+    "annoGiocato": null,
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "Nascosto",
+    "pinned": false,
+    "id": 1792490088472
   },
   {
     "id": 726,
@@ -11182,6 +11267,19 @@
     "annoGiocato": 2016,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4kpj.webp",
     "stato": "Completato"
+  },
+  {
+    "titolo": "The Midnight Walk",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ur3.webp",
+    "saga": "",
+    "annoUscita": 2025,
+    "annoGiocato": null,
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "id": 1792490294139
   },
   {
     "id": 760,
