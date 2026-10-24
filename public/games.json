@@ -9489,12 +9489,12 @@
     "id": 618,
     "saga": "Adventures of Sherlock Holmes",
     "titolo": "Sherlock Holmes: Crimes and Punishments",
-    "piattaforma": "",
+    "piattaforma": "PS4",
     "annoUscita": 2014,
-    "annoGiocato": null,
+    "annoGiocato": 2026,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sqz.webp",
-    "stato": "Non Giocato",
-    "pinned": true
+    "stato": "In corso",
+    "pinned": false
   },
   {
     "id": 619,
