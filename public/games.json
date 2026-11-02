@@ -2051,12 +2051,12 @@
     "id": 576,
     "saga": "Remnant Series",
     "titolo": "Chronos: Before the Ashes",
-    "piattaforma": "",
+    "piattaforma": "PS4",
     "annoUscita": 2020,
-    "annoGiocato": null,
+    "annoGiocato": 2026,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2glx.webp",
-    "stato": "Non Giocato",
-    "pinned": true
+    "stato": "In corso",
+    "pinned": false
   },
   {
     "id": 123,
