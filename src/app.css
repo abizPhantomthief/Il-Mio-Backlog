@@ -64,7 +64,7 @@ body {
 
 /* Light Mode */
 .app-container.light-mode {
-  --bg-primary: rgb(237, 240, 241);
+  --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
   --bg-tertiary: #f0f0f0;
   --bg-hover: #e8e8e8;
@@ -811,26 +811,33 @@ textarea {
 /* Game Card */
 .game-card {
   background: var(--bg-tertiary);
-  border-radius: 0;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 12px var(--card-shadow);
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Rimosso 'all' o transform da qui */
   position: relative !important;
   display: flex;
   border: 1px solid var(--border-color);
 }
 
+/* Il wrapper che racchiude sia la card che i DLC si muove insieme! */
 .games-grid.list-view .game-card-wrapper {
   display: flex;
   flex-direction: column;
   max-width: 1000px;
   width: 100%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transizione fluida */
+}
+
+/* Quando passi il mouse sul wrapper, TUTTO (card + dlc) sale insieme */
+.games-grid.list-view .game-card-wrapper:hover {
+  transform: translateY(-8px);
 }
 
 .game-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px var(--card-shadow);
+  /* Niente transform qui, solo cambio bordo */
   border-color: var(--accent-primary);
+  box-shadow: 0 12px 24px var(--card-shadow);
 }
 
 .game-card.pinned {
@@ -1775,10 +1782,20 @@ datalist {
   font-size: 12px;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.dlc-expand-btn:hover {
+  background: rgba(14, 165, 233, 1);
+  transform: scale(1.05);
+}
+
+/* Effetto pressione al click (feedback immediato) */
+.dlc-expand-btn:active {
+  transform: scale(0.95);
 }
 
 .games-grid.list-view .dlc-expand-btn {
@@ -1791,9 +1808,21 @@ datalist {
   transform: translateY(-50%) scale(1.05);
 }
 
-.dlc-expand-btn:hover {
-  background: rgba(14, 165, 233, 1);
-  transform: scale(1.05);
+/* Effetto pressione al click anche nella vista a lista */
+.games-grid.list-view .dlc-expand-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Animazione di dissolvenza e discesa */
+@keyframes dlcFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dlc-container {
@@ -1803,13 +1832,15 @@ datalist {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  animation: dlcFadeDown 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .dlc-container.list-view {
   border-top: none;
   border-left: 3px solid var(--accent-primary);
+  border-right: 3px solid var(--accent-primary);
   margin: 0;
-  border-radius: 0px 0px 0px 10px;
+  border-radius: 10px 10px 10px 10px;
   width: 100%;
 }
 
