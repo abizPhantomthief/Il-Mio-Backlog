@@ -2055,7 +2055,7 @@
     "annoUscita": 2020,
     "annoGiocato": 2026,
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2glx.webp",
-    "stato": "In corso",
+    "stato": "Completato",
     "pinned": false
   },
   {
@@ -4113,10 +4113,11 @@
     "titolo": "Forbidden Siren",
     "piattaforma": "PS4",
     "annoUscita": 2003,
-    "annoGiocato": 2023,
+    "annoGiocato": "2023, 2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p0m.webp",
-    "stato": "Completato",
-    "voto": "88"
+    "stato": "In corso",
+    "voto": "88",
+    "note": "Rigiocato"
   },
   {
     "id": 277,
