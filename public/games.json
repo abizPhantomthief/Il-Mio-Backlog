@@ -1568,21 +1568,6 @@
     "stato": "Sospeso"
   },
   {
-    "titolo": "Borderlands: The Pre-Sequel - Shock Drop Slaughter Pit",
-    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bu7.webp",
-    "saga": "Borderlands Series",
-    "annoUscita": 2014,
-    "annoGiocato": null,
-    "piattaforma": "",
-    "stato": "Non Giocato",
-    "note": "",
-    "categoria": "",
-    "pinned": false,
-    "dlcType": "dlc",
-    "parentId": 84,
-    "id": 1792490824652
-  },
-  {
     "titolo": "Borderlands: The Pre-Sequel - L'Assalto dell'Holodome",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bu6.webp",
     "saga": "Borderlands Series",
@@ -1596,6 +1581,21 @@
     "dlcType": "dlc",
     "parentId": 84,
     "id": 1792428757830
+  },
+  {
+    "titolo": "Borderlands: The Pre-Sequel - Shock Drop Slaughter Pit",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4bu7.webp",
+    "saga": "Borderlands Series",
+    "annoUscita": 2014,
+    "annoGiocato": null,
+    "piattaforma": "",
+    "stato": "Non Giocato",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 84,
+    "id": 1792490824652
   },
   {
     "titolo": "Borderlands: The Pre-Sequel - Viaggio Claptastico",
@@ -4853,6 +4853,22 @@
     "dlcType": "dlc",
     "parentId": 329,
     "id": 1777930324534
+  },
+  {
+    "titolo": "Hitman 3: Seven Deadly Sins Collection",
+    "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co97as.webp",
+    "saga": "Hitman: World of Assassination",
+    "annoUscita": 2021,
+    "annoGiocato": 2026,
+    "piattaforma": "PS5",
+    "stato": "In corso",
+    "note": "",
+    "categoria": "",
+    "pinned": false,
+    "dlcType": "dlc",
+    "parentId": 329,
+    "includeInCount": false,
+    "id": 1793990061960
   },
   {
     "id": 326,
