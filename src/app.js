@@ -205,7 +205,7 @@ const App = () => {
       case 'Completato':
       case 'Giocato': // <--- Condivide la stessa trasparenza verde di 'Completato'
         return 'rgba(39, 174, 96, 0.15)';
-      case 'In corso': return 'rgba(241, 196, 15, 0.15)';
+      case 'In corso': return 'rgba(243, 183, 20, 0.22)';
       case 'Droppato': return 'rgba(231, 76, 60, 0.15)';
       case 'Sospeso': return 'rgba(230, 126, 34, 0.15)';
       default: return 'transparent';

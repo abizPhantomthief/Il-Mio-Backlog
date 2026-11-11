@@ -360,6 +360,7 @@ textarea {
 }
 
 .saga-item {
+  font-family: Roboto;
   cursor: pointer;
   padding: 10px;
   border-radius: 8px;
@@ -1071,12 +1072,12 @@ textarea {
 }
 
 .card-title {
+  font: Rajdhani;
   margin: 0 0 10px 0;
   font-size: 18px;
   line-height: 1.2;
   color: var(--text-primary);
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .card-title .year {
