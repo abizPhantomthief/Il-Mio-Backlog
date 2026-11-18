@@ -8985,11 +8985,12 @@
     "id": 579,
     "saga": "Resident Evil Series",
     "titolo": "Resident Evil 2",
-    "piattaforma": "PS3",
+    "piattaforma": "PS3, PS5",
     "annoUscita": 1998,
-    "annoGiocato": 2020,
+    "annoGiocato": "2020, 2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vz0.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "note": "Rigiocato"
   },
   {
     "id": 590,
