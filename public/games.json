@@ -4499,11 +4499,11 @@
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocv1v.webp",
     "saga": "Grand Theft Auto Series",
     "annoUscita": 2026,
-    "annoGiocato": null,
-    "piattaforma": "",
-    "stato": "Non Giocato",
+    "annoGiocato": 2026,
+    "piattaforma": "PS5",
+    "stato": "In corso",
     "note": "",
-    "categoria": "In Uscita",
+    "categoria": "",
     "pinned": false,
     "id": 1794438489399
   },
@@ -9033,11 +9033,12 @@
     "id": 580,
     "saga": "Resident Evil Series",
     "titolo": "Resident Evil 3: Nemesis",
-    "piattaforma": "PS3",
+    "piattaforma": "PS3, PS5",
     "annoUscita": 1999,
-    "annoGiocato": 2020,
+    "annoGiocato": "2020, 2026",
     "copertina": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vvb.webp",
-    "stato": "Completato"
+    "stato": "Completato",
+    "note": "Rigiocato"
   },
   {
     "id": 584,
